@@ -31,7 +31,7 @@
 ## Bibliografía
 
 * [Java, como programar (Deitel & Deitel)](biblio/)
-* [Apuntes](doc/)
+* [Apuntes (Pablo Pandolfo)](doc/)
 
 ## Condiciones para aprobar
 
