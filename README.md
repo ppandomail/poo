@@ -12,7 +12,6 @@
 ## Objetivos
 
 * Construir modelos de problemas utilizando correctamente los fundamentos del POO: objeto-mensaje, encapsulamiento, polimorfismo, herencia.
-
 * Desarrollar POO
 
 ## Programa
@@ -31,7 +30,7 @@
 
 ## Bibliografía
 
-* [Java, como programar (Deitel & Deitel)](doc/deitel.pdf)
+* [Java, como programar (Deitel & Deitel)](biblio/)
 * [Apuntes](doc/)
 
 ## Condiciones para aprobar
