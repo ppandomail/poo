@@ -4,11 +4,11 @@
 
 * Es una habilidad que se adquiere mejor con la **práctica** y el **ejemplo** más que con los libros (Alan Turing)
 
-![](img/programacion.png)
+![Programación](img/programacion.png)
 
 ## ¿Cuáles son las ramas de la programación?
 
-![](img/ramas-programacion.png)
+![Ramas de la programación](img/ramas-programacion.png)
 
 ## ¿Qué hace un programador?
 
@@ -19,10 +19,10 @@
 1. **Depurar**: diagnóstico y arreglo de errores.
 
 * Se espera un código:
-  + Eficiente
-  + Robusto
-  + Legible
-  + Confiable
+  * Eficiente
+  * Robusto
+  * Legible
+  * Confiable
 
 ## ¿Cuáles son los niveles de los desarrolladores?
 
@@ -40,17 +40,17 @@
 
 * Es la secuencia de pasos que resuelven un programa y es la base de la programación.
 * Las partes de un algoritmo son:
-  + **Entrada**: datos
-  + **Proceso**: operaciones con los datos
-  + **Salida**: resultado
+  * **Entrada**: datos
+  * **Proceso**: operaciones con los datos
+  * **Salida**: resultado
 * Características:
-  + **Preciso**: resolver el problema sin errores.
-  + **Definido**: si se ejecuta el algoritmo varias veces, la salida serán iguales en cada repetición.
-  + **Finito**: debe tener un inicio y un final.
-  + **Legible**: cualquier persona que vea el algoritmo debe ser capaz de comprenderlo.
+  * **Preciso**: resolver el problema sin errores.
+  * **Definido**: si se ejecuta el algoritmo varias veces, la salida serán iguales en cada repetición.
+  * **Finito**: debe tener un inicio y un final.
+  * **Legible**: cualquier persona que vea el algoritmo debe ser capaz de comprenderlo.
 * Representación:
-  + Gráfica: **Diagrama de Flujo**
-  + No gráfica: **Pseudocódigo**
+  * Gráfica: **Diagrama de Flujo**
+  * No gráfica: **Pseudocódigo**
 
 ## ¿Cómo se desarrolla un algoritmo?
 
@@ -63,11 +63,11 @@
 
 ## ¿Cómo se resuelve un problema?
 
-1. **Diseñar** un algoritmo para el problema. 
+1. **Diseñar** un algoritmo para el problema.
 2. Expresar el algoritmo como un **Programa** (especificación formal de un algoritmo por medio de un lenguaje de programación)
 3. **Ejecutar** el programa (Eficiencia + V&V)
 
-![](img/algoritmo.png)
+![Algoritmo](img/algoritmo.png)
 
 ## ¿Cuáles son los entornos de trabajo en el desarrollo de software?
 
@@ -82,11 +82,11 @@
 * Es un modelo que brinda reglas que permiten abstraer la realidad.
 * Tipos:
   * Operacionales (COMO)
-    + Imperativo: secuencia, ciclos y condiciones. Mutación de variables. Lenguajes: Fortran, C, Pascal, COBOL
-    + Orientado a Objetos: Objetos que tiene datos y comportamiento y se comunican enviándose mensajes. Lenguajes: Java, Python, Eiffel, Smalltack 
+    * Imperativo: secuencia, ciclos y condiciones. Mutación de variables. Lenguajes: Fortran, C, Pascal, COBOL
+    * Orientado a Objetos: Objetos que tiene datos y comportamiento y se comunican enviándose mensajes. Lenguajes: Java, Python, Eiffel, Smalltack
   * Declarativos (QUE)
-    + Funcional: funciones que no manejan datos mutables o estados. Lenguajes: Lisp, Haskell
-    + Lógico: reglas y hechos basados en la lógica de predicado. Lenguajes: Prolog y dialectos.
+    * Funcional: funciones que no manejan datos mutables o estados. Lenguajes: Lisp, Haskell
+    * Lógico: reglas y hechos basados en la lógica de predicado. Lenguajes: Prolog y dialectos.
 
 ## ¿Qué es la POO?
 
@@ -95,7 +95,7 @@
 * Todo es pensado como un objeto.
 * Los objetos que existen en el mundo real pueden ser conceptuales (Ej. pedido, plano, punto, caja de ahorro) o físicos (Ej. vehículo).
 
-![](img/poo.png)
+![POO](img/poo.png)
 
 ## ¿Qué es un POO?
 
@@ -114,28 +114,27 @@
 * **Clase**: describir la estructura del objeto, responsable de crear sus instancias.
 * **Herencia**: compartir conocimiento. Se dá en una jerarquía (clasificación)
 
-
-## ¿Cuáeles son las relaciones entre las clases?
+## ¿Cuáles son las relaciones entre las clases?
 
 * **Dependencia** (Colaboradores Externos) -> "utiliza un"
-  + Pedido utiliza la clase Cuenta.
+  * Pedido utiliza la clase Cuenta.
 * **Composición** (Colaboradores Internos) / **Agregación** -> "tiene un"
-  + Pedido contiene objetos de tipo Artículo.
+  * Pedido contiene objetos de tipo Artículo.
 * **Herencia** (Compartir conocimiento) -> "es un"
-  + PedidoVigente es un Pedido.
+  * PedidoVigente es un Pedido.
 
-![](img/uml.png)
+![UML](img/uml.png)
 
 ## Ejemplo de jerarquía de clases
 
-![](img/jerarquia.png)
+![Jerarquía](img/jerarquia.png)
 
 ## ¿Qué es un lenguaje de programación?
 
-* Es una notación para escribir programas. 
+* Es una notación para escribir programas.
 * Proporcionan estructuras:
-  + **sintácticas**: cómo escribir una expresión 
-  + **semánticas**: cómo evaluar una expresión
+  * **sintácticas**: cómo escribir una expresión
+  * **semánticas**: cómo evaluar una expresión
 
 ## ¿Cuáles son las características de un LOO?
 
@@ -151,16 +150,10 @@
 * Los más implantados en la actualidad: Java, C++ y PHP.
 * C#, Python, Ruby, Delphi son otros LOO muy utilizados.
 
-![](img/genealogia.png)
+![Genealogía](img/genealogia.png)
 
 ## Actividad
 
-1. Identificar objetos y responsabilidades:
-  + Supongamos que Luis quiere enviar flores a Alba, que vive en otra ciudad. 
-  + Luis va a la floristería más cercana, regentada por un florista llamado Pedro. 
-  + Luis le dice a Pedro que tipo de flores enviar a Alba y la dirección de recepción.
+1. Identificar objetos y responsabilidades: Supongamos que Luis quiere enviar flores a Alba, que vive en otra ciudad. Luis va a la floristería más cercana, regentada por un florista llamado Pedro. Luis le dice a Pedro que tipo de flores enviar a Alba y la dirección de recepción.
 
-1. Identificar objetos y responsabilidades:
-  + Gestionar para un edificio la simulación del desplazamiento de su ascensor que puede viajar desde el piso 1 hasta el piso final que se indique (no puede bajar menos del piso 1 y no puede subir más del piso final).
-  + Cuenta con una limitación de peso de 750Kg.
-  + Para realizar el desplazamiento hay que indicar la cantidad de personas que se suben y el piso destino. La cantidad de personas se usa para calcular el peso a desplazar (considerando que cada persona pesa 50 kg).
+1. Identificar objetos y responsabilidades: Gestionar para un edificio la simulación del desplazamiento de su ascensor que puede viajar desde el piso 1 hasta el piso final que se indique (no puede bajar menos del piso 1 y no puede subir más del piso final). Cuenta con una limitación de peso de 750Kg. Para realizar el desplazamiento hay que indicar la cantidad de personas que se suben y el piso destino. La cantidad de personas se usa para calcular el peso a desplazar (considerando que cada persona pesa 50 kg).

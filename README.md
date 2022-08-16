@@ -3,8 +3,8 @@
 ## Docentes
 
 * Titular: Mg. Ing. Pablo Pandolfo
-* Adjunto: Ing. Leonardo Blautzik 
-* Ayudantes: 
+* Adjunto: Ing. Leonardo Blautzik
+* Ayudantes:
   * Lic. Victor Desia
   * Sr. Martin Ivaldi
   * Sr. Lucas Fernandez

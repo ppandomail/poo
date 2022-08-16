@@ -10,18 +10,17 @@
 ## Aspectos de Java
 
 * **Plataforma**: es un ambiente de software y/o hardware sobre el que se ejecuta un programa.
-  + Enorme biblioteca.
-  + Código reutilizable.
-  + Entorno de ejecución: seguridad, adaptabilidad, Garbage Collector.
+  * Enorme biblioteca.
+  * Código reutilizable.
+  * Entorno de ejecución: seguridad, adaptabilidad, Garbage Collector.
 
-![](img/plataforma.png)
+![Plataforma](img/plataforma.png)
 
-![](img/funcionamiento.png)
-
+![Funcionamiento](img/funcionamiento.png)
 
 * **Lenguaje**: posibilita el desarrollo de aplicaciones seguras, robustas sobre múltiples plataformas en redes heterogéneas y distribuidas.
-  + Sintaxis agradable.
-  + Semántica comprensible.
+  * Sintaxis agradable.
+  * Semántica comprensible.
 
 ## Características de Java
 
@@ -30,7 +29,7 @@
 * El objetivo de los diseñadores de Java fue crear un lenguaje de programación que fuera fácil de aprender. Java adoptó una sintaxis similar a la de C/C++ teniendo en cuenta su popularidad. Y eliminó aquellas características que son fuente de confusión.
 * Características de C/C++ eliminadas en Java: Preprocesador,  estructuras de datos,  uniones, herencia múltiple de clases,  GOTO,  punteros.
 
-###  Orientado a Objetos
+### Orientado a Objetos
 
 * Java posee todas las características de un lenguaje orientado a objetos: Polimorfismo, Encapsulamiento y Herencia.
 * Java implementa herencia simple de clases. Una clase puede ser subclase de una única clase. Todas las clases heredan de la clase Object. (Todo es un objeto)
@@ -39,7 +38,7 @@
 ### Distribuido
 
 * Con Java es posible usar protocolos como HTTP y FTP para leer o copiar archivos remotos de manera tan simple como si estuviesen en el File System local.
-* El comportamiento distribuido de Java posibilita la colaboración y la distribución de carga de trabajo del sistema. 
+* El comportamiento distribuido de Java posibilita la colaboración y la distribución de carga de trabajo del sistema.
 
 ### Seguro
 
@@ -67,19 +66,19 @@
 ## IDE
 
 * Es una aplicación que provee un entorno de desarrollo de software con diversas herramientas integradas:
- + editor de código con resaltador de sintaxis.
- + compilador.
- + depurador.
- + terminal.
- + control de versiones.
- + etc.
+  * editor de código con resaltador de sintaxis.
+  * compilador.
+  * depurador.
+  * terminal.
+  * control de versiones.
+  * etc.
 
 * IDEs:
-  + Eclipse
-  + IntelliJ
-  + NetBeans
-  + BlueJ
-  + Visual Studio
+  * Eclipse
+  * IntelliJ
+  * NetBeans
+  * BlueJ
+  * Visual Studio
 
 ## Eclipse
 
@@ -87,11 +86,11 @@
 * En 2001 IBM y Borland crearon la Fundación Eclipse
 * [Sitio web](www.eclipse.org)
 
-![](img/eclipse.png)
+![Atajos del Eclipse](img/eclipse.png)
 
 ## Hola Mundo
 
-* Edición: 
+* Edición:
 
   ```java
   public class HolaMundo {
@@ -115,9 +114,6 @@
 
 ## Ejercicios
 
-1. FizzBuzz: Imprimir por pantalla los números del 1 al 100 pero considerando lo siguiente:
-  + Si el número es divisible por 3 se debe imprimir “Fizz”.
-  + Si el número es divisible por 5 se debe imprimir “Buzz”.
-  + Si el número es divisible por 3 y por 5 se debe imprimir “FizzBuzz”.
+1. FizzBuzz: Imprimir por pantalla los números del 1 al 100 pero considerando lo siguiente: a) Si el número es divisible por 3 se debe imprimir “Fizz”. b) Si el número es divisible por 5 se debe imprimir “Buzz”. c) Si el número es divisible por 3 y por 5 se debe imprimir “FizzBuzz”.
 
-2) Sumados: Sumar los 1000 primeros números naturales (1 + 2 + 3 + 4 + … + 1000), imprimiendo por cada suma el resultado parcial obtenido. 
+2. Sumados: Sumar los 1000 primeros números naturales (1 + 2 + 3 + 4 + … + 1000), imprimiendo por cada suma el resultado parcial obtenido.
