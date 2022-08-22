@@ -18,11 +18,9 @@
 
 1. [Introducción POO](doc/intro-poo.md)
 1. [Introducción Java](doc/intro-java.md)
-1. [Componentes Java](doc/comp-java.md)
 1. [Encapsulamiento](doc/encapsulamiento.md)
-1. [Enumerados](doc/enums.md)
 1. [Herencia](doc/herencia.md)
-1. [Interfaces](doc/interfaces)
+1. [Polimorfismo](doc/polimorfismo.md)
 1. [Colecciones](doc/colecciones.md)
 1. [Excepciones](doc/excepciones.md)
 1. [Archivos](doc/archivos.md)
