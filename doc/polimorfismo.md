@@ -90,6 +90,17 @@ public class Punto implements Reseteable {
 
 ![Interface Figura](img/interface1.png)
 
+1. Dada la siguiente jerarquia de clases:
+    * Sociedad Anónima es una Sociedad.
+    * SRL es una Sociendad.
+    * SH es una Sociedad.
+    * Datos comunes: Denominación social, domicilio legal, capital social, cuit.
+    * Datos adicionales según el tipo de sociedad:
+        * Sociedad Anónima: cantidad de acciones, precio de cada acción, cotiza en bolsa (s/n), cantidad de directores.
+        * SRL: Nombre de socios gerentes (máximo 3), patrimonio personal de cada socio gerente, cantidad de socios no gerentes.
+        * SH: lista de los nombres de los socios, porcentaje de participación de cada socio.
+    * Considerar que siempre una sociedad debe corresponder a algún tipo específico. Escribir los constructores y los métodos necesarios y adecuados. Escribir un programa usando el concepto de polimorfismo que muestre en pantalla toda la información disponible de una sociedad. Escribir un método (y usarlo en el programa) que permita comparar el capital de dos sociedades.
+
 1. Un Video Club pone a disposición de sus socios series, películas y videojuegos.
     1. Crear una clase llamada Película con las siguientes características:
         * Sus atributos son título, año, entregado, género y director.
@@ -135,3 +146,23 @@ public class Punto implements Reseteable {
         * Entrega algunos Videojuegos y Películas y Series con el método entregar().
         * Cuenta cuantas Películas Series y Videojuegos hay entregados. Al contarlos, devuelvelos.
         * Por último, indica que Videojuego tiene más horas estimadas, la serie con más temporadas y la Película más antigua. Muéstralos en pantalla con toda su información (usa el método toString()).
+
+1. Definir las clases VehiculoCliente, VehiculoAbonado y VehiculoHotel. Estas clases deben implementar la interfaz Vehículo cuyos datos son una cadena de texto id y un valor entero tiempo.
+    * La cadena de texto funciona como identificador del vehículo y es inmutable. El valor entero almacena el número de horas, días o meses dependiendo del tipo de vehículo. La clase VehiculoCliente deberá tener constructores y métodos set y get. El valor inicial para tiempo es 0.
+    * Deberá realizar el método factura() que determina lo que tiene que abonar un objeto del tipo VehiculoCliente por su estancia en el garaje. El costo de la permanencia es de $12 el día completo y $0.6 la hora o fracción. El método hayPlaza() que determina si hay lugar en el garaje para estacionar un objeto del tipo VehiculoCliente.
+    * La clase VehiculoAbonado tiene los datos id y tiempo que en este caso representa un numero de meses, debe contener constructores y los métodos factura() que determina lo que debe abonar un objeto del tipo VehiculoAbonado, el costo de la estancia es de $200 por mes y hayPlaza() igual que en el caso anterior.
+    * En la clase VehiculoHotel el tiempo se mide en días. El costo es de $10 por día.
+
+1. Definir la clase Vehículo como clase base de las clases derivadas VehiculoTerrestre, VehiculoAereo, VehiculoAcuatico. A la clase VehiculoYerrestre adicionarle dos clases hijas: VehiculoCarretera y VehiculoVias. Detallar las variables miembros de cada una y los métodos que correspondan.
+
+1. Se debe crear una pequeña orquesta de cámara que pueda ofrecer información de si misma. Se deberán definir las siguientes clases:
+    * Clase abstracta Instrumento. Atributos: nombre, precio. Método: abstract void afinar(). Variable estática: numeroInstrumentos.
+    * Clase Viento. Variables miembro estáticas: numInstrVientoMetal y numInstrVientoMadera. Método: boolean esDeMetal().
+    * Clase Percusion. Variable miembro estática: numInstrPercusion.
+    * Clase Cuerda. Variable miembro estática: numInstrCuerda.
+    * Además, se debe crear la interface Identificable con el método String queInstrumentoEres(). Esta interface deberá ser implementada por todas las clases descendientes de Instrumento. El método afinar() deberá emitir “de alguna manera” el sonido propio del instrumento.
+
+1. Se pide escribir un programa de gestión bancaria. Para ello se crearán dos clases, las que se detallan a continuación:
+    * Una clase Cuenta con 4 atributos: Número de cuenta (long), el cual debe ser único. Nombre del propietario de la cuenta (String). Saldo actual (double). Interés que se aplica a esa cuenta (double). Esta clase debe implementar la interface Salida que tiene un único método imprimirCuenta(), que debe mostrar en pantalla el saldo actual de la cuenta y sus datos. La clase Cuenta deberá tener el método actualizarSaldo() que actualizará el saldo de la cuenta aplicándole el interés. Además, deberá tener los métodos constructores.
+    * La clase Banco que contendrá una lista de cuentas, con 4 métodos: crearCuenta() para agregar una nueva cuenta a la lista. Se deberá verificar que no exista otra cuenta con ese número. ActualizarCuentas() que aplicará el interés apropiado a cada una de las cuentas existentes usando el método actualizarSaldo() de la clase Cuenta. MostrarCuentas(), mostrará los extractos de cada cuenta. BorrarCuenta(), que permitirá borrar una cuenta dado el número de cuenta.
+    * El programa principal deberá mostrar un menú de opciones: crear, borrar, actualizar, mostrar y salir, y deberá permitir el ingreso de la opción.

@@ -62,3 +62,11 @@ public boolean equals(Object obj) {
     * Un empleado de Planta Permanente (que no sea gerente) con 80 horas trabajadas, con esposa, 2 hijos y 6 años de antigüedad.
     * Un empleado de Planta Permanente (que no sea gerente) con 160 horas trabajadas, sin esposa, sin hijos y con 4 años de antigüedad.
     * Un Gerente con 160 horas trabajadas, con esposa, un hijo y 10 años de antigüedad.
+
+1. En este ejercicio se pretende construir una pequeña base de datos de canciones clásicas en CD.
+Para ello se debe definir una clase base Canción, de la cual descenderán todas las demás (clásica, pop, jazz, etc.). Nosotros solo implementaremos la clase Clásica. La clase abstracta Canción tendrá 4 atributos: número de referencia (long), el cual identifica el CD de música, único para cada CD. Titulo (string), nombre de la canción. Álbum (String), nombre del disco. Grupo (String), nombre del grupo que toca la canción y el método abstract imprimirCancion();. La clase Clásica hereda de Canción. Esta clase tendrá solo una variable adicional: Instrumentos(String), que pondrá el tipo de instrumentos que se usan.
+El programa principal deberá permitir elegir distintas opciones:
+    * crear: permite agregar una nueva canción.
+    * eliminar: borrar una canción, dado su número de referencia.
+    * listado: mostrar todas las canciones de la base de datos.
+    * salir: fin del programa.

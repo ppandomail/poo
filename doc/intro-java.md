@@ -142,22 +142,22 @@
 * Son inmutables.
 
   ```java
-  String saludo = “Hola”;
-  String otroSaludo = new String(“Como andás?”);
+  String saludo = "Hola";
+  String otroSaludo = new String("Como andás?");
 
   saludo.length();
   saludo.charAt(0);
   saludo.substring(0,2);
-  saludo.compareTo(“adios”);
-  saludo.equals(“Hol”);
-  saludo.split(“o”);
+  saludo.compareTo("adios");
+  saludo.equals("Hol");
+  saludo.split("o");
   saludo.trim();
-  saludo.indexOf(“a”);
-  saludo.indexOf(“a”, 2);
+  saludo.indexOf("a");
+  saludo.indexOf("a", 2);
   saludo.toLowerCase();
   saludo.toUpperCase();
-  saludo.equalsIgnoreCase(“h”);
-  saludo.endsWith(“la”);
+  saludo.equalsIgnoreCase("h");
+  saludo.endsWith("la");
   ```
 
 ## Operadores
@@ -181,7 +181,7 @@
   float[] arreglo = {2, 4, 6};
   int[][] matriz = {{1, 7}, {3, 4}};
   caracteres = new char[]{‘a’, ‘1’};
-  palabras[2] = “chango”;
+  palabras[2] = "chango";
   ```
 
 * Operaciones con arreglos: es necesario importar la clase java.util.Arrays.
@@ -283,23 +283,89 @@
 ## Salida de datos a consola
 
   ```java
-  System.out.print(“Hola mundo”);
-  System.out.println(“Hola mundo”);
+  System.out.print("Hola mundo");
+  System.out.println("Hola mundo");
 
   Double x = 10000.0/3.0;
   System.out.println(x);          // 3333.3333333
-  System.out.printf(“%8.2f”, x);  // 3333.33
-  System.out.printf(“%,.2f”, x);  // 3,333.33
+  System.out.printf("%8.2f", x);  // 3333.33
+  System.out.printf("%,.2f", x);  // 3,333.33
 
   String.format(“Hola, %s. El año que viene tendrás %d”, nombre, edad);
   ```
 
 ## Ejercicios
 
-1. FizzBuzz: Imprimir por pantalla los números del 1 al 100 pero considerando lo siguiente: a) Si el número es divisible por 3 se debe imprimir “Fizz”. b) Si el número es divisible por 5 se debe imprimir “Buzz”. c) Si el número es divisible por 3 y por 5 se debe imprimir “FizzBuzz”.
+1. Leer dos valores enteros e informar la suma y su cociente.
+
+1. Dado un valor numérico entero, informar si es par o impar.
+
+1. Se ingresa un valor numérico de  8 dígitos que representa una fecha con el siguiente formato aaaammdd. Se pide informar por separado el día, el mes y el año de la fecha ingresada.
+
+1. Leer dos valores numéricos enteros e indicar cual es el mayor y cual es el menor. Considerar que ambos valores son diferentes.
+
+1. Leer tres valores numéricos enteros, indicar cual es el mayor, cuál es el del medio y cuál el menor. Considerar que los tres valores son diferentes.
+
+1. Leer un valor numérico que representa un día de la semana. Se pide mostrar por pantalla el nombre del día considerando que el lunes es el día 1, el martes es el día 2 y así, sucesivamente.
+
+1. Se ingresa por teclado un conjunto de valores numéricos enteros positivos, se pide informar, por cada uno, si el valor ingresado es par o impar. Para indicar el final se ingresará un valor cero o negativo.
+
+1. Desarrollar un algoritmo que muestre por pantalla los primeros n números naturales considerando al 0 (cero) como primer número natural.
+
 1. Sumados: Sumar los 1000 primeros números naturales (1 + 2 + 3 + 4 + … + 1000), imprimiendo por cada suma el resultado parcial obtenido.
-1. Intercambiar el valor de dos variables de tipo entero sin utilizar una tercera variable.
+
+1. Dado un conjunto de valores numéricos que se ingresan por teclado determinar el valor promedio. El fin de datos se indicará ingresando un valor igual a cero.
+
+1. Se ingresa un valor numérico por consola, determinar e informar si se trata de un número primo o no.
+
+1. Desarrollar un algoritmo que muestre los primeros n números primos siendo n un valor que debe ingresar el usuario.
+
+1. Dado un conjunto de valores numéricos indicar cuál es el mayor. El ingreso de datos finaliza con la llegada de un cero.
+
+1. Determinar el menor valor de un conjunto de números e indicar también su posición relativa dentro del mismo. El ingreso de datos finaliza con la llegada de un cero.
+
+1. Se ingresa por consola un número entero que representa un sueldo que se debe pagar. Considerando que existen billetes de las denominaciones que se indican más abajo; informar, que cantidad de billetes de cada denominación se deberá utilizar, dando prioridad a los de valor nominal más alto. Denominaciones ($) = {100, 50, 20, 10, 5, 2, 1}
+
+1. FizzBuzz: Imprimir por pantalla los números del 1 al 100 pero considerando lo siguiente: a) Si el número es divisible por 3 se debe imprimir “Fizz”. b) Si el número es divisible por 5 se debe imprimir “Buzz”. c) Si el número es divisible por 3 y por 5 se debe imprimir “FizzBuzz”.
+
+1. Se tiene una tabla o planilla con los resultados de la última llamada a examen de una materia, con la siguiente información:
+    * Matricula (valor numérico entero de 8 dígitos).
+    * Nota (valor numérico entero de 2 dígitos entre 1 y 10).
+    * Nombre (valor alfanumérico de 10 caracteres).
+    * Se pide informar:
+      1. Cantidad de alumnos que se presentaron a rendir examen.
+      1. Nota promedio.
+      1. Nombre y nota del alumno que obtuvo el mejor resultado (será único).
+    * Para indicar el fin del ingreso de datos el operador ingresará un registro nulo con matrícula =0, nota=0 y nombre="".
+
 1. Invertir un string, sin usar la biblioteca que lo haga automáticamente.
+
 1. Encriptar un mensaje usando el método de "la cifra del césar", que consiste en correr cada letra -considerando la posición de cada una en el alfabeto- una determinada cantidad de lugares. Ejemplo: si el corrimiento es de 2 lugares, la palabra "HOLA" se transforma en "JQNC". Si el alfabeto termina antes de poder correr la cantidad de lugares  necesarios, se vuelve a comenzar desde la letra "a".
-1. Determinar si un número es par o no.
-1. Implementar en Java el algoritmo de búsqueda secuencial y binaria.
+
+1. Desarrollar un programa que le permita al usuario ingresar un conjunto de 10 valores enteros. Luego se debe imprimir el conjunto que el usuario ingresó, primero en el orden original y luego en el inverso. Por ejemplo, si el usuario ingresa: 12, 43, 5, 26, 7, 98, 1, 32, 18, 9 la salida del programa debe ser la siguiente:
+    * Orden original: 12 43 5 26 7 98 1 32 18 9
+    * Orden inverso: 9 18 32 1 98 7 26 5 43 12
+
+1. Desarrollar un programa que le permita al usuario ingresar un conjunto de 5 cadenas de caracteres. Luego se debe imprimir el conjunto que el usuario ingresó, pero en orden inverso.
+
+1. Dado un conjunto de número enteros mayores o iguales a 0 y menores que 100 determinar e informar cuántas veces aparece cada uno. El conjunto finaliza con la llegada de un valor negativo.
+
+1. Se tiene una tabla que detalla la facturación emitida por un comercio durante el período de un mes, con el siguiente formato: nroFactura (número entero de 8 dígitos), día (número entero entre 1 y 31, importe (número real), codCliente (alfanumérico, 5 caracteres). Los datos no necesariamente están ordenados y puede haber más de una factura emitida en un mismo día. Finaliza cuando se ingrese un nroFactura igual a cero. Se pide:
+    1. Total facturado por día, sólo para aquellos días en los que hubo facturación.
+    1. Día de mayor facturación (será único) y monto total facturado ese día.
+
+1. Dado un conjunto de número enteros determinar cuántas veces se repite cada uno. Los datos se ingresan sin ningún orden y finalizan al llegar el valor 0. Se garantiza que a los sumo habrá 100 números diferentes.
+
+1. Se ingresa un conjunto de ternas de valores que representan el año, el grado y la cantidad de alumnos que se inscribieron en un colegio durante ese año y para ese grado en particular. Solo se ingresará la información comprendida entre los años 2000 y 2009. En el colegio, los alumnos cursan desde el primer grado hasta el séptimo. Los datos se ingresan sin ningún tipo de orden. Se pide:
+    1. Emitir un listado ordenado por año detallando para cada año la cantidad de inscriptos por grado.
+    1. Emitir un listado ordenado por grado detallando para cada grado la cantidad de inscriptos por año.
+
+1. Los números expansivos se definen de la siguiente forma:
+    * El primer número expansivo es el 1.
+    * Dado un número expansivo x, para calcular el siguiente se ha de sustituir cada grupo de n cifras consecutivas iguales que aparezcan en x (por ejemplo, 3333) por número n seguido de la cifra que se repite (en el ejemplo 43).
+    * Así, los primeros números expansivos son:
+    * 1 -> “un uno”: 11
+    * 11 -> “dos unos”: 21
+    * 21 -> “un dos, un uno”: 1211
+    * 1211 -> “un uno, un dos, dos uno”: 111221
+    * Se pide programar: A) una función “expand” que, dado un arreglo con las cifras de un número expansivo genere el siguiente. B) una función “list2num” que, dado un arreglo con las cifras de un número expansivo, devuelva el número correspondiente.
