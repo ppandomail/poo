@@ -255,6 +255,7 @@
 * Es un conjunto de clases (framework) que permite realizar la ejecución de clases Java de manera controlada, para poder evaluar si el funcionamiento de cada uno de los métodos de la clase se comporta como se espera.
 * Es decir, en función de algún valor de entrada se evalúa el valor de retorno esperado; si la clase cumple con la especificación, entonces JUnit devolverá que el método de la clase pasó exitosamente la prueba; en caso de que el valor esperado sea diferente al que regresó el método durante la ejecución, JUnit devolverá un fallo en el método correspondiente.
 * [Link](http://www.vogella.com/tutorials/JUnit/article.html)
+* [Sitio Oficial](https://junit.org/junit5/docs/current/user-guide/)
 * Ejemplo:
 
 ```java
@@ -275,6 +276,8 @@ public class Sumador {
 ```
 
 ```java
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 public class SumadorTest {
 
   @Test
@@ -285,6 +288,19 @@ public class SumadorTest {
 
 }
 ```
+
+### Anotaciones JUnit
+
+| Anotación | Descripción |
+| -- | -- |
+| @Test | Denota que un método es un método test |
+| @ParameterizedTest | Denota que un método es una prueba parametrizada |
+| @RepeatedTest | Para repetir pruebas.  Ejemplo: @RepeatedTest(10) |
+| @BeforeEach | Denota que el método se va a ejecutar antes de cada test (precondición) |
+| @AfterEach | Denota que el método se va a ejecutar después de cada test (postcondición) |
+| @BeforeAll | Denota que el método se va a ejecutar antes de la suite de tests |
+| @AfterAll | Denota que el método se va a ejecutar después de la suite de tests |
+| @Disabled | Usado para deshabilitar una clase test o un método test |
 
 ## Actividad
 
