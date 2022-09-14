@@ -446,3 +446,372 @@ public class SumadorTest {
     * El método pertenece, que recibe como argumento un objeto Punto P, y comprueba si P se encuentra en el segmento representado por un objeto Segmento.
     * El método recta, sin argumentos, que construye un objeto Recta que contiene a un objeto Segmento.
     * El método mediatriz, sin argumentos, que devuelve un objeto Recta que representa la mediatriz de un objeto Segmento.
+
+1. Implementar la clase Nota
+
+```java
+class Nota {
+
+    /**
+     * pre : valorInicial está comprendido entre 0 y 10.
+     * post: inicializa la Nota con el valor indicado.
+     */
+    public Nota(int valorInicial) { }
+    
+    /**
+     * post: devuelve el valor numérico de la Nota, comprendido entre 0 y 10.
+     */
+    public int obtenerValor() { }
+    
+    /**
+     * post: indica si la Nota permite o no la aprobación.
+     */
+    public boolean aprobado() { }
+    
+    /**
+     * post: indica si la Nota implica desaprobación.
+     */
+    public boolean desaprobado() { }
+    
+}
+```
+
+1. Agregar a la clase Nota el método:
+
+```java
+    /**
+     * pre : nuevoValor está comprendido entre 0 y 10.
+     * post: modifica el valor numérico de la Nota, cambiándolo por nuevoValor, siempre y cuando nuevoValor sea superior al valor numérico actual de la Nota.
+    */
+    public void recuperar(int nuevoValor) { }
+```
+
+1. Implementar una clase que modele un círculo, del que se desea manipular (obtener y cambiar):
+    * radio
+    * diámetro
+    * perímetro
+    * área
+
+1. Implementar una clase que modele una corona circular utilizando la clase Circulo desarrollada previamente. Se desea manipular (obtener y cambiar):  @
+    * radio interior
+    * radio exterior
+    * perímetro interior
+    * perímetro exterior
+    * área
+
+1. Implementar la clase Cubo a partir de la siguiente interfaz:
+
+```java
+class Cubo {
+
+    /**
+     * pre : longitudLado es un valor mayor a 0.
+     * post: inicializa el cubo a partir de la longitud de lado dada
+     */
+    public Cubo (double longitudLado) { }
+
+    /**
+     * post: devuelve la longitud de todos los lados del cubo
+     */
+    public double obtenerLado() { }
+    
+    /**
+     * pre : longitudLado es un valor mayor a 0.
+     * post: cambia la longitud de todos los lados del cubo
+     */
+    public void cambiarLado(double longitudLado) { }
+    
+    /**
+     * post: devuelve el área de la superficie de las caras del cubo
+     */
+    public double obtenerAreaCara() { }
+    
+    /**
+     * pre: areaCara es un valor mayor a 0.
+     * post: cambia el área de las caras del cubo
+     */
+    public void cambiarAreaCara(double areaCara) { }
+
+    /**
+     * post: devuelve el volumen que encierra el cubo
+     */
+    public double obtenerVolumen() { }
+
+    /**
+     * pre: volumen es un valor mayor a 0.
+     * post: cambia el volumen del cubo
+     */
+    public void cambiarVolumen(double volumen) { }
+}
+```
+
+1. Implementar la clase TarjetaBaja a partir de la siguiente declaración:
+
+```java
+class TarjetaBaja {
+
+    /**
+     * post: saldo de la Tarjeta en saldoInicial.
+     */
+    public TarjetaBaja(double saldoInicial) { }
+
+    /**
+     * post: devuelve el saldo actual de la Tarjeta
+     */
+    public double obtenerSaldo() { } 
+
+    /**
+     * post: agrega el monto al saldo de la Tarjeta.
+     */
+    public void cargar(double monto) { }
+
+    /**
+     * pre : saldo suficiente.
+     * post: utiliza 21.50 del saldo para un viaje en colectivo.
+     */
+    public void pagarViajeEnColectivo() { }
+
+    /**
+     * pre : saldo suficiente.
+     * post: utiliza 19.50 del saldo para un viaje en subte. 
+     */
+    public void pagarViajeEnSubte() { }
+
+    /**
+     * post: devuelve la cantidad de viajes realizados.
+     */
+    public int contarViajes() { }
+
+    /**
+     * post: devuelve la cantidad de viajes en colectivo.
+     */
+    public int contarViajesEnColectivo() { }
+
+    /**
+     * post: devuelve la cantidad de viajes en subte.
+     */
+    public int contarViajesEnSubte() { }
+}
+```
+
+1. Implementar la clase Ticket a partir de la siguiente interfaz
+
+```java
+class Ticket {
+
+    /**
+     * post: el Ticket se inicializa con importe 0.
+     */
+    public Ticket() { }
+
+    /**
+     * pre : cantidad y precio son mayores a cero. El ticket está abierto.
+     * post: suma al Ticket un item a partir de la cantidad de productos y su precio unitario.
+     */
+    public void agregarItem(int cantidad, double precioUnitario) { }
+
+    /**
+     * pre : está abierto y no se ha aplicado un descuento previamente.
+     * post: aplica un descuento sobre el total del importe.
+     */
+    public void aplicarDescuento(double porcentaje) { }
+
+    /**
+     * post: devuelve el importe acumulado hasta el momento, sin cerrar el Ticket.
+     */
+    public double calcularSubtotal() { }
+
+    /**
+     * post: cierra el Ticket y devuelve el importe total.
+     */
+    public double calcularTotal() { }
+
+    /**
+     * post: devuelve la cantidad total de productos.
+     */
+    public int contarProductos() { }
+
+}
+```
+
+1. Implementar la clase CajaDeAhorro con la siguiente interfaz:
+
+```java
+class CajaDeAhorro {
+
+    /**
+     * post: la instancia queda asignada al titular indicado y con saldo igual a 0.
+     */
+    public CajaDeAhorro(String titularDeLaCuenta) { }
+    
+    /**
+     * post: devuelve el nombre del titular de la Caja de Ahorro.
+     */
+    public String obtenerTitular() { }
+
+    /**
+     * post: devuelve el saldo de la Caja de Ahorro.
+     */
+    public double consultarSaldo() { }
+
+    /**
+     * pre : monto es un valor mayor a 0.
+     * post: aumenta el saldo de la Caja de Ahorro según el monto depositado.  
+     */
+    public void depositar(double monto) { }
+ 
+    /**
+     * pre : monto es mayor a 0 y menor o igual que el saldo de la Caja de Ahorro.
+     * post: disminuye el saldo de la Caja de Ahorro según el monto extraído.
+     */
+    public void extraer(double monto) { }
+}
+```
+
+1. Implementar la clase Cerradura con los siguientes métodos. Indique axiomas de la clase, pre y post condiciones de los métodos. Cuando una Cerradura se bloquea no puede volver a abrirse nunca más.
+
+```java
+class Cerradura {
+
+   public Cerradura(int claveDeApertura,int cantidadDeFallosConsecutivosQueLaBloquean)
+
+    public boolean abrir(int clave)
+
+    public void cerrar()
+
+    public boolean estaAbierta()
+
+    public boolean estaCerrada()
+
+    public boolean fueBloqueada()
+
+    public int contarAperturasExitosas()
+
+    public int contarAperturasFallidas()
+
+}
+```
+
+1. Implementar la clase ExpendedorDePasajes con los siguientes métodos. Indique axiomas de la clase, pre y post condiciones de los métodos.
+
+```java
+class ExpendedorDePasajes {
+
+    public ExpendedorDePasajes(double precioPorKm)
+
+    public double venderPasaje(double distanciaEnKm)
+
+    public double venderPasajes(int cantidad, double distanciaEnKm)
+
+    public int contarPasajesVendidos()
+
+    public double obtenerDistanciaMaxima()
+
+    public double calcularDistanciaPromedio()
+
+    public double calcularVentaTotal()
+}
+```
+
+1. Un Tragamonedas está compuesto por 3 Tambores. Cuando el Tragamonedas se activa, giran los 3 Tambores. Cada Tambor se detiene en una posición comprendida entre 1 y 8.  El Tragamonedas entrega un premio cada vez que, luego de ser activado los 3 Tambores se detienen en la misma posición. Implementar las clases Tragamonedas usando la clase Tambor:
+
+```java
+class Tambor {
+
+    private int posicion;
+
+    /**
+     * post: inicialmente el Tambor está en la posición 1.
+     */
+    public Tambor() {
+
+        posicion = 1;
+    }
+
+    /**
+     * post: devuelve el número de posición en la que se encuentra el Tambor. Es un valor comprendido entre 1 y 8.
+     */
+    public int obtenerPosicion() { 
+
+        return posicion;
+    }
+
+    /**
+     * post: hace girar el tambor y luego se detiene en una posición comprendida entre 1 y 8.
+     */
+    public void girar() { 
+
+        /* provee un número aleatorio en el rango [0.0, 1.0) */
+        double aleatorio = Math.random();
+
+        posicion = (int) (aleatorio * 8) + 1;
+    }
+}
+
+
+class Tragamonedas {
+
+    /**
+     * post: los 3 Tambores del Tragamonedas están en la posición 1.
+     */
+    public Tragamonedas() { }
+
+    /**
+     * post: activa el Tragamonedas haciendo girar sus 3 Tambores.
+     */
+    public void activar() { }
+
+    /**
+     * post: indica si el Tragamonedas entrega un premio a partir de la posición de sus 3 Tambores.
+     */
+    public boolean entregaPremio() { }
+
+/**
+     * post: obtiene la posición del iésimo tambor del Tragamonedas
+       pre:  i => 0; i < n (n = cantidad de tambores)
+     */
+    public int obtenerPosicionDelTambor(int i) { }
+}
+```
+
+1. Implementar la clase SalaDeCine, tal que tenga operaciones para:
+    1. Crearla con la cantidad de butacas totales, y cantidad de filas.
+    1. Consultar si una butaca está ocupada (referida por fila y asiento).
+    1. Ocupar una butaca determinada, siempre que ésta no esté previamente ocupada.
+    1. Consultar la cantidad total de butacas ocupadas.
+    1. Consultar si es posible acomodar a un grupo de X personas, en forma contigua, en la misma fila.
+
+    ```java
+    public class SalaDeCine {
+      private boolean [][] sala;
+      public SalaDeCine(int butacas, int filas) { /*TODO*/ }
+      public boolean estaOcupada(int fila, int asiento) { /*TODO*/ }
+      public void ocuparButaca(int fila, int asiento) { /*TODO*/ }
+      public int cantidadDeButacasOcupadas() { /*TODO*/ }
+      boolean hayEspacioPara(int cantidadDePersonas) { /*TODO*/ }
+    ```
+
+1. Implementar la class Biblioteca. Para cada uno de los puntos confeccionar los casos de prueba JUnit que aseguren su correcto funcionamiento.
+
+  ```java
+  public class Bibioteca {
+    private Libro[] libros;
+    // Se construya a partir de la máxima cantidad de libros que puede contener.
+    public Biblioteca (int maxCantidadDeLibros) { /*TODO*/ }
+    // Se pueda consultar la cantidad de libros que contiene.
+    public int cuantosLibros() { /*TODO*/ }
+    //Se pueda agregar un libro indicando su título, autor, Genero y cantidad de páginas, siempre y cuando haya lugar en la Biblioteca. Los Generos literarios que le gustan a éste bibiotecario son: POESIA, CIENCIAFICCION, AVENTURA, NOVELA, HISTORIA, INFANTILES.
+    public boolean agregarLibro(String titulo, String autor, Genero genero, int paginas) { /*TODO*/ }
+    // Devuelva el título de un libro a partir de la posición.
+    public String libroEnLaPosicion(int posicion) { /*TODO*/ }
+    //Devuelva el libro con más cantidad de páginas.
+    public Libro libroConMasPaginas() { /*TODO*/ }
+    // Se pueda consultar cuantos libros hay de determinado autor.
+    public int cuantosLibrosDelAutor(String autor) { /*TODO*/ }
+    // Devuelva un arreglo con todos los Libros de un autor que se pasa por parámetro.
+    public Libro [] librosDelAutor(String autor) { /*TODO*/ }
+    // Calcule el tiempo (en minutos) que llevaría leer todos los libros, asumiendo que se tarda 1 minuto por página.
+    public int tiempoEnLeetTodosLosLibros() { /*TODO*/ }
+    // Informe por pantalla la cantidad de libros que hay por cada Genero literario.
+    public void librosPorGeneroLiterario() { /*TODO*/ }
+  ```  
