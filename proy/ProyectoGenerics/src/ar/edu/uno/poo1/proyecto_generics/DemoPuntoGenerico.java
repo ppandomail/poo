@@ -11,6 +11,21 @@ public class DemoPuntoGenerico {
 		System.out.println(p.getY());
 		System.out.println(p);
 		
+		Punto<Double, Character> p5 = new Punto<Double, Character>(9.8, 'G');
+		
+		ArrayList<Double> valoresConocidos = new ArrayList<Double>();
+		valoresConocidos.add(9.8);
+		valoresConocidos.add(3.14);
+		valoresConocidos.add(2.7);
+		
+		ArrayList<Character> constantesConocidas = new ArrayList<Character>();
+		constantesConocidas.add('G');
+		constantesConocidas.add('P');
+		constantesConocidas.add('E');
+		
+		
+		Punto<ArrayList<Double>, ArrayList<Character>> p6 = new Punto<ArrayList<Double>, ArrayList<Character>>(valoresConocidos, constantesConocidas);
+		
 		Punto<String, Integer> p2 = new Punto<String, Integer>("Nov", 2);
 		System.out.println(p2.getX());
 		System.out.println(p2);

@@ -1,7 +1,8 @@
 # Genericidad
 
 * Consiste en escribir código que se puede reutilizar para objetos de muy distintos tipos.
-* Antes de JDK 5.0, la programación genérica en Java siempre se realizaba por herencia (Object). * Problemas: Se necesita una refundición siempre que se recupera un valor y no hay comprobación de errores. Un error de compilación es mucho mejor que una excepción de refundición (ClassCastException) durante la ejecución.
+* Antes de JDK 5.0, la programación genérica en Java siempre se realizaba por herencia (Object).
+* Problemas: Se necesita una refundición siempre que se recupera un valor y no hay comprobación de errores. Un error de compilación es mucho mejor que una excepción de refundición (ClassCastException) durante la ejecución.
 * JDK 5.0 ofrece una solución mejor: los parámetros de tipo.
 * Ventajas: programas fáciles de leer y seguros (no se necesita refundir).
 * Desventajas: no es tan fácil implementarlas.
