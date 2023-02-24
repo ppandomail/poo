@@ -32,8 +32,34 @@
 * [Java, como programar (Deitel & Deitel)](biblio/)
 * [Apuntes (Pablo Pandolfo)](doc/)
 
-## Condiciones para aprobar
+## Cronograma UNO
 
-* 80% asistencia
-* Aprobar 2 parciales con nota >= 4
-* Final con nota >= 4
+| **Clase** | **Fecha** | **Tema** |
+| -- | -- | -- |
+| 01 | Semana 13/03 | Presentación. Introducción POO |
+| 02 | Semana 20/03 | Introducción Java |
+| 03 | Semana 27/03 | Encapsulamiento |
+| 04 | Semana 03/04 | Encapsulamiento |
+| 05 | Semana 10/04 | Herencia |
+| 06 | Semana 17/04 | Herencia |
+| 07 | Semana 24/04 | Polimorfismo |
+| 08 | Semana 01/05 | Polimorfismo |
+| 09 | Semana 08/05 | **1er. Parcial** |
+| 10 | Semana 15/05 | Colecciones |
+| 11 | Semana 22/05 | Colecciones |
+| 12 | Semana 29/05 | Excepciones |
+| 13 | Semana 05/06 | Archivos |
+| 14 | Semana 12/06 | Generics y Annotations. **Entrega TP** |
+| 15 | Semana 19/06 | **2do. Parcial**|
+| 16 | Semana 26/06 | **Recuperatorios**. Cierre de Notas |
+
+## Criterios de evaluación UNO
+
+* **Regularidad**
+  * Dos parciales, con nota >= 4
+  * 80% asistencia
+  * Resolución TP Obligatorio
+  * Dos recuperatorios, con nota >= 4
+
+* **Final (Alumnos Regulares)**
+  * Final, con nota >= 4 oral y/o escrito
