@@ -35,6 +35,6 @@
 
 ## Condiciones para aprobar
 
-* 75% asistencia
+* 80% asistencia
 * Aprobar 2 parciales con nota >= 4
 * Final con nota >= 4
