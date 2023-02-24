@@ -3,7 +3,9 @@
 ## Docentes
 
 * Titular: Mg. Ing. Pablo Pandolfo
-* Adjunto: Ing. Leonardo Blautzik
+* Adjuntos:
+  * Ing. Leonardo Blautzik
+  * Ing. Roberto Guglielmino
 * Ayudantes:
   * Lic. Victor Desia
   * Sr. Dante Mendoza
@@ -29,6 +31,9 @@
 
 ## Bibliografía
 
+* [Eclipse Foundation](https://www.eclipse.org)
+* [Java](https://www.java.com/es/)
+* [StarUML](https://staruml.io)
 * [Java, como programar (Deitel & Deitel)](biblio/)
 * [Apuntes (Pablo Pandolfo)](doc/)
 
