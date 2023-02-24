@@ -8,7 +8,6 @@
   * Lic. Victor Desia
   * Sr. Dante Mendoza
   * Sr. Martin Ivaldi
-  * Sr. Lucas Fernandez
 
 ## Objetivos
 
