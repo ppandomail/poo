@@ -125,9 +125,9 @@
     }
 
     public static void main(String [] args) {
-      Fecha f1 = Fecha(23, 6, 1912);
-      Fecha f2 = Fecha(7, 6, 1954);
-      Fecha f3 = Fecha(); 
+      Fecha f1 = new Fecha(23, 6, 1912);
+      Fecha f2 = new Fecha(7, 6, 1954);
+      Fecha f3 = new Fecha(); 
     }
 
   }
