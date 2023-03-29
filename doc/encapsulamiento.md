@@ -304,7 +304,16 @@ public class SumadorTest {
 
 ## Actividad
 
-1. Defina una clase punto que tendrá dos atributos, de tipo real, x e y, que representarán las coordenadas del punto dentro del plano. Defina un método que tenga como argumento otro objeto de la clase punto y que calcule la distancia entre los dos puntos. Defina otro método que calcule la distancia de un objeto de la clase Punto al origen de coordenadas. Para probar esta funcionalidad, escriba un método main en el que se creen dos puntos, el primero de los cuales deberá tener las coordenadas 100.0, 200.0 y el segundo deberá tener las coordenadas 400.0, 800.0 y calcule e imprima la distancia entre ambos y sus distancias al origen de coordenadas.
+1. Defina una clase Punto que tendrá dos atributos, de tipo double, x e y, que representarán las coordenadas del punto dentro del plano. Implemente los siguientes métodos:
+
+    ```java
+    public boolean estaSobreElEjeX() {}
+    public boolean estaSobreElEjeY() {}
+    public boolean esElOrigenDeCoordenadas() {}
+    public double distanciaAlOrigen() {}
+    public static double distancia(Punto p1, Punto p2) {}
+    public double distancia(Punto p) {}
+    ```
 
 1. Defina una clase 'Monedero' que permita gestionar la cantidad de dinero de que una persona dispone en un momento dado. La clase deberá tener un constructor que permitirá crear un monedero con una cantidad de dinero inicial y deberá definir un método para meter dinero en el monedero, otro para sacarlo y finalmente, otro para consultar el disponible; solo podrá conocerse la cantidad de dinero del monedero a través de este último método. Por supuesto, no se podrá sacar más dinero del que haya en un momento dado en el monedero. Para probar el funcionamiento de la clase, escriba un método 'main' con una serie de instrucciones que hagan uso de los métodos definidos.
 
