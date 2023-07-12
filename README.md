@@ -41,30 +41,29 @@
 
 | **Clase** | **Fecha** | **Tema** |
 | -- | -- | -- |
-| 01 | Semana 13/03 | Presentación. Introducción POO |
-| 02 | Semana 20/03 | Introducción Java |
-| 03 | Semana 27/03 | Encapsulamiento: clases y objetos |
-| 04 | Semana 03/04 | Encapsulamiento: constructores y métodos. Sobrecargas |
-| 05 | Semana 10/04 | Herencia: jerarquías. Funcionamiento |
-| 06 | Semana 17/04 | Herencia: sobreescrituras |
-| 07 | Semana 24/04 | Polimorfismo: interfaces. Funcionamiento |
-| 08 | Semana 01/05 | Polimorfismo: implementaciones |
-| 09 | Semana 08/05 | **Primer Parcial** |
-| 10 | Semana 15/05 | Colecciones: Pilas, Colas y Listas |
-| 11 | Semana 22/05 | Colecciones: Mapas |
-| 12 | Semana 29/05 | Excepciones |
-| 13 | Semana 05/06 | Archivos |
-| 14 | Semana 12/06 | Genericidad y Anotaciones. **Entrega TP** |
-| 15 | Semana 19/06 | **Segundo Parcial**|
-| 16 | Semana 26/06 | **Recuperatorios**. Cierre de Cursada |
+| 01 | Semana 07/08 | Presentación. Introducción POO |
+| 02 | Semana 14/08 | Introducción Java |
+| 03 | Semana 21/08 | Encapsulamiento: clases y objetos |
+| 04 | Semana 28/08 | Encapsulamiento: constructores y métodos. Sobrecargas |
+| 05 | Semana 04/09 | Herencia: jerarquías. Funcionamiento |
+| 06 | Semana 11/09 | Herencia: sobreescrituras |
+| 07 | Semana 18/09 | Polimorfismo: interfaces. Funcionamiento |
+| 08 | Semana 25/09 | Polimorfismo: implementaciones |
+| 09 | Semana 02/10 | **Primer Parcial** |
+| 10 | Semana 09/10 | Colecciones: Pilas, Colas y Listas |
+| 11 | Semana 16/10 | Colecciones: Mapas |
+| 12 | Semana 23/10 | Excepciones |
+| 13 | Semana 30/10 | Archivos |
+| 14 | Semana 06/11 | Genericidad y Anotaciones |
+| 15 | Semana 13/11 | **Segundo Parcial**|
+| 16 | Semana 20/11 | **Recuperatorios**. Cierre de Cursada |
 
 ## Criterios de evaluación UNO
 
 * **Regularidad**
-  * Dos parciales, con nota >= 4
+  * Dos parciales prácticos en papel, con nota >= 4
   * 80% asistencia
-  * Resolución TP Obligatorio
-  * Dos recuperatorios, con nota >= 4
+  * Dos recuperatorios prácticos en papel, con nota >= 4
 
 * **Final (Alumnos Regulares)**
-  * Final, con nota >= 4 oral y/o escrito
+  * Final teórico en papel, con nota >= 4
