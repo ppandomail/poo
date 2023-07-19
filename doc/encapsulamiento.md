@@ -215,6 +215,44 @@
 
 ![Clase Coche](img/ejemplo-clase-coche.png)
 
+### Sintaxis básica de Python
+
+```python
+import random
+
+
+class Tambor():
+    posicion = 0
+
+    def girar(self):
+        r = random.randint(1, 8)
+        self.posicion = r
+
+    def mostrar(self):
+        return "[" + str(self.posicion) + "]"
+
+
+class Tragamonedas():
+    t1 = Tambor()
+    t2 = Tambor()
+    t3 = Tambor()
+
+    def activar(self):
+        self.t1.girar()
+        self.t2.girar()
+        self.t3.girar()
+
+    def mostrar(self):
+        return self.t1.mostrar() + self.t2.mostrar() + self.t3.mostrar()
+
+tambor = Tambor()
+tambor.girar()
+print(tambor.mostrar())
+tgm = Tragamonedas()
+tgm.activar()
+print(tgm.mostrar())
+```
+
 ## Enums
 
 * Para declarar variables con un conjunto restringido de valores.
