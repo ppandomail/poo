@@ -15,12 +15,14 @@
 * Refundiciones incorrectas -> **ClassCastException**
 * Usuarios esperan que el programa se comporte de forma sensata cuando se producen errores -> volver a un estado seguro.
 
+![Ejemplos de Exceptions](img/ex-ejemplos.JPG)
+
 ## Clasificación de Excepciones
 
 * **Exception**: se produce porque se ha cometido un error de programación. Recuperable.
 * **Error**: describe errores internos y el agotamiento de recursos dentro del sistema de ejecución de Java (JVM). No se deben lanzar objetos de este tipo. No recuperable.
 
-![Jerarquia Excepciones](img/jerarquia-excepciones.png)
+![Jerarquia Excepciones](img/ex-jerarquia.png)
 
 * **Comprobadas**:
   * El compilador verifica que el programador proporcione, o bien, un manejador o que lance la excepción.

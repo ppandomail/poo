@@ -22,6 +22,10 @@
 
 ![Cuenta Bancaria](img/herencia3.png)
 
+## Uso correcto
+
+![Herencia uso correcto](img/herencia-uso-correcto.JPG)
+
 ## Constructores
 
 * Los constructores NO se heredan de las superclases.
@@ -51,6 +55,10 @@ public boolean equals(Object obj) {
   ...
 }
 ```
+
+## Herencia en C++
+
+![Herencia en C++](img/herencia-c%2B%2B.jpg)
 
 ## Ejercicios
 

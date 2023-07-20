@@ -1,7 +1,8 @@
-# Introducción al POO
+# Introducción al Paradigma Orientado a Objetos
 
 ## ¿Qué es programación?
 
+* Es el proceso de **codificar un algoritmo** en el lenguaje de programación determinado, con el objetivo que sea ejecutado por la computadora.
 * Es una habilidad que se adquiere mejor con la **práctica** y el **ejemplo** más que con los libros (Alan Turing)
 
 ![Programación](img/programacion.png)
@@ -51,6 +52,9 @@
 * Representación:
   * Gráfica: **Diagrama de Flujo**
   * No gráfica: **Pseudocódigo**
+  * Formal: **Código de un lenguaje de programación**
+
+![Representación algoritmos](img/algoritmo.jpg)
 
 ## ¿Cómo se desarrolla un algoritmo?
 
@@ -82,11 +86,11 @@
 * Es un modelo que brinda reglas que permiten abstraer la realidad.
 * Tipos:
   * Operacionales (COMO)
-    * Imperativo: secuencia, ciclos y condiciones. Mutación de variables. Lenguajes: Fortran, C, Pascal, COBOL
-    * Orientado a Objetos: Objetos que tiene datos y comportamiento y se comunican enviándose mensajes. Lenguajes: Java, Python, Eiffel, Smalltack
+    * **Imperativo**: secuencia, ciclos y condiciones. Mutación de variables. Lenguajes: Fortran, C, Pascal, COBOL
+    * **Orientado a Objetos**: Objetos que tiene datos y comportamiento y se comunican enviándose mensajes. Lenguajes: Java, Python, Eiffel, Smalltack
   * Declarativos (QUE)
-    * Funcional: funciones que no manejan datos mutables o estados. Lenguajes: Lisp, Haskell
-    * Lógico: reglas y hechos basados en la lógica de predicado. Lenguajes: Prolog y dialectos.
+    * **Funcional**: funciones que no manejan datos mutables o estados. Lenguajes: Lisp, Haskell
+    * **Lógico**: reglas y hechos basados en la lógica de predicado. Lenguajes: Prolog y dialectos.
 
 ## ¿Qué es la POO?
 
@@ -109,10 +113,12 @@
 
 ## ¿Cuáles son las características del POO?
 
-* **Encapsulamiento**: ocultar detalles de implementación.
-* **Polimorfismo**: objetos responden al mismo mensaje (mismo comportamiento)
+* **Encapsulamiento**: ocultar detalles de implementación de un objeto.
+* **Polimorfismo**: objetos de diferentes tipos responden al mismo mensaje (mismo comportamiento)
 * **Clase**: describir la estructura del objeto, responsable de crear sus instancias.
-* **Herencia**: compartir conocimiento. Se dá en una jerarquía (clasificación)
+* **Herencia**: compartir conocimiento. Se dá en una jerarquía (clasificación). Un objeto adquiere las propiedades de otro objeto.
+
+![Pilares POO](img/poo-pilares.JPG)
 
 ## ¿Cuáles son las relaciones entre las clases?
 
@@ -128,6 +134,12 @@
 ## Ejemplo de jerarquía de clases
 
 ![Jerarquía](img/jerarquia.png)
+
+## Desafío UML
+
+![Desafío UML](img/uml-desafio.JPG)
+
+![Solución UML](img/uml-solucion.JPG)
 
 ## ¿Qué es un lenguaje de programación?
 
@@ -151,6 +163,12 @@
 * C#, Python, Ruby, Delphi son otros LOO muy utilizados.
 
 ![Genealogía](img/genealogia.png)
+
+## Proceso de AOO y DOO
+
+![Pasos AOO y DOO](img/aoo-doo-1.JPG)
+![Pasos AOO y DOO](img/aoo-doo-2.JPG)
+![Pasos AOO y DOO](img/aoo-doo-3.JPG)
 
 ## Actividad
 

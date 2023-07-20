@@ -108,9 +108,9 @@ System.out.println("Tamaño de la lista: " + lista.size());
 
 ### Stack
 
-* Es una lista ordenada
-* Solamente pueden eliminar o insertar en la cima de la lista.
-* LIFO (Last In First Out)
+![Pila](img/pila.JPG)
+
+![Pila aplicaciones](img/pila-app.JPG)
 
 ```java
 Stack<Integer> pila = new Stack<Integer>();
@@ -124,6 +124,14 @@ System.out.println("toString: " + pila);
 System.out.println("Esta vacio?: " + pila.empty());
 System.out.println("Elemento en el tope: " + pila.peek());
 ```
+
+## Cola
+
+![Cola](img/cola1.JPG)
+
+![Cola](img/cola2.JPG)
+
+![Cola aplicaciones](img/cola-app.JPG)
 
 ## Map
 

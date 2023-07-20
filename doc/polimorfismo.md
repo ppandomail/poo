@@ -55,7 +55,11 @@ package nombre_paquete;
 * Super Interfaces es una lista de nombres de interfaces separados por coma.
 * Una interfaz hereda todas las constantes y métodos de sus Super Interfaces.
 
-### Ejemplo
+### Ejemplo 1
+
+![Ejemplo Interface](img/interface-ejemplo.jpg)
+
+### Ejemplo 2
 
 ```java
 public interface Reseteable {

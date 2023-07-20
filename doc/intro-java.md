@@ -7,6 +7,14 @@
 1. Cuenta con una gran comunidad de más de 20 años.
 1. Altamente demandado en el mercado tecnológico.
 
+## Usos
+
+1. Desarrollo Android
+1. Aplicaciones en escritorio
+1. API web
+1. Servidores web
+1. Videojuegos
+
 ## Aspectos de Java
 
 * **Plataforma**: es un ambiente de software y/o hardware sobre el que se ejecuta un programa.
@@ -21,6 +29,10 @@
 * **Lenguaje**: posibilita el desarrollo de aplicaciones seguras, robustas sobre múltiples plataformas en redes heterogéneas y distribuidas.
   * Sintaxis agradable.
   * Semántica comprensible.
+
+## Evolución de Java
+
+![Evolución de Java](img/evolucion-java.jpg)
 
 ## Características de Java
 
@@ -120,7 +132,7 @@
   * Numéricos reales: float (4 bytes), double (8 bytes)
   * Lógico: boolean (1 byte)
   * Carácter: char (2 bytes)
-* Objetos (Clases, Interfaces, Enums)
+* No primitivos / Objetos (Clases, Interfaces, Enums)
 
 * Para los tipos primitivos existen clases “wrappers”:
   * byte       Byte
@@ -131,6 +143,10 @@
   * double     Double
   * boolean    Boolean
   * char       Character
+
+## Transformaciones de datos en Java
+
+![Transformaciones de datos en Java](img/transformaciones-datos.jpg)
 
 ## Clase String
 
@@ -174,6 +190,8 @@
 * Todo arreglo es de un tipo o una clase.
 * Se los instancia con el operador new
 * Son “zero-based”
+
+  ![Arrays](img/arrays.jpg)
 
   ```java
   char[] caracteres;

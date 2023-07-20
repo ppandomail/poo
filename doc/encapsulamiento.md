@@ -2,11 +2,15 @@
 
 ## Paquete
 
-* Es un conjunto de artefactos java relacionados de acuerdo a su función que proveen acceso protegido y administración de nombres.
+* Es un conjunto de artefactos java relacionados de acuerdo a su función que proveen:
+  * **acceso protegido**: controla la visibilidad de las clases, atributos y métodos, y
+  * **administración de nombres**: reduce los problemas de colisión de nombres entre los artefactos
 * Ejemplo de paquetes que son parte del lenguaje:
-  * java.lang: clases del lenguaje. Se importa por defecto.
-  * java.io: para manejo de Entrada/Salida.
-* El programador agrupa sus artefactos en paquetes, anteponiendo la cláusula **package** nombrepaquete; a las declaraciones de todos los artefactos agrupados.
+  * **java.lang**: clases del lenguaje. Se importa por defecto.
+  * **java.io**: para manejo de Entrada/Salida.
+  * **java.sql**: para base de datos.
+  * **java.util**: para utilidades varias.
+* El programador agrupa y organiza sus artefactos en paquetes, anteponiendo la cláusula **package** nombrepaquete; a las declaraciones de todos los artefactos agrupados.
 * Se recomienda utilizar el nombre de dominio de Internet al revés. Ejemplo: ar.edu.uno.poo.xxx
 * El alcance de un identificador de artefacto es todo el paquete en donde se declara el artefacto, por lo tanto no puede haber dos artefactos con el mismo nombre dentro de un mismo paquete.
 
@@ -99,7 +103,7 @@
 | protected | X | X | X | |
 | public | X | X | X | X |
 
-### Constructor
+## Constructores
 
 * Si una clase no declara ningún constructor, entonces tiene el constructor por defecto.
   * Números se inicializan en 0.
@@ -133,6 +137,8 @@
   }
   ```
 
+## Variables
+
 ### Modificadores de las variables
 
 * **static**: variables de clase (variable compartida).
@@ -160,6 +166,10 @@
     }
   }
   ```
+
+## Métodos
+
+![Método](img/metodo.jpg)
 
 ### Métodos privados
 
@@ -217,6 +227,8 @@
 
 ### Sintaxis básica de Python
 
+![Ejemplo Python](img/python-ejemplo.jpg)
+
 ```python
 import random
 
@@ -264,8 +276,8 @@ print(tgm.mostrar())
       MINI, 
       MEDIANO, 
       GRANDE, 
-      EXTRA_GRANDE
-    };
+      EXTRA_GRANDE;
+    }
     ```
 
 * Ejemplo uso:
