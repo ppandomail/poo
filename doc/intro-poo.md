@@ -152,7 +152,7 @@
 
 * Todo es un objeto.
 * Todo objeto es instancia de una clase.
-* Todos los objetos de la misma clase pueden recibir los mismos   mensajes.
+* Todos los objetos de la misma clase pueden recibir los mismos mensajes.
 * Las clases se organizan en una estructura arbórea de raíz única, llamada jerarquía de herencia.
 
 ## Genealogía de los LOO
@@ -164,7 +164,7 @@
 
 ![Genealogía](img/genealogia.png)
 
-## Proceso de AOO y DOO
+## Proceso de AOO (Análisis Orientado a Objetos) y DOO (Diseño Orientado a Objetos)
 
 ![Pasos AOO y DOO](img/aoo-doo-1.JPG)
 ![Pasos AOO y DOO](img/aoo-doo-2.JPG)
