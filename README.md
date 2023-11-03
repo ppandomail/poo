@@ -37,7 +37,7 @@
 * [Java, como programar (Deitel & Deitel)](biblio/)
 * [Apuntes (Pablo Pandolfo)](doc/)
 
-## Cronograma UNO
+## Cronograma Tentativo UNO
 
 | **Clase** | **Fecha** | **Tema** |
 | -- | -- | -- |
