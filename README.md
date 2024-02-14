@@ -7,9 +7,7 @@
   * Ing. Leonardo Blautzik
   * Ing. Roberto Guglielmino
 * Ayudantes:
-  * Lic. Victor Desia
   * Lic. Dante Mendoza
-  * Sr. Martin Ivaldi
 
 ## Objetivos
 
