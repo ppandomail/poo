@@ -39,23 +39,23 @@
 
 | **Clase** | **Fecha** | **Tema** |
 | -- | -- | -- |
-| 01 | Semana 07/08 | Presentación. Introducción POO |
-| 02 | Semana 14/08 | Introducción Java |
-| 03 | Semana 21/08 | Encapsulamiento: clases y objetos |
-| 04 | Semana 28/08 | Encapsulamiento: constructores y métodos. Sobrecargas |
-| 05 | Semana 04/09 | Herencia: jerarquías. Funcionamiento |
-| 06 | Semana 11/09 | Herencia: sobreescrituras |
-| 07 | Semana 18/09 | Polimorfismo: interfaces. Funcionamiento |
-| 08 | Semana 25/09 | Polimorfismo: implementaciones |
-| 09 | Semana 02/10 | **Primer Parcial** |
-| 10 | Semana 09/10 | Colecciones: Pilas, Colas y Listas |
-| 11 | Semana 16/10 | Colecciones: Mapas |
-| 12 | Semana 23/10 | Excepciones |
-| 13 | Semana 30/10 | Archivos |
-| 14 | Semana 06/11 | Genericidad y Anotaciones |
-| 15 | Semana 13/11 | **Segundo Parcial**|
-| 16 | Semana 20/11 | **Recuperatorios**. Cierre de Cursada |
-
+| 01 | Semana 11/03 | Presentación. Introducción POO |
+| 02 | Semana 18/03 | Introducción Java |
+| 03 | Semana 25/03 | Encapsulamiento: clases y objetos |
+| 04 | Semana 01/04 | Encapsulamiento: constructores y métodos. Sobrecargas |
+| 05 | Semana 08/04 | Herencia: jerarquías. Funcionamiento |
+| 06 | Semana 15/04 | Herencia: sobreescrituras |
+| 07 | Semana 22/04 | Polimorfismo: interfaces. Funcionamiento |
+| 08 | Semana 29/04 | Polimorfismo: implementaciones |
+| 09 | Semana 06/05 | **Primer Parcial** |
+| 10 | Semana 13/05 | Colecciones: Pilas, Colas y Listas |
+| 11 | Semana 20/05 | Colecciones: Mapas |
+| 12 | Semana 27/05 | Excepciones |
+| 13 | Semana 03/06 | Archivos |
+| 14 | Semana 10/06 | Genericidad y Anotaciones |
+| 15 | Semana 17/06 | **Segundo Parcial**|
+| 16 | Semana 24/06 | **Recuperatorios**. Cierre de Cursada |
+    
 ## Criterios de evaluación UNO
 
 * **Regularidad**
