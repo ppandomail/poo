@@ -1,5 +1,3 @@
-package pacman;
-
 public class DemoMaze {
 
 	public static void main(String[] args) {

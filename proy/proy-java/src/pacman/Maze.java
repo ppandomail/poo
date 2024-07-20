@@ -1,5 +1,3 @@
-package pacman;
-
 public class Maze {
 	
 	public static final char FOOD = '.';

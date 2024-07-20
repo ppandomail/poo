@@ -12,6 +12,8 @@ public class DemoPuntoGenerico {
 		System.out.println(p);
 		
 		Punto<Double, Character> p5 = new Punto<Double, Character>(9.8, 'G');
+		System.out.println(p5.getY());
+		System.out.println(p5);
 		
 		ArrayList<Double> valoresConocidos = new ArrayList<Double>();
 		valoresConocidos.add(9.8);
@@ -23,9 +25,10 @@ public class DemoPuntoGenerico {
 		constantesConocidas.add('P');
 		constantesConocidas.add('E');
 		
-		
 		Punto<ArrayList<Double>, ArrayList<Character>> p6 = new Punto<ArrayList<Double>, ArrayList<Character>>(valoresConocidos, constantesConocidas);
-		
+		System.out.println(p6.getY());
+		System.out.println(p6);
+
 		Punto<String, Integer> p2 = new Punto<String, Integer>("Nov", 2);
 		System.out.println(p2.getX());
 		System.out.println(p2);

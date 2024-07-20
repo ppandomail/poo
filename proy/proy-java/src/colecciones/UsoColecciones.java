@@ -1,6 +1,5 @@
 package colecciones;
 
-import java.util.AbstractList;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -14,7 +13,6 @@ public class UsoColecciones {
 	public static void main(String[] args) {
 		// ArrayList
 		List<String> arrayList = new ArrayList<String>();
-		AbstractList<String> arrayList2 = new ArrayList<String>();
 		arrayList.add("POO1");
 		arrayList.add("SO");
 		System.out.println(arrayList.get(1));
