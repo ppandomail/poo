@@ -1,4 +1,4 @@
-# Introducción al Lenguaje Java
+# Introducción a los Lenguajes Orientados a Objetos
 
 ## Razones para aprender Java
 
@@ -29,10 +29,6 @@
 * **Lenguaje**: posibilita el desarrollo de aplicaciones seguras, robustas sobre múltiples plataformas en redes heterogéneas y distribuidas.
   * Sintaxis agradable.
   * Semántica comprensible.
-
-## Evolución de Java
-
-![Evolución de Java](img/evolucion-java.jpg)
 
 ## Características de Java
 
@@ -91,14 +87,6 @@
   * NetBeans
   * BlueJ
   * Visual Studio
-
-## Eclipse
-
-* Es un IDE abierto y extensible (plugins)
-* En 2001 IBM y Borland crearon la Fundación Eclipse
-* [Sitio web](www.eclipse.org)
-
-![Atajos del Eclipse](img/eclipse.png)
 
 ## Hola Mundo
 
