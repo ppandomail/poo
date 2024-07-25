@@ -2,291 +2,329 @@
 
 ## Paquete
 
-* Es un conjunto de artefactos java relacionados de acuerdo a su función que proveen:
-  * **acceso protegido**: controla la visibilidad de las clases, atributos y métodos, y
-  * **administración de nombres**: reduce los problemas de colisión de nombres entre los artefactos
-* Ejemplo de paquetes que son parte del lenguaje:
-  * **java.lang**: clases del lenguaje. Se importa por defecto.
-  * **java.io**: para manejo de Entrada/Salida.
-  * **java.sql**: para base de datos.
-  * **java.util**: para utilidades varias.
-* El programador agrupa y organiza sus artefactos en paquetes, anteponiendo la cláusula **package** nombrepaquete; a las declaraciones de todos los artefactos agrupados.
-* Se recomienda utilizar el nombre de dominio de Internet al revés. Ejemplo: ar.edu.uno.poo.xxx
-* El alcance de un identificador de artefacto es todo el paquete en donde se declara el artefacto, por lo tanto no puede haber dos artefactos con el mismo nombre dentro de un mismo paquete.
+=== "java"
 
-### Accesos estáticos
+* Directorios donde se almacenarán artefactos java (clases, interfaces, enumerados) relacionados entre sí
+* Ejemplos: **java.lang**, **java.io**, **java.sql**, **java.util**, etc.
 
-* Permiten llamar a un método o propiedad estática sin necesidad de hacer referencia al nombre de su clase.
-* La sintaxis general, es:
-  * Para un sólo método o propiedad:
+  ```java
+  package calculos;
 
-    ```java
-    import static paquete.Clase.metodo_o_propiedad_static;
-    ````
+  public class CalculosGenerales {
 
-  * Para todos los elementos estáticos de la clase:
+    public static double sumar(double a, double b) {
+      return a + b;
+    }
 
-    ```java
-    import static paquete.Clase.*; 
-    ```
+  }
+  ```
 
-* Ejemplo:
+  ```java
+  package demos;
+  import calculos.*;
 
-    ```java
-    import static java.lang.System.*;
-    out.println(“Hola”);  
-    exit(0);
-    ```
+  public class UsoCalculo {
+
+    public static void main(String [] args) {
+      System.out.println(CalculosGenerales.sumar(2.5, 3.4));
+    }
+
+  }
+  ```
+
+=== "python"
+
+* Directorios donde se almacenarán módulos (archivos con extensión .py) relacionados entre sí
+* Se crea una carpeta con un archivo \_\_init__.py
+
+  ```py
+  # Módulo calculos.py
+  def sumar(op1, op2):
+    return op1 + op2
+  ```
+
+  ```py
+  import calculos as calc
+
+  print(calc.sumar(2.5, 3.4))
+
+  # Otra forma:
+  # from calculos import *
+  # print(sumar(2.5, 3.4))
+  ```
 
 ## Clase
 
-* Cada clase, excepto la clase Object, es una extensión (subclase), de una sola clase ya existente (herencia simple).
-* En Java, una clase se compone de:
-  * Declaración.
-  * Cuerpo.
-* Ejemplo:
+* Modelo (plantilla, molde) donde se redactan las características comunes de un grupo de objetos
+* Tiene como responsabilidad crear objetos del mismo tipo
+* Se compone de una declaración y un cuerpo
 
-```java
-[package nombre_paquete;]
-{import nombre_paquete.[* | artefacto];}
-[modificadores_clase] class NombreClase [extends NombreSuperClase][implements {NombreInterface}] {
-  // Cuerpo de la clase
-  // Atributos (datos)
-  {[accesibilidad] [modificadores_atributo] tipo nombreAtributo [= valor];}
-  // Constructores: inicializan los atributos del objeto
-  {[accesibilidad] NombreClase([parámetros]) [throws NombreExceptions] {
-    // Cuerpo del constructor
-  }}
-  // Métodos (comportamiento)
-  {[accesibilidad] [modificadores_método] tipoRetorno nombreMetodo([parametros]) [throws NombreExceptions]{
-    // Cuerpo del método
-  }}
-  
-}
-```
+=== "java"
 
+* Cada clase, excepto la clase Object, es una extensión (subclase), de una sola clase ya existente (herencia simple)
 * Si una clase no declara explícitamente su superclase, entonces se asume que extiende a la clase Object
 
-### Modificadores de la Clase
-
-* **public**: clases que son accedidas por todos.
-* **package**: clases que son accedidas dentro el paquete donde fueron declaradas.
-* **abstract**: clases que no se pueden instanciar. Ejemplo Number. Toda clase que tenga 1 o más métodos abstractos tiene que declararse abstracta a su vez. Puede tener atributos y métodos concretos.
-* **final**: clases que no se pueden extender.  Ejemplo String. Todos los métodos de una clase final son final automáticamente NO así los atributos.
-
-* Son opcionales. Se pueden combinar, salvo **abstract** y **final**.
-
   ```java
-  public class MesaAlgarrobo extends Mesa {...}
-  abstract class Mesa {...}
-  public final class Conexion implements ErrorListener {...}
-  public abstract class Estado {...}
-  ````
+  public class Auto {
 
-### Convenciones de nombres
+    // atributos del objeto
+    private int ruedas;
+    private boolean enMarcha;
 
-* Las convenciones de nomenclatura en Java son importantes y determinan estándares de nombramiento de elementos en Java.
-* La convención más usada y recomendada es Camel Case en sus 2 variaciones:
-  * **UpperCamelCase**: convención que nombra las iniciales con Mayúsculas.
-    * Usos: Clases.
-    * Ejemplos: Person, CarJapanese, etc.
-  * **LowerCamelCase**: convención que nombra la primera inicial en minúsculas.
-    * Usos: Atributos y Métodos.
-    * Ejemplos: name, lastName, personalAddress, createPerson, getSalary, etc.
-
-### Accesibilidades
-
-| Accesibilidad | Clase | Paquete | Subclase | Mundo |
-| -- | -- | -- | -- | -- |
-| private | X | | | |
-| package | X | X | | |
-| protected | X | X | X | |
-| public | X | X | X | X |
-
-## Constructores
-
-* Si una clase no declara ningún constructor, entonces tiene el constructor por defecto.
-  * Números se inicializan en 0.
-  * Booleanos se inicializan en false.
-  * Objetos se inicializan en null.
-
-  ```java
-  public class Fecha {
-
-    private int dia;
-    private int mes;
-    private int anio;
-
-    public Fecha(int dia, int mes, int anio) {
-      this.dia = dia;
-      this.mes = mes;
-      this.anio = anio;
+    // constructor: inicializa los atributos del objeto
+    public Auto() {
+      this(4);
     }
 
-    // Sobrecarga del constructor
-    public Fecha() {
-      this(1, 1, 2000);
+    // otro constructor, sobrecarga de constructores
+    // this: objeto actual
+    public Auto(int ruedas) {
+      this.ruedas = ruedas;
+      this.enMarcha = false;
     }
+
+    // métodos
+    public void arrancar() {
+      this.enMarcha = true;
+    }
+
+    public String getEstado() {
+      return (this.enMarcha)? "En marcha" : "Parado";
+    }
+
+  }
+  ```
+
+  ```java
+  public class DemoAuto {
 
     public static void main(String [] args) {
-      Fecha f1 = new Fecha(23, 6, 1912);
-      Fecha f2 = new Fecha(7, 6, 1954);
-      Fecha f3 = new Fecha(); 
+      Auto auto = new Auto();
+      System.out.prinltn(auto.getEstado());
+      auto.arrancar();
+      // auto.enMarcha = false es un error porque está encapsulado
+      System.out.prinltn(auto.getEstado());
     }
 
   }
   ```
 
-## Variables
+=== "python"
 
-### Modificadores de las variables
+  ```py
+  class Auto:
+    
+    # constructor: inicializa los atributos del objeto
+    # self: objeto actual
+    def __init__(self, ruedas=4):
+      # atributos del objeto
+      # prefijo __ significa private
+      self.__ruedas = ruedas
+      self.__enmarcha = False
 
-* **static**: variables de clase (variable compartida).
-* **transient**: no persistentes.
-* **volatile**: indica a la JVM que la variable puede ser modificada en forma asincrónica por cualquier thread.
-* **final**: constantes. Deben recibir valor inicial cuando se construye el objeto. En lo sucesivo, el campo o atributo no podrá ser modificado. Ejemplo: Math.PI
-
-  ```java
-  public static final double PI = 3.14….;
+    # métodos
+    def arrancar(self):
+      self.__enmarcha = True
+    
+    def get_estado(self):
+      if self.__enmarcha:
+        return 'En marcha'
+      else:
+        return 'Parado'
+    
+  auto = Auto()
+  print(auto.get_estado())
+  auto.arrancar()
+  auto.__enmarcha = False    # no hay error, tampoco modifica porque está encapsulado
+  print(auto.get_estado())
   ```
 
-### Alcance de las variables
+## Modificadores en Java
 
-* Bloque de código en donde es accesible la variable.
-* Hay 3 categorías: a nivel clase, a nivel método, a nivel bloque.
+| Modificadores de clase | | Ejemplo |
+| -- | -- | -- |
+| **public**   | accedidas por todos | public class Auto {} |
+| **package**  | accedidas dentro el paquete donde fueron declaradas | class Auto {} |
+| **abstract** | no se pueden instanciar | public abstract class Vehiculo {} |
+| **final**    | no se pueden extender | public final class Auto {} |
 
-  ```java
-  public class MiClase {
-    String s;
-    public void miMetodo(boolean b) {
-      int s;
-      if (b) {
-        long s;
-      }
-    }
-  }
-  ```
+| Modificadores de atributos | | Ejemplo |
+| -- | -- | -- |
+| **static** | variables de clase (variable compartida) | private static int contador; |
+| **final**  | constantes                               | private static final double PI = 3.14; |
 
-## Métodos
+| Modificadores de métodos | | Ejemplo |
+| -- | -- | -- |
+| **abstract**     | no tiene implementación. Debe ser miembro de una clase abstracta | public abstract double getSalary(); |
+| **static**       | no necesita de un objeto que lo controle. Lo invoca la clase | public static double pow(base, exp) {} |  
+| **final**        | no puede ser redefinido por las subclases | public final String toLowerCase() {} |
+| **native**       | está implementado en otro lenguaje | public native void diHola() {} |
+| **synchronized** | permite que múltiples objetos invoquen el mismo método con exclusión mutua | public synchronized void imprimir() {} |
 
-![Método](img/metodo.jpg)
+## Convenciones de nombres
 
-### Métodos privados
+| | UpperCamelCase | LowerCamelCase | LowerSnackCase | UpperSnackCase |
+| -- | -- | -- | -- | -- |
+| **Paquete**    |             |                | calculos_generales |           |
+| **Clase**      | AutoJapones |                |                    |           |
+| **Atributo**   |             | J: lastName    | P: last_name       |           |
+| **Método**     |             | J: getSalary() | P: get_salary()    |           |
+| **Constantes** |             |                |                    | NUMERO_PI |
+
+## Métodos privados
 
 * Se declaran métodos privados cuando:
-  * Demasiado cerca de la implementación.
-  * Requieren un determinado orden de llamada.
-  * Se utilizan en las operaciones de la propia clase.
-* La base del encapsulamiento se basa en que determinados métodos o atributos **no deben ser de acceso público por seguridad de manejo de datos**.
+  * Demasiado cerca de la implementación
+  * Requieren un determinado orden de llamada
+  * Se utilizan en las operaciones de la propia clase
+* La base del encapsulamiento se basa en que determinados métodos o atributos **no deben ser de acceso público por seguridad de manejo de datos**
+
+=== "java"
 
   ```java
   public class Laptop {
+
     private Color color;
     private String marca;
-    private double tamanio;
-
+    
     public void encender() {...}
     public void apagar() {...}
     public void reiniciar() {...}
-    private void cambiarMemoriaRAM() {...}
+    private void cambiarRAM() {...}
     private void cambiarHDD() {...}
-    private void cambiarFuenteEnergia() {...}
   }
   ```
 
-### Modificadores de los métodos
+=== "python"
 
-* **abstract**: no tiene implementación. Debe ser miembro de una clase abstracta. Actúan como reservas de espacio para los métodos que se implementan en las subclases.
-* **static**: no necesita de un objeto que lo controle. Ejemplo: Math.pow  
-  * Métodos factoría: Métodos estáticos que retornan objetos de su propia clase. Ejemplo: NumberFormat.getCurrencyInstance()
-* **final**: el método no puede ser redefinido por las subclases.
-* **native**: el método está implementado en otro lenguaje.
-* **synchronized**: permite que múltiples objetos invoquen el mismo método con exclusión mutua.
+  ```py
+  class Laptop {
 
-### Lista de parámetros variables de los métodos
+    def __init__(self, color, marca):
+      self.color = color
+      self.marca = marca
+    
+    def encender(self):
+      pass
 
-* Número variable de argumentos (varargs). Ejemplo:
+    def apagar(self):
+      pass
+
+    def reiniciar(self):
+      pass
+
+    def __cambiarRAM(self):
+      pass
+
+    def __cambiarHDD(self):
+      pass
+
+  }
+  ```
+
+## Argumetos variables (varargs)
+
+=== "java"
 
   ```java
-  public void unMetodo(Object...args) {
-  //args es manipulado como un arreglo de Objects
+  public static void main(String[] args) {
+    System.out.println(sum_all(1));
+    System.out.println(sum_all(1, 2));
+    System.out.println(sum_all(1, 2, 3));
   }
 
-  public static void main(String[] args) {
-    objeto.unMetodo(new Punto());
-    objeto.unMetodo(new Punto(), new Integer(3));
-    objeto.unMetodo(new Integer(3), “Hola”, “Mundo”);
+  public static double sum_all(Double...varargs) {
+    double suma = 0;
+    for (Double v : varargs)
+      suma += v;
+    return suma;
   }
   ```
 
-### Sintaxis básica de Java
+=== "python"
 
-![Sintaxis](img/sintaxis.jpg)
+  ```py
+  def sum_all(*varargs):
+      suma = 0
+      for v in varargs:
+          suma += v
+      return suma
 
-![Clase Coche](img/ejemplo-clase-coche.png)
+  print(sum_all(1))
+  print(sum_all(1, 2))
+  print(sum_all(1, 2, 3))
+  ```
 
-### Sintaxis básica de Python
+### Sintaxis básica
 
-![Ejemplo Python](img/python-ejemplo.jpg)
+=== "java"
 
-```python
-import random
+  ![Sintaxis](img/sintaxis.jpg)
 
+  ![Clase Coche](img/ejemplo-clase-coche.png)
 
-class Tambor():
-    posicion = 0
+=== "python"
 
-    def girar(self):
-        r = random.randint(1, 8)
-        self.posicion = r
+  ![Ejemplo Python](img/python-ejemplo.jpg)
 
-    def mostrar(self):
-        return "[" + str(self.posicion) + "]"
+  ```py
+  import random
 
+  class Tambor():
 
-class Tragamonedas():
-    t1 = Tambor()
-    t2 = Tambor()
-    t3 = Tambor()
+      posicion = 0
 
-    def activar(self):
-        self.t1.girar()
-        self.t2.girar()
-        self.t3.girar()
+      def girar(self):
+          r = random.randint(1, 8)
+          self.posicion = r
 
-    def mostrar(self):
-        return self.t1.mostrar() + self.t2.mostrar() + self.t3.mostrar()
+      def mostrar(self):
+          return "[" + str(self.posicion) + "]"
 
-tambor = Tambor()
-tambor.girar()
-print(tambor.mostrar())
-tgm = Tragamonedas()
-tgm.activar()
-print(tgm.mostrar())
-```
+  class Tragamonedas():
+    
+      t1 = Tambor()
+      t2 = Tambor()
+      t3 = Tambor()
+
+      def activar(self):
+          self.t1.girar()
+          self.t2.girar()
+          self.t3.girar()
+
+      def mostrar(self):
+          return self.t1.mostrar() + self.t2.mostrar() + self.t3.mostrar()
+
+  tambor = Tambor()
+  tambor.girar()
+  print(tambor.mostrar())
+  tgm = Tragamonedas()
+  tgm.activar()
+  print(tgm.mostrar())
+  ```
 
 ## Enums
 
-* Para declarar variables con un conjunto restringido de valores.
-* Enum es un objeto que posee objetos.
-* Ejemplo declaración:
-  
-    ```java
-    public enum Talle {
-      MINI, 
-      MEDIANO, 
-      GRANDE, 
-      EXTRA_GRANDE;
-    }
-    ```
+* Para declarar variables con un conjunto restringido de valores
 
-* Ejemplo uso:
+### Sin representación
 
-    ```java
-    Talle talle = Talle.MEDIANO;
-    ```
+=== "java"
 
-### Enumerado con representación
+  ```java
+  public enum Talle {
+    MINI, 
+    MEDIANO, 
+    GRANDE, 
+    EXTRA_GRANDE;
+  }
+  ```
+
+  ```java
+  Talle talle = Talle.MEDIANO;
+  ```
+
+### Con representación
 
   ```java
   public enum Talle {
@@ -300,57 +338,69 @@ print(tgm.mostrar())
   }
   ```
 
-## JUnit
+## Pruebas Unitarias
 
-* Es un conjunto de clases (framework) que permite realizar la ejecución de clases Java de manera controlada, para poder evaluar si el funcionamiento de cada uno de los métodos de la clase se comporta como se espera.
-* Es decir, en función de algún valor de entrada se evalúa el valor de retorno esperado; si la clase cumple con la especificación, entonces JUnit devolverá que el método de la clase pasó exitosamente la prueba; en caso de que el valor esperado sea diferente al que regresó el método durante la ejecución, JUnit devolverá un fallo en el método correspondiente.
-* [Link](http://www.vogella.com/tutorials/JUnit/article.html)
-* [Sitio Oficial](https://junit.org/junit5/docs/current/user-guide/)
-* Ejemplo:
+* Evaluar si el funcionamiento de cada uno de los métodos de la clase se comporta como se espera
+* El resultado de la prueba puede ser PASS o FAIL
 
-```java
-public class Sumador {
-  private int operando1;
-  private int operando2;
+=== "java"
 
-  public Sumador(int operando1, int operando2){
-    this.operando1 = operando1;
-    this.operando2 = operando2;
+  ```java
+  public class Matematicas {
+    
+    public static int sumar(int op1, int op2) {
+      return op1 + op2;
+    }
+
   }
+  ```
 
-  public int sumar() {
-    return operando1 + operando2;
+  ```java
+  import static org.junit.jupiter.api.Assertions.assertEquals;
+  import org.junit.jupiter.api.Test;
+  public class SumadorTest {
+
+    @Test
+    public testSuma1Y2() {
+      assertEquals(3, Matematicas.sumar(1, 2));
+    }
+
   }
+  ```
 
-}
+=== "python"
+
+```py
+class Matematicas:
+
+  @classMethod
+  def sumar(op1, op2):
+    return op1 + op2
 ```
 
-```java
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import org.junit.jupiter.api.Test;
-public class SumadorTest {
+```py
+import unittest
 
-  @Test
-  public test1() {
-    Sumador sumador = new Sumador(1, 2);
-    assertEquals(3, sumador.sumar());
-  }
+class SumadorTest(unittest.TestCase):
 
-}
+  def test_suma_1_y_2(self):
+    self.assertEquals(3, Matematicas.sumar(1, 2))
+
+if __name__ == '__main__':
+    unittest.main()
 ```
 
-### Anotaciones JUnit
+## Gestión del ciclo de vida de las pruebas
 
-| Anotación | Descripción |
-| -- | -- |
-| @Test | Denota que un método es un método test |
-| @ParameterizedTest | Denota que un método es una prueba parametrizada |
-| @RepeatedTest | Para repetir pruebas.  Ejemplo: @RepeatedTest(10) |
-| @BeforeEach | Denota que el método se va a ejecutar antes de cada test (precondición) |
-| @AfterEach | Denota que el método se va a ejecutar después de cada test (postcondición) |
-| @BeforeAll | Denota que el método se va a ejecutar antes de la suite de tests |
-| @AfterAll | Denota que el método se va a ejecutar después de la suite de tests |
-| @Disabled | Usado para deshabilitar una clase test o un método test |
+| Anotación JUnit | Prefijo/Decorador Unittest | Descripción |
+| -- | -- | -- |
+| **@Test**         | **test_xxx**              | denota que es un método test |
+| **@BeforeEach**   | **setUp(self)**           | denota que el método se va a ejecutar antes de cada test (precondición) |
+| **@AfterEach**    | **tearDown(self)**        | denota que el método se va a ejecutar después de cada test (postcondición) |
+| **@BeforeAll**    | **setUpClass(cls)**       | denota que el método se va a ejecutar antes de la suite de tests |
+| **@AfterAll**     | **tearDownClass(cls)**    | denota que el método se va a ejecutar después de la suite de tests |
+| **@Disabled**     | **@unittest.skip('xxx')** | usado para deshabilitar una clase test o un método test |
+| **@RepeatedTest** |                           | para repetir pruebas. Ejemplo: @RepeatedTest(10) |
 
 ## Actividad
 
