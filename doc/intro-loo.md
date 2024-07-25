@@ -1,4 +1,4 @@
-# Introducción a los Lenguajes Orientados a Objetos (LOO)
+# Introducción a los Lenguajes Orientado a Objetos (LOO)
 
 ## Características
 
@@ -12,7 +12,7 @@
 | **Tipado**       | (?) estático, comprobación de tipos en tiempo de compilación | (?) dinámico, comprobación de tipos en tiempo de ejecución. Frecuencia de errores |
 | **Paradigma**    | (+) POO y multipropósito       | (+) POO y multipropósito |
 
-* **Conclusión**: Java es más rápido, pero Python es más simple. En ambos, la arquitectura es neutral (multiplataforma), no hay GOTO tampoco punteros
+**Conclusión**: Java es más rápido, pero Python es más simple. En ambos, la arquitectura es neutral (multiplataforma), no hay GOTO tampoco punteros
 
 * [Python vs Java](https://radixweb.com/blog/python-vs-java)
 * [Python vs Java](https://jaydevs.com/python-vs-java/)
@@ -45,12 +45,6 @@
 
 ## Comentarios
 
-|| Java | Python |
-| -- | -- | -- |
-| **Unilinea**      | `` | `# Esto es un comentario` |
-| **Multilínea**    | `/* Comentario en varias líneas */` | `""" Comentario en varias líneas """` |
-| **Documentación** | `/**  */` | |
-
 === "java"
 
   ```java
@@ -69,7 +63,7 @@
    *  @author Pablo Pandolfo, 
    *  @version 1.0
    */
-    ```
+  ```
 
 === "python"
 
