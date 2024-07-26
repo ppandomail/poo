@@ -1,129 +1,198 @@
 # Excepciones
 
-* Representan condiciones excepcionales que el programador quiere tratar.
-* La clase Exception extiende la clase Throwable.
-* La clase Throwable provee características útiles para tratar con excepciones. Específicamente:
-  * provee un slot para un mensaje.
-  * contiene un stack trace.
+* Representan condiciones excepcionales que el programador quiere tratar (controlar)
+* Aparecen cuando el programa intenta hacer una operación no permitida
+* Errores no detectados al momento de la compilación, si en tiempo de ejecución
+* Usuarios esperan que el programa se comporte de forma sensata cuando se producen errores -> volver a un estado seguro
 
-## Manejo de errores en tiempo de ejecución
-
-* Introducción de datos de formato incorrecto ->  **NumberFormatException**
-* Archivo con información incorrecta -> **IOException**
-* Índice matricial incorrecto -> **ArrayIndexOutOfBoundsException**
-* null.método() -> **NullPointerException**
-* Refundiciones incorrectas -> **ClassCastException**
-* Usuarios esperan que el programa se comporte de forma sensata cuando se producen errores -> volver a un estado seguro.
-
-![Ejemplos de Exceptions](img/ex-ejemplos.JPG)
+| Tipo | Clase Java | Clase Python |
+| -- | -- | -- |
+| División entre cero | **ArithmeticException**   | **ZeroDivisionError** |
+| Conversión de datos | **NumberFormatException** | **TypeError**         |
+| Archivo incorrecto  | **IOException**           | **FileNotFoundError** |
+| Acceso a espacio de arreglo inexistente | **ArrayIndexOutOfBoundsException** | **IndexError**  |
+| null.método()                           | **NullPointerException**           | **ValueError**  |
+| Refundiciones incorrectas               | **ClassCastException**             | |
+| Acceso a dict con key inexistente       |                                    | **KeyError**    |
+| Falla importación módulo                |                                    | **ImportError** |
 
 ## Clasificación de Excepciones
 
-* **Exception**: se produce porque se ha cometido un error de programación. Recuperable.
-* **Error**: describe errores internos y el agotamiento de recursos dentro del sistema de ejecución de Java (JVM). No se deben lanzar objetos de este tipo. No recuperable.
+=== "java"
 
-![Jerarquia Excepciones](img/ex-jerarquia.png)
+  ![Jerarquia Excepciones](img/ex-jerarquia.png)
 
-* **Comprobadas**:
-  * El compilador verifica que el programador proporcione, o bien, un manejador o que lance la excepción.
-  * Ejemplos: IOException, FileNotFoundException, SQLException, etc.
+  | Clase | | ¿Recuperable? |
+  | -- | -- | -- |
+  | **Exception** | se produce porque se ha cometido un error de programación | SI |
+  | **Error**     | describe errores internos y el agotamiento de recursos    | NO |
 
-* **No Comprobadas**:
-  * Son las excepciones comunes, como por ejemplo, acceder a una referencia nula, que no se comprueban.
-  * Ejemplos: Error y sus subclases (OutOfMemoryError, InternalError, etc.) y RuntimeException y sus subclases (NullPointerException, ArrayIndexOutOfBoundException, NumberFormatException, ClassCastException, ArithmeticException, etc.)
+  | Tipos de exceptions | | Ejemplos |
+  | -- | -- | -- |
+  | **Comprobadas** | compilador verifica que el programador proporcione, o bien, un manejador o que lance la excepción | IOException, FileNotFoundException, SQLException, ... |
+  | **No Comprobadas** | excepciones comunes que no se comprueban | Error y sus subclases (OutOfMemoryError, InternalError, ...) y RuntimeException y sus subclases (NullPointerException, ArrayIndexOutOfBoundException, NumberFormatException, ClassCastException, ArithmeticException, ...) |
+
+  ![Ejemplos de Exceptions](img/ex-ejemplos.JPG)
 
 ## Declaración
 
-* Para crear excepciones propias generalmente se hace una subclase de Exception.
+* Para crear excepciones propias generalmente se hace una subclase de Exception
 
-```java
-package nombre_paquete;
-{importaciones}
-[modificadores] class NombreException extends Exception {
-  ...
-}
-```
+=== "java"
+
+  ```java
+  public class NombreException extends Exception { }
+  ```
+
+=== "python"
+
+  ```py
+  class NombreException(Exception):
+    pass
+  ```
 
 ## ¿Cómo se causan excepciones?
 
-* Implícitamente: el programa hace algo ilegal.
-* Explícitamente: ejecución de la sentencia throw.
+* Implícitamente: el programa hace algo ilegal
+* Explícitamente: ejecución de la sentencia throw
 
-```java
-public class SinNaftaException extends Exception { }
+=== "java"
 
-public class Auto {
-  ...
-  if (nafta < 0.1)
-    throw new SinNaftaException();
-  ...
-}  
-```
+  ```java
+  public class SinNaftaException extends Exception { }
+
+  public class Auto {
+    
+    public void arrancar() {
+      if (nafta < 0.1)
+        throw new SinNaftaException();
+      ...
+    }
+
+  }  
+  ```
+
+=== "python"
+
+  ```py
+  class SinNaftaException(Exception):
+    pass
+
+  class Auto:
+
+    def arrancar(self):
+      if self.nafta < 0.1:
+        raise SinNaftaException()
+  ```
 
 ## ¿Cómo manejar una excepción?
 
+=== "java"
+
 ```java
-try {
-  // Código que levanta una excepción
-} catch (TipoExcepción nombre) {
-  // Código que se ejecuta en caso de excepción
-} finally {
-  // Código que se ejecuta siempre (si se produce o no la exception)
+public double divide(double op1, dpuble op2) {
+  try {
+    // código que levanta la excepción
+    return op1 / op2;
+  } catch (ArithmeticException ex) {
+    // código que se ejecuta en caso de excepción
+    System.out.println("No se puede dividir por cero");
+    return 0;
+  }
 }
 ```
+
+=== "python"
+
+  ```py
+  def divide(n1, n2):
+    try:
+      return n1 / n2
+    except ZeroDivisionError:
+      print('No se puede dividir por cero')
+      return 'operación errónea'
+  ```
 
 ## ¿Cómo manejar múltiples excepciones?
 
-```java
-try {
-  // sentencias;
-} catch (TipoExcepcion1 nombre) {
-} catch (TipoExcepcion2 nombre) {
-}
-// En aumento a Exception (de lo particular a lo general); al revés no compila.
-```
+=== "java"
 
-## Ejemplo
+  ```java
+  public void divide() {
+    try {
+      Scanner in = new Scanner(System.in);
+      double op1 = in.nextDouble();
+      double op2 = in.nextDouble();
+      in.close();
+      System.out.println("La división es " + op1 / op2);
+    } catch (NumberFormatException ex1) {
+      System.out.println("Valores incorrectos");
+    } catch (ArithmeticException ex) {
+      System.out.println("No se puede dividir por cero");
+    }
+    System.out.println("Cálculo finalizado");
+  }
+  // en aumento a Exception (de lo particular a lo general); al revés no compila
+  ```
 
-```java
-// Declaración y cuerpo del método que lanza excepciones
-public Object pop() throws SinElementosException {
-  if (this.getElementos().isEmpty())
-    throw new SinElementoException();
-  return this.getElementos().removeLast();
-}
+=== "python"
 
-// Uso del método
-try {
-  elemento = pila.pop();
-} catch (SinElementosException sinElementoException) {
-    sinElementoException.printStackTrace();
-}
-```
+  ```py
+  def divide():
+    try:
+      op1 = int(input('Num 1: '))
+      op2 = int(input('Num 2: '))
+      print('La división es ' + str(op1 / op2))
+    except ValueError:
+      print('Valores incorrectos')
+    except ZeroDivisionError:
+      print('No se puede dividir entre cero')
+    print('Cálculo finalizado')
+  ```
 
 ## Comportamiento de tipo reanudación
 
-```java
-Boolean continuar = Boolean.TRUE;
-while (continuar) {
-  try {
-    System.out.print("Introduce un número entero: ");
-    Scanner scanner = new Scanner(System.in);
-    Integer numero = scanner.nextInt();
-    scanner.close();
-    System.out.println("El cuadrado de " + numero + " = " + (numero * numero));
-    continuar = Boolean.FALSE;
-  } catch (Exception e) {}
-}
-```
+=== "java"
+
+  ```java
+  double op1 = 0;
+  double op2 = 0;
+  while (true) {
+    try {
+      Scanner in = new Scanner(System.in);
+      System.out.print("Num 1: ");
+      op1 = in.nextDouble();
+      System.out.print("Num 2: ");
+      op2 = in.nextDouble();
+      in.close();
+      break;
+    } catch (NumberFormatException e) {
+      System.out.println("Valores incorrectos. Intente nuevamente");
+    }
+    System.out.println(divide(op1, op2));
+  }
+  ```
+
+=== "python"
+
+  ```py
+  while True:
+    try:
+      n1 = int(input('Num 1: '))
+      n2 = int(input('Num 2: '))
+      break
+    except ValueError:
+      print('Valores incorrectos. Intente nuevamente')
+  print(divide(n1, n2))    
+  ```
 
 ## Sobre el uso de excepciones
 
-* Una condición de error es tratada sólo donde tiene sentido hacerlo y no en todo el nivel entre que ocurre y es tratada.
-* El código puede ser escrito como si todas las operaciones funcionaran correctamente.
-* Deben ser tratadas lo más específicamente posible.
-* No se deben dejar vacíos o solo imprimiendo el stack trace los bloques catch.
-* Stack Trace (Seguimiento de Pila): listado de todas las llamadas a métodos pendientes en un determinado momento de la ejecución de un programa.
+* Una condición de error es tratada sólo donde tiene sentido hacerlo y no en todo el nivel entre que ocurre y es tratada
+* El código puede ser escrito como si todas las operaciones funcionaran correctamente
+* Deben ser tratadas lo más específicamente posible
+* No se deben dejar vacíos o solo imprimiendo el stack trace los bloques catch
+* Stack Trace (Seguimiento de Pila): listado de todas las llamadas a métodos pendientes en un determinado momento de la ejecución de un programa
 
 ## Ejercicios
 

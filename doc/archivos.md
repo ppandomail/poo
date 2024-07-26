@@ -3,77 +3,110 @@
 ## Funciones
 
 * Administración del Sistema de Archivos (clase File)
-* Persistencia de datos (Buffering): guardar información más allá del tiempo de ejecución de un programa.
+* Persistencia de datos (Buffering): guardar información más allá del tiempo de ejecución de un programa
 
 ## Administración del Sistema de Archivos
 
-* **File**: proporciona información acerca de los archivos, de sus atributos, de los directorios, etc.
-* La clase File tiene 3 constructores:
-  * File(String path)
-  * File(String path, String name)
-  * File(File dir, String name)
-    * path: indica el camino hacia el directorio donde se encuentra el archivo.
-    * name: indica el nombre del archivo.
+=== "java"
 
-| Métodos de File |
-| -- |
-| getName():String |
-| getPath():String |
-| getParent():String |
-| exists():boolean |
-| canWrite():boolean |
-| canRead():boolean |
-| isFile():boolean |
-| isDirectory():boolean |
-| isHidden():boolean |
-| toURL():URL |
-| length():long |
-| lastModified():long |
-| mkdir():boolean |
-| delete():boolean |
-| renameTo(File):boolean |
-| createNewFile():boolean |
-| list():String[] |
-| listFiles():File[] |
-| list(FilenameFilter):String[] |
-| listFiles(FilenameFilter):File[] |
+  ```java
+  File f1 = new File("tmp/prueba.txt");
+  File f2 = new File("tmp", "prueba.txt");
+  File f3 = new File(new File("tmp"), "prueba.txt");
+  f1.getName();
+  f1.getPath();
+  f1.getParent();
+  f1.exists();
+  f1.canWrite();
+  f1.canRead();
+  f1.isFile();
+  f1.isDirectory();
+  f1.isHidden();
+  f1.length();
+  f1.lastModified();
+  f1.mkdir();
+  f1.delete();
+  f1.renameTo(new File("prueba2.txt"));
+  f1.createNewFile();
+  f1.list();                             // devuelve String[]
+  f1.listFiles();                        // devuelve File[]
+  f1.list(FilenameFilter);               // devuelve String[]
+  f1.listFiles(FilenameFilter);          // devuelve File[]
+  ```
+
+=== "python"
+
+  ```py
+  import os
+
+  os.rename(ruta1, ruta2)
+  os.remove(ruta)
+  os.path.isfile('./proy/PY')  # True si es un archivo
+  for f in os.listdir('.'):    # Lista de archivos y directorios
+    print(f.title())
+
+  os.mkdir(ruta)  # crea nuevo directorio
+  os.chdir(ruta)  # cambia directorio actual por ruta
+  os.getcwd()     # devuelve ruta directorio actual
+  os.rmdir(ruta)  # borra directorio de la ruta, siempre y cuando esté vacio
+  ```
 
 ## Persistencia de datos
 
-* Flujo de ENTRADA (**BufferedReader**): abstracción que consume información
-* Flujo de SALIDA (**BufferedWriter**): abstracción que produce información
+* Flujo de ENTRADA: abstracción que consume información
+* Flujo de SALIDA: abstracción que produce información
 * Operaciones de Flujo:
     1. Apertura del Flujo
     1. Lectura/Escritura en el flujo
     1. Cierre del Flujo
 
-![Flujos](img/flujos.png)
+    ![Flujos](img/flujos.png)
 
-## Persistencia de datos como objetos (objetos serializados)
+=== "java"
 
-```java
-// Lectura de Objetos
-ObjectInputStream ois = new ObjectInputStream(new FileInputStream(new File("tst.dat")));
-Punto p = (Punto) ois.readObject();
+  ```java
+  // escritura
+  BufferedWriter bw = new BufferedWriter(new FileWriter("prueba.txt"));
+  bw.write("hola");
+  bw.newLine();
 
-// Escritura de Objetos
-ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(new File("tst.dat")));
-oos.writeObject(new Punto(1, 2));
-```
+  // lectura
+  BufferedReader br = new BufferedReader(new FileReader("prueba.txt"));
+  while((linea = br.readLine()) != null)
+    System.out.println(linea);
+  ```
 
-## Persistencia de datos como texto
+=== "python"
 
-```java
-// Lectura de Texto
-BufferedReader br = new BufferedReader(new FileReader("prueba.txt"));
-while((linea = br.readLine()) != null)
-  System.out.println(linea);
+  ```py
+  from io import open
 
-// Escritura de Texto
-BufferedWriter bw = new BufferedWriter(new FileWriter("prueba.txt"));
-bw.write("hola");
-bw.newLine();
-```
+  # Si el archivo no existe, el método open lo crea
+  # 'w': escritura -> reemplaza
+  # 'a': append    -> agrega
+  fw = open('archivo.txt', 'w')    
+  fw.write('Hola mundo \n cruel')
+  fw.close()
+
+  # 'r': lectura
+  fr = open('archivo.txt', 'r')
+  texto = fr.read()           # devuelve todo el contenido del archivo
+  lines = fr.readLines()      # devuelve lista de lineas
+  print(texto)
+  print(lines[0])
+  fr.seek(0)                  # se cambia posición del puntero añ caracter en posición 0
+  fr.read(11)                 # lee hasta el caracter en posición 11
+  fr.close()
+
+  # 'r+': lectura/escritura
+  f = open('archivo.txt', 'r+')
+  f.write('Comienzo del texto')
+  lista = f.readlines()
+  lista[1] = 'linea incluida desde el exterior \n'
+  f.seek(0)
+  f.writelines(lista)
+  f.close()
+  ```
 
 ## Ejercicios
 
