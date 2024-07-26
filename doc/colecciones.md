@@ -2,161 +2,194 @@
 
 ## Concepto
 
-* Representa un grupo de objetos (elementos).
-* Es el almacén lógico donde guardar los elementos.
-* Son formas de organizar la información para manipular, buscar e insertar datos de manera eficiente.
+* Representa un grupo de objetos (elementos)
+* Es el almacén lógico donde guardar los elementos
+* Son formas de organizar la información para manipular, buscar e insertar datos de manera eficiente
+
+=== "java"
+
 * En Java se emplea la interfaz genérica Collection.
-* Tipos (interfaces):
-  * Set (HashSet, TreeSet, LinkedHashSet).
-  * List (ArrayList, LinkedList).
-  * Map (HashMap, TreeMap, LinkedHashMap).
 
-## Diagrama de decisión para uso de Colecciones Java
+  | Tipos (interfaces) | | Implementaciones |
+  | -- | -- | -- |
+  | **Set**  | colección que no puede contener elementos duplicados | HashSet, TreeSet, LinkedHashSet |
+  | **List** | sucesión de elementos. Admite duplicados | ArrayList, LinkedList |
+  | **Map**  | asocia claves a valores. No puede contener claves duplicadas y cada clave sólo puede tener asociado un valor | HashMap, TreeMap, LinkedHashMap |
 
-![Diagrama de decisión para uso de Colecciones Java](img/decision-colecciones.png)
+  ![Diagrama de decisión para uso de Colecciones Java](img/decision-colecciones.png)
 
-## Jerarquía
+  ![Jerarquía Colecciones Java](img/jerarquia-colecciones.png)
 
-![Jerarquía Colecciones Java](img/jerarquia-colecciones.png)
+  ```java
+  // array redimensionable que aumenta su tamaño según crece la colección de elementos
+  ArrayList<Integer> vector = new ArrayList<Integer>();
+  vector.add(2);     // agrega 2 al final
+  vector.add(1, 5);  // agrega 5 en la posición 1
+  vector.set(0, 3);  // sustituye elemento que se encuentra en posición 0 por el objeto 3
+  vector.get(1);     // devuelve elemento en la posición 1
+  vector.remove(2);  // elimina elemento en la posición 2
+  vector.toString(); // aplana a un string
+  vector.isEmpty();  // verifica si esta vacio
+  vector.indexOf(5); // devuelve posición del elemento 5, si no existe devuelve -1
+  vector.size();     // devuelve tamaño del vector
+  vector.contains(5);// verifica si está el elemento 5
+  vector.clear();    // elimina todos los elementos
 
-## Set
+  // for
+  for(int i = 0;  i < vector.size();  i++)
+    vector.get(i);
 
-* Define una colección que no puede contener elementos duplicados.
-* Implementaciones:
-  * **HashSet**: almacena los elementos en una tabla hash.  No importa el orden que ocupen los elementos.
-  * **TreeSet**: almacena los elementos ordenándolos en función de sus valores. Los elementos almacenados deben implementar la interfaz Comparable.
-  * **LinkedHashSet**: almacena los elementos en función del orden de inserción.
+  // for each
+  for(Object objeto: vector)
+    objeto
 
-## List
+  // Iterator
+  Iterator it = vector.iterator(); // se crea el iterador it para el array
+  while(it.hasNext())              // mientras queden elementos
+    it.next();                     // se obtienen
 
-* Define una sucesión de elementos. Admite duplicados.
-* Implementaciones:
-  * **ArrayList**: se basa en un array redimensionable que aumenta su tamaño según crece la colección de elementos. Es la que mejor rendimiento tiene sobre la mayoría de situaciones.
-  * **LinkedList**: se basa en una lista doblemente enlazada de los elementos, teniendo cada uno de los elementos un puntero al anterior y al siguiente elemento.
-  * **Stack**: LIFO (Last In First Out).
+  for (Iterator it = vector.iterator(); it.hasNext();)
+    it.next();
 
-### ArrayList
+  // ----------------------------------------------------------------------
 
-* Almacenan múltiples datos en una sola variable.
+  // lista doblemente enlazada de los elementos
+  List<Integer> lista = new LinkedList<Integer>();
+  lista.add(2);
+  lista.add(1, 5);
+  lista.add(3);
+  lista.remove(1);
+  lista.toString();
+  lista.isEmpty();
+  lista.get(1);
+  lista.size();
 
-```java
-ArrayList<Integer> vector = new ArrayList<Integer>();
-System.out.println("Esta vacio?: " + vector.isEmpty());
-vector.add(2);
-vector.add(5);
-vector.add(3);
-System.out.println("toString: " + vector);
-vector.remove(2);
-System.out.println("toString: " + vector);
-System.out.println("Esta vacio?: " + vector.isEmpty());
-System.out.println("Posición del elemento 5: " + vector.indexOf(5));
-System.out.println("Tamaño del vector: " + vector.size());
-```
+  // ----------------------------------------------------------------------
 
-| Método | Descripción |
-| -- | -- |
-| size() | Devuelve el número de elementos (int) |
-| add(x) | Agrega el objeto x al final. Devuelve true |
-| add(posicion, x) | Inserta el objeto x en la posición indicada |
-| get(posicion) | Devuelve el elemento que está en la posición indicada |
-| remove(posicion) | Elimina el elemento que se encuentra en la posición indicada. Devuelve el elemento eliminado |
-| remove(x) | Elimina la primera ocurrencia del objeto x. Devuelve true si el elemento está en la lista |
-| clear() | Elimina todos los elementos |
-| set(posicion, x) | Sustituye el elemento que se encuentra en la posición indicada por el objeto x. Devuelve el elemento sustituido |
-| contains(x) | Comprueba si la colección contiene al objeto x. Devuelve true o false |
-| indexOf(x) | Devuelve la posición del objeto x. Si no existe devuelve -1 |
+  // LIFO (Last In First Out)
+  Stack<Integer> pila = new Stack<Integer>();
+  pila.push(2);
+  pila.push(5);
+  pila.push(3);
+  pila.pop();
+  pila.toString();
+  pila.empty();
+  pila.peek();     // elemento en el tope
 
-* Recorridos de ArrayList
+  // ----------------------------------------------------------------------
 
-```java
-// for
-for(int i = 0;  i < nombreArray.size();  i++)
-  System.out.println(nombreArray.get(i));
+  // almacena claves en una tabla hash
+  HashMap<String, Object> map = new HashMap<String, Object>();
+  map.put("user", "ppando");
+  map.get("user");
 
-// for each
-for(Object objeto: nombreArray)
-  System.out.println(objeto);
+  // ----------------------------------------------------------------------
 
-// Iterator
-Iterator it = nombreArray.iterator();      // se crea el iterador it para el array
-while(it.hasNext())                        // mientras queden elementos
-  System.out.println(it.next());           // se obtienen y se muestran
+  // útil para almacenar y recuperar archivos de propiedades
+  Properties prop = new Properties();
+  prop.put("user", "ppando");
+  prop.get("user");
+  prop.load(new FileInputStream(new File("/prop.properties")));
+  ```
 
-for (Iterator it = nombreArray.iterator(); it.hasNext();)
-  System.out.println(it.next());
+=== "python"
 
-```
+```py
+# puede guardar distintos tipos de valores
+# se pueden expandir dinámicamente, agregando nuevos elementos
+lista_vacia = []
+lista = ['Maria', 'Pepe', 'Marta', 'Antonio']
+lista_lista = [1, [2, 3], 4]
 
-### LinkedList
+# list(c): crea una lista con los elementos de la secuencia o colección c.
+print(list())
+print(list((1, 2, 3)))
+print(list('python'))
 
-* Se componen de nodos que tienen dos atributos (dato y enlace).
-* []->[]->[]->null
+lista[:]   # Toda la lista
+lista[2]   # Marta
+lista[7]   # IndexError: list index out of range
+lista[-2]  # Marta
+lista[0:3] # ['Maria', 'Pepe', 'Marta']
+lista[1:]  # ['Pepe', 'Marta', 'Antonio']
+lista[:2]  # ['Maria', 'Pepe']
 
-```java
-List<Integer> lista = new LinkedList<Integer>();
-System.out.println("Esta vacia?: " + lista.isEmpty());
-lista.add(2);
-lista.add(1, 5);
-lista.add(3);
-System.out.println("toString: " + lista);
-lista.remove(1);
-System.out.println("toString: " + lista);
-System.out.println("Esta vacia?: " + lista.isEmpty());
-System.out.println("Elemento en pos 1?: " + lista.get(1));
-System.out.println("Tamaño de la lista: " + lista.size());
-```
+# operaciones que no modifican la lista
+len(lista) # 4
+min(lista)
+max(lista)
+sum(lista)
+lista.index('Antonio')  # 3
+lista.count('Antonio')  # 1
+'Pepe' in lista         # True
+'Juan' in lista         # False
 
-### Stack
+# Operaciones que modifican la lista
+lista.append('Ana')             # agrega al final
+lista.insert(2, 'Ana')          # agrega en índice 2
+lista.extend(['Luis', 'Pablo']) # une listas al final
+lista.remove('Ana')
+lista.pop()                     # elimina último elemento
+lista.sort()
+lista.reverse()
 
-![Pila](img/pila.JPG)
+# Listas por comprensión
+lista = [1, 2, 3, 4, 5, 6]
+[x*2 for x in lista if x > 2]
 
-![Pila aplicaciones](img/pila-app.JPG)
+# -----------------------------------------------------------------------
 
-```java
-Stack<Integer> pila = new Stack<Integer>();
-System.out.println("Esta vacia?: " + pila.empty());
-pila.push(2);
-pila.push(5);
-pila.push(3);
-System.out.println("toString: " + pila);
-pila.pop();
-System.out.println("toString: " + pila);
-System.out.println("Esta vacio?: " + pila.empty());
-System.out.println("Elemento en el tope: " + pila.peek());
-```
+# listas inmutables
+# ventajas: + rápidas en cuanto a ejecución y - espacio (mayor optimización)
+tupla_vacia = ()
+tupla = ('Juan', 13, 1, 1995)
+tupla_tupla = ((1, 2, 3), (4, 5, 6))
 
-## Cola
+# tuple(c): crea una tupla con los elementos de la secuencia o colección c.
+print(tuple())
+print(tuple([1, 2, 3]))
+print(tuple('python'))
 
-![Cola](img/cola1.JPG)
+tupla[1]             # 13
+len(tupla)           # 4
+tupla.count(9)       # 1
+tupla.index('Juan')  # 0
+'Juan' in tupla      # True
 
-![Cola](img/cola2.JPG)
+list(tupla)          # Convierte tupla en lista
+tuple([1, 2])        # Convierte lista en tupla
 
-![Cola aplicaciones](img/cola-app.JPG)
+nom, dd, mm, yyyy = tupla # desempaquetado de tupla
+print(nom)                # 'Juan'
 
-## Map
+# -----------------------------------------------------------------------
 
-* Asocia claves a valores. No puede contener claves duplicadas y; cada clave, sólo puede tener asociado un valor.
-* Implementaciones:
-  * **HashMap**: almacena las claves en una tabla hash. Es la implementación con mejor rendimiento de todas pero no garantiza ningún orden a la hora de realizar iteraciones.
-  * **TreeMap**: almacena las claves ordenándolas en función de sus valores. Las claves almacenadas deben implementar la interfaz Comparable.
-  * **LinkedHashMap**: almacena las claves en función del orden de inserción.
-  * **Properties**: útil para almacenar y recuperar archivos de propiedades (opciones de configuración para programas).
+# asociación de tipo clave : valor
+# los elementos almacenados no están ordenados.
+dicc_vacio = {}
+dicc = {'Arg':'Bs As', 'Chile':'Santiago', 'Brasil':'Brasilia'}
+dicc_dicc = {'nom_full': {'nom': 'pp', 'ape': 'perez'}, 'edad': 45}
 
-### Properties
+# Acceso a valores
+dicc['Brasil']          # 'Brasilia'
+dicc.get('Brasil')      # 'Brasilia'
 
-```java
-Properties prop = new Properties();
-prop.put(“user”, “ppando”);
-prop.get(“user”);
-prop.load(new FileInputStream(new File(“/prop.properties")));
-```
+# Operaciones que no modifican a un diccionario
+len(dicc)     # 3
+min(dicc)
+max(dicc)
+sum(dicc)
 
-### HashMap
+'España' in dicc  # False
+dicc.keys()       # ['Arg', 'Chile', 'Brasil']
+dicc.values()     # ['Bs As', 'Santiago', 'Brasilia']
+dicc.items()
 
-```java
-HashMap<String, Object> map = new HashMap<String, Object>();
-map.put("user", "ppando");
-map.get("user");
+# Operaciones que modifican a un diccionario
+dicc['Arg'] = 'Buenos Aires'            # agregar elemento
+dicc.update({'Uruguay': 'Montevideo'})  # actualiza
+dicc.pop('Uruguay')                     # elimina elemento
+dicc.clear()
 ```
 
 ## Ejercicios
