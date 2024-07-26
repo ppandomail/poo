@@ -1,104 +1,154 @@
 # Genericidad
 
-* Consiste en escribir código que se puede reutilizar para objetos de muy distintos tipos.
-* Antes de JDK 5.0, la programación genérica en Java siempre se realizaba por herencia (Object).
-* Problemas: Se necesita una refundición siempre que se recupera un valor y no hay comprobación de errores. Un error de compilación es mucho mejor que una excepción de refundición (ClassCastException) durante la ejecución.
-* JDK 5.0 ofrece una solución mejor: los parámetros de tipo.
-* Ventajas: programas fáciles de leer y seguros (no se necesita refundir).
-* Desventajas: no es tan fácil implementarlas.
+* Consiste en escribir código con **variables de tipos (TV)** que se puede reutilizar para objetos de muy distintos tipos
 
 ## Convención de nombres de las variables de tipos
 
 | Nombre | Descripción | Ejemplo |
 | -- | -- | -- |
-| E | Tipo de elemento de las colecciones | ArrayList\<E> |
-| K | Tipo de clave | Hashtable<K,V> |
-| V | Valor de las tablas | Dictionary<K,V> |
-| T, U, V | Absolutamente cualquier tipo | Comparable\<T> |
+| **E**       | Tipo de elemento de las colecciones | ArrayList\<E> |
+| **K**       | Tipo de clave                       | Hashtable<K,V> |
+| **V**       | Valor de las tablas                 | Dictionary<K,V> |
+| **T, U, V** | Absolutamente cualquier tipo        | Comparable\<T> |
 
-## Clase genérica
+## Genérico con Método/Función
 
-* Es una clase que tiene una o más variables de tipo.
+=== "java"
 
-```java
-public class Pareja <T> {
-  private T primero;
-  private T segundo;
-  public Pareja() {
-    this(null, null); 
-  }
-  public Pareja(T primero, T segundo) {
-    this.primero = primero; 
-    this.segundo = segundo;
-  }
-  public T getPrimero() {
-    return this.primero; 
-  }
-  public T getSegundo() {
-    return this.segundo; 
-  }
-}
-```
+  ```java
+  // se puede definir métodos genéricos con variables de tipos sin que la clase sea genérica
+  public class Colecciones {
 
-* Los tipos genéricos se particularizan reemplazando las variables de tipo por tipos:
+    public static <T> T getPrimero(T[] items) {
+      if (items == null) return null;
+      if (items.length == 0) return null;
+      return items[0];
+    }
 
-```java
-Pareja<String> pareja1 = new Pareja<String>();
-Pareja<String> pareja2 = new Pareja<String>("1", "2");
-Pareja<Integer> pareja3 = new Pareja<Integer>(3, 4);
-Pareja<Double> pareja4 = new Pareja<Double>(5.0, 6.0);
-Pareja<Comprobante> pareja5 = new Pareja<Comprobante>(new RLIQ(), new OPPRE());
-Pareja<LinkedList<Integer>> pareja6 = new Pareja<LinkedList<Integer>> (new LinkedList<Integer>(), new LinkedList<Integer>());
-```
-
-## Método genérico
-
-* Se puede definir métodos genéricos con parámetros de tipo sin que la clase sea genérica.
-
-```java
-public class ManejoColecciones {
-
-  public static <T> T getMitad(T[] arreglo) {
-    if (arreglo == null) return null;
-    if (arreglo.length == 0) return null;
-    return arreglo[(int) (arreglo.length/2)];
   }
 
-}
-```
+  // uso
+  String [] letras = {"a", "b", "c"};
+  Integer [] nros  = {1, 2, 3};
+  String  priL = Colecciones.getPrimero(letras); // "a"
+  Integer priN = Colecciones.getPrimero(nros);   // 1
+  ```
 
-```java
-String [] vocales = {"a", "e", "i"};
-String mitad = ManejoColecciones.<String>getMitad(vocales);
-```
+=== "python"
 
-## Límites para las variables de tipo
+  ```py
+  from typing import TypeVar, List
 
-* Restringir la variable de tipo a una clase que implemente una interface o subclase:
+  T = TypeVar('T')
 
-```java
-public static <T extends Comparable<T>> T minimo(T[] arreglo) {
-  ...
-}
-```
+  def get_primero(items: List[T]) -> T:
+    return items[0]
 
-* Las variables de tipo pueden tener múltiples límites:
+  # uso
+  print(get_primero(['a', 'b', 'c'])) # 'a'
+  print(get_primero([1, 2, 3]))       # 1
+  ```
 
-```java
-<T extends Comparable<T> & Serializable>
-```
+## Genérico con diferentes tipos de datos
 
-## Restricciones para las variables de tipo
+=== "java"
 
-* No es posible reemplazar un parámetro de tipo por un tipo primitivo.
-* No es posible lanzar ni capturar objetos de clases genéricas.
-* No se permite que una clase genérica extienda a Throwable.
-* No es posible declarar vectores de tipos parametrizados.
-  * Ejemplo: Pareja\<String> [] v = new Pareja\<String>(10);
-* No se pueden crear objetos de tipos genéricos.
-  * Ejemplo: new T();
-* No es posible hacer referencias a variables de tipo en atributos o métodos estáticos.
-  * Ejemplo: private static T ejemplarUnico;
+  ```java
+  
+  public class Utils {
+
+    public static <T, U> String combinar(T a, U b) {
+      if (a == null || b == null) return null;
+      return a.toString() + b.toString();
+    }
+
+  }
+
+  // uso
+  System.out.println(Utils.combinar(10, 20));        // "1020"
+  System.out.println(Utils.combinar("Oi", 9111975)); // "Oi9111975"
+  ```
+
+=== "python"
+
+  ```py
+  from typing import TypeVar
+
+  T = TypeVar('T')
+  U = TypeVar('U')
+
+  def combinar(a: T, b: U) -> str:
+    return str(a) + str(b)
+
+  # uso
+  print(combinar(10, 20))         # "1020"   
+  print(combinar('Oi', 9111975))  # "Oi9111975"
+  ```
+
+## Genérico con clase
+
+=== "java"
+
+  ```java
+  public class Contenedor <T> {
+
+    private T contenido;
+  
+    public Contenido(T contenido) {
+      this.contenido = contenido;
+    }
+    
+    public T getContenido() {
+      return this.contenido; 
+    }
+
+  }
+
+  // uso
+  Contenedor<Integer> cInt = new Contenedor(10);
+  Contenedor<String> cStr = new Contenedor("Oi");
+  System.out.println(cInt.getContenido());  // 10
+  System.out.println(cStr.getContenido());  // "Oi"
+  ```
+
+=== "python"
+
+  ```py
+  from typing import TypeVar, Generic
+
+  T = TypeVar(Generic[T])
+
+  class Contenedor:
+
+      def __init__(self, contenido: T):
+          self.contenido = contenido
+      
+      def get_contenido(self) -> T:
+          return self.contenido
+
+  # uso
+  c_int = Contenedor(10)
+  c_str = Contenedor('Oi')
+
+  print(c_int.get_contenido()) # 10 
+  print(c_str.get_contenido()) # 'Oi' 
+  ```
+
+## Límites y restricciones para las TV en Java
+
+| Límite | Ejemplo |
+| -- | -- |
+| Restringir la TV a una clase que implemente una interface o subclase | `public static <T extends Comparable<T>> T minimo(T[] arreglo) {}` |
+| Las TVs pueden tener múltiples límites | `<T extends Comparable<T> & Serializable>` |
+
+| Restricción: No es posible... | Ejemplo |
+| -- | -- |
+| Reemplazar una TV por un primitivo             | `T a = 0;` |
+| Lanzar ni capturar objetos de clases genéricas | `throw new A<String>()` |
+| Que una clase genérica extienda a Throwable    | `public class A <T> extends Throwable` |
+| Declarar arreglos de tipos parametrizados      | `Pareja\<String> [] v = new Pareja\<String>(10);` |
+| Crear objetos de TV                            | `new T();` |
+| Hacer referencias a TVs en atributos o métodos estáticos | `private static T ejemplarUnico;` |
 
 ## Ejercicios
 
