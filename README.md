@@ -25,7 +25,7 @@
 1. [Excepciones](doc/excepciones.md)
 1. [Archivos](doc/archivos.md)
 1. [Genericidad](doc/genericidad.md)
-1. [Anotaciones](doc/anotaciones.md)
+1. [Anotaciones/Decoradores](doc/anotaciones-decoradores.md)
 
 ## Bibliografía
 
