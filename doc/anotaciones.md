@@ -1,84 +1,182 @@
-# Anotaciones
+# Anotaciones en Java y Decoradores en Python
 
-* Son marcadores que se insertan en el código fuente para procesarlas empleando ciertas herramientas.
-* Se pueden procesar los marcadores en el nivel de código fuente, pero el compilador también puede insertarlos en archivos de clases. @Retention(RetentionPolicy.RUNTIME).
+## Anotaciones en Java
 
-## Declaración de Anotación
+* Son marcadores que se insertan en el código fuente para procesarlas empleando ciertas herramientas
 
-```java
-[modificadores] @interface NombreAnotacion {
-  // declaraciones de elementos
-}
-```
-
-* Las anotaciones se definen mediante una interface de anotación.
-* Todas las interfaces de anotación extienden implícitamente la interface java.lang.annotation.Annotation.
-* No es posible extender las interfaces de anotación.
-* Los métodos no pueden tener parámetros ni cláusulas throws, tampoco ser genéricos.
-
-## Declaración de elementos
-
-* Las declaraciones de los elementos tienen la forma:
-  * tipo nombreElemento();
-  * tipo nombreElemento() default  valor_predeterminado;
-* El tipo puede ser: Primitivos, String, Class, Enum, Annotation, [] de anteriores
-* Ejemplo:
+### Declaración
 
 ```java
+// extienden implícitamente la interface java.lang.annotation.Annotation
 public @interface NotificacionError {
+  // declaraciones de elementos
+  // tipos: primitivos, String, class, enum, annotation, [] de anteriores
   String asignadoA() default "[none]";
   int severidad() default 0;
 }
-```
 
-## Formato de las anotaciones
-
-```java
+// uso
 @NotificacionError(severidad=10, asignadoA="Harry")
 @NotificacionError(severidad=10)
 @NotificacionError
 ```
 
-## Metaanotaciones (aplicables a anotaciones)
+### Metaanotaciones
 
-* **@Target**: restringe los elementos a los que se puede aplicar la anotación.
-  * @Target(ElementType.PACKAGE)
-  * @Target({ElementType.METHOD, ElementType.CONSTRUCTOR})
-  * Las anotaciones que no tienen una restricción @Target se pueden aplicar a cualquier elemento.
+| Metaanotación |  | Ejemplo 1 | Ejemplo 2 | Ejemplo 3 |
+| -- | -- | -- | -- | -- |
+| **@Target** | restringe los elementos a los que se puede aplicar la anotación | @Target(ElementType.PACKAGE) | @Target({ElementType.METHOD, ElementType.CONSTRUCTOR}) | |
+| **@Retention** | inclusión de anotaciones | @Retention(RetentionPolicy.SOURCE) | @Retention(RetentionPolicy.CLASS)  | @Retention(RetentionPolicy.RUNTIME) |
 
-* **@Retention**: inclusión de anotaciones
-  * @Retention(RetentionPolicy.SOURCE)  No se incluyen en .class
-  * @Retention(RetentionPolicy.CLASS)   Se incluyen en .class, JVM no las carga.
-  * @Retention(RetentionPolicy.RUNTIME) Se incluyen en .class, JVM las carga.
+### Ejemplo
 
-## Ejemplo
+Ejemplo
 
 1. Crear la anotación
 
-```java
-@Retention(RetentionPolicy.RUNTIME)
-@Target(ElementType.TYPE)
-public @interface Anotacion {
-  int elemento1();
-  String elemento2();
-}
-```
+    ```java
+    @Retention(RetentionPolicy.RUNTIME)
+    @Target(ElementType.TYPE)
+    public @interface Anotacion {
+      int elemento1();
+      String elemento2();
+    }
+    ```
 
 1. Usar la anotación
 
-```java
-@Anotacion(elemento1=999, elemento2="Prueba")
-public class Clase {
-  ...
-}
-```
+    ```java
+    @Anotacion(elemento1=999, elemento2="Prueba")
+    public class Clase {
+      ...
+    }
+    ```
 
 1. Procesar la anotación
 
-```java
-Anotacion anotacion = (Anotacion) Clase.class.getAnnotation(Anotacion.class);
-if (anotacion != null) {
-  System.out.println(anotacion.elemento1());
-  System.out.println(anotacion.elemento2());
-}
+    ```java
+    Anotacion anotacion = (Anotacion) Clase.class.getAnnotation(Anotacion.class);
+    if (anotacion != null) {
+      System.out.println(anotacion.elemento1());
+      System.out.println(anotacion.elemento2());
+    }
+    ```
+
+## Decoradores en Python
+
+* Permiten encapsular otra función para extender el comportamiento de la función encapsulada
+* Es una función de orden superior que toma otra función como argumento, agrega alguna funcionalidad y devuelve una nueva función. Permite modificar o ampliar el comportamiento de funciones o métodos
+
+### Ejemplo 1 - Sin parámetros
+
+```py
+# funcion decorador que recibe como parámetro una función sin parámetros
+def entra_sale(f):
+
+  # función interna
+  def fi():
+    print('->')
+    f()
+    print('<-')
+
+  return fi
+
+@entra_sale
+def sumar():
+  print(1 + 2)
+
+sumar()
+```
+
+### Ejemplo 2 - Con parámetros
+
+```py
+def entra_sale(f):
+
+  def fi(*args):
+    print('->')
+    f(*args)
+    print('<-')
+
+  return fi
+
+@entra_sale
+def sumar(n1, n2):
+  print(n1 + n2)
+
+sumar(1, 2)
+```
+
+### Ejemplo 3 - Con retorno
+
+```py
+def entra_sale(f):
+
+  def fi(*args):
+    print('->')
+    v = f(*args)
+    print('<-')
+    return v
+
+  return fi
+
+@entra_sale
+def sumar(n1, n2):
+  return n1 + n2
+
+print(sumar(1, 2))
+```
+
+### Ejemplo 4 - Encadenamiento de decoradores
+
+```py
+def decor1(func): 
+  def inner(): 
+    x = func() 
+    return x * x 
+  return inner 
+
+def decor(func): 
+  def inner(): 
+    x = func() 
+    return 2 * x 
+  return inner 
+
+@decor1
+@decor
+def num(): 
+  return 10
+
+@decor
+@decor1
+def num2():
+  return 10
+  
+print(num())   # similar a decor1(decor(num))
+print(num2())  # similar a decor(deco1(num2))
+```
+
+### Ejemplo 5
+
+```py
+import time
+import math
+
+# decorador que calcula duración
+def calculate_time(func):
+    
+  def inner1(*args, **kwargs):
+      begin = time.time()
+      func(*args, **kwargs)
+      end = time.time()
+      print("Tiempo total en : ", func.__name__, end - begin)
+
+  return inner1
+
+@calculate_time
+def factorial(num):
+    time.sleep(2)
+    print(math.factorial(num))
+
+factorial(10)
 ```
