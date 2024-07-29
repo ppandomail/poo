@@ -222,39 +222,6 @@
   }
   ```
 
-## Argumetos variables (varargs)
-
-=== "java"
-
-  ```java
-  public static void main(String[] args) {
-    System.out.println(sum_all(1));
-    System.out.println(sum_all(1, 2));
-    System.out.println(sum_all(1, 2, 3));
-  }
-
-  public static double sum_all(Double...varargs) {
-    double suma = 0;
-    for (Double v : varargs)
-      suma += v;
-    return suma;
-  }
-  ```
-
-=== "python"
-
-  ```py
-  def sum_all(*varargs):
-      suma = 0
-      for v in varargs:
-          suma += v
-      return suma
-
-  print(sum_all(1))
-  print(sum_all(1, 2))
-  print(sum_all(1, 2, 3))
-  ```
-
 ### Sintaxis básica
 
 === "java"
