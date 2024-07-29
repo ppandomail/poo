@@ -33,7 +33,28 @@
   * Eclipse
   * Sublime Text 3
   * IntelliJ IDEA / PyCharm
-  * **Visual Studio Code**
+  * [**Visual Studio Code**](https://code.visualstudio.com/)
+
+## Instalación
+
+=== "java"
+
+```sh
+java --version  # si te muestra versión está instalado
+# Si no está instalado, ir a https://learn.microsoft.com/es-es/java/openjdk/download#openjdk-21 y bajar la versión correspondiente a tu SO
+```
+
+* Extensiones para VSC: Extension Pack for Java
+
+=== "python"
+
+```sh
+python --version  # si te muestra versión está instalado
+# Si no está instalado, ir a python.org/downloads y bajar la versión correspondiente a tu SO
+```
+
+* Extensiones para VSC: pylint, python, autopep8
+* En settings (la ruedita del menú de la izquierda) settings y en la cajita de buscar, escribir formatOnSave y tildar la opción  
 
 ## Hola Mundo
 
