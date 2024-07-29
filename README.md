@@ -16,16 +16,18 @@
 
 ## Programa
 
-1. [Introducción POO](doc/intro-poo.md)
-1. [Introducción LOO (Java/Python)](doc/intro-loo.md)
-1. [Encapsulamiento](doc/encapsulamiento.md)
-1. [Herencia](doc/herencia.md)
-1. [Polimorfismo](doc/polimorfismo.md)
-1. [Colecciones](doc/colecciones.md)
-1. [Excepciones](doc/excepciones.md)
-1. [Archivos](doc/archivos.md)
-1. [Genericidad](doc/genericidad.md)
-1. [Anotaciones/Decoradores](doc/anotaciones-decoradores.md)
+| Unidad | Contenido | Ejercicios |
+| -- | -- | -- |
+| 01 | [Introducción POO](doc/01-intro-poo-contenido.md)                      | [Ejercicios](doc/01-intro-poo-ejercicios.md) |
+| 02 | [Introducción LOO (Java/Python)](doc/02-intro-loo-contenido.md)        | [Ejercicios](doc/02-intro-loo-ejercicios.md) |
+| 03 | [Encapsulamiento](doc/03-encapsulamiento-contenido.md)                 | [Ejercicios](doc/03-encapsulamiento-ejercicios.md) |
+| 04 | [Herencia](doc/04-herencia-contenido.md)                               | [Ejercicios](doc/04-herencia-ejercicios.md) |
+| 05 | [Polimorfismo](doc/05-polimorfismo-contenido.md)                       | [Ejercicios](doc/05-polimorfismo-ejercicios.md) |
+| 06 | [Colecciones](doc/06-colecciones-contenido.md)                         | [Ejercicios](doc/06-colecciones-ejercicios.md) |
+| 07 | [Excepciones](doc/07-excepciones-contenido.md)                         | [Ejercicios](doc/07-excepciones-ejercicios.md) |
+| 08 | [Archivos](doc/08-archivos-contenido.md)                               | [Ejercicios](doc/08-archivos-ejercicios.md) |
+| 09 | [Genericidad](doc/09-genericidad-contenido.md)                         | [Ejercicios](doc/09-genericidad-ejercicios.md) |
+| 10 | [Anotaciones/Decoradores](doc/10-anotaciones-decoradores-contenido.md) | |
 
 ## Bibliografía
 
