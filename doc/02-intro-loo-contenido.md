@@ -41,7 +41,7 @@
 
 ```sh
 java --version  # si te muestra versión está instalado
-# Si no está instalado, ir a https://learn.microsoft.com/es-es/java/openjdk/download#openjdk-21 y bajar la versión correspondiente a tu SO
+# Si no está instalado, ir a https://learn.microsoft.com/es-es/java/openjdk/download#openjdk-21 y bajar la versión correspondiente al SO
 ```
 
 * Extensiones para VSC: Extension Pack for Java
@@ -49,9 +49,39 @@ java --version  # si te muestra versión está instalado
 === "python"
 
 ```sh
-python --version  # si te muestra versión está instalado
-# Si no está instalado, ir a python.org/downloads y bajar la versión correspondiente a tu SO
+python --version  # si muestra versión está instalado
+# Si no está instalado:
+
+WINDOWS
+
+# 01. Ir a python.org/downloads y bajar la versión según SO
+# 02. Ejecutar el instalador: sig, sig, sig (agregar Python al PATH)
+# 03. Validar que está en el PATH
+# 04. python --version
+# 05. Si no existe archivo pip.ini en c:\users\id_usuario\pip crearlo
+# 06. Crear proyecto (mkdir <proy>) o clonarlo (git clone <url repo>)
+# 07. Crear entorno virtual: python -m venv venv
+# 08. Activar entorno virtual: . venv\scripts\activate
+# 09. Instalar libreria: pip install <libname>
+# 10. Instalar librerias: pip install -r requirements.txt 
+
+LINUX
+# 01 a 03 reemplazar por sudo apt install python3-pip
+# 05 Si no existe archivo pip.conf en .config/pip crearlo
+# 08. Activar entorno virtual: . venv\bin\activate
 ```
+
+| Libs que no necesitan instalarse | |
+| -- | -- |
+| **sys**      | funciones y parámetros específicos del SO |
+| **os**       | interfaz con el SO |
+| **io**       | funciones para manejo de flujos de datos y archivos |
+| **string**   | funciones con cadenas |
+| **datetime** | funciones para fechas y tiempos |
+| **calendar** | funciones de calendario |
+| **math**     | funciones y constantes estadísticas |
+| **random**   | generación de números pseudo-aleatorios |
+| **unittest** | generación de tests unitarios |
 
 * Extensiones para VSC: pylint, python, autopep8
 * En settings (la ruedita del menú de la izquierda) settings y en la cajita de buscar, escribir formatOnSave y tildar la opción  
@@ -145,6 +175,25 @@ python --version  # si te muestra versión está instalado
   dia = 9
   mes = "noviembre"
   print(f"Mi cumple es el {dia} de {mes}")
+  ```
+
+## Palabras claves
+
+=== "java"
+
+  ```java
+  //TODO
+  public static void main(String[] args) {
+
+  }  
+  ```
+
+=== "python"
+
+  ```py
+  import keyword
+
+  print(keyword.kwlist)
   ```
 
 ## Tipos de datos primitivos
@@ -441,6 +490,8 @@ python --version  # si te muestra versión está instalado
 === "python"
 
   ```py
+  # pueden tener parámetros/argumentos
+  # el pasaje es siempre por referencia
   def sumar(a, b=3):      # declaración con argumento por defecto
       return a + b        # cuerpo
 
@@ -480,4 +531,49 @@ python --version  # si te muestra versión está instalado
   print(sum_all(1))
   print(sum_all(1, 2))
   print(sum_all(1, 2, 3))
+  ```
+
+## Funciones recursivas
+
+=== "python"
+
+  ```py
+  def hanoi(n, inc='1', temp='2', fin='3'):
+      if n > 0:
+          hanoi(n-1, inc, fin, temp)
+          print('se mueve de torre', inc, 'a torre', fin)
+          hanoi(n-1, temp, inc, fin)
+
+  hanoi(5)
+  ```
+
+## Documentar una función/método
+
+* Para ayudar en el trabajo en equipo
+* Especialmente útil en aplicaciones complejas
+
+=== "java"
+
+  ```java
+  /**
+   *  Calcula el área de un cuadrado
+      elevando al cuadrado el lado pasado
+      por parámetro
+  */
+  public static double areaCuadrado(double lado) {
+      return lado * lado;
+  }
+  ```
+
+=== "python"
+
+  ```py
+  def area_cuadrado(lado):
+    """ Calcula el área de un cuadrado
+    elevando al cuadrado el lado pasado
+    por parámetro """
+    return "El area es: " + str(lado * lado)
+
+  print(area_cuadrado.__doc__)   # imprime comentario
+  help(area_cuadrado)            # imprime mas detalle
   ```
