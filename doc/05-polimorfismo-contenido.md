@@ -49,12 +49,15 @@ hacer(B())
   * Objetos reusables.
   * Programar por protocolo, no por implementación (buscar la esencia).
 
-## Interfaces en Java
+## Interfaces
 
 * Es una forma de describir lo que deberían hacer las clases sin especificar cómo deben hacerlo (protocolo de comportamiento)
 * Es una colección de declaraciones de constantes y definiciones de métodos sin implementación, agrupados bajo un nombre
-* La razón de usar interfaces es que Java tiene comprobación estricta de tipos. Cuando se hace una llamada a un método, el compilador necesita ser capaz de averiguar si el método existe realmente
 * No debe crecer, si se cambia el comportamiento de una interface, todas las clases que la implementen fallarán
+
+=== "java"
+
+* La razón de usar interfaces es que Java tiene comprobación estricta de tipos. Cuando se hace una llamada a un método, el compilador necesita ser capaz de averiguar si el método existe realmente
 
   ```java
   package nombre_paquete;
@@ -68,31 +71,80 @@ hacer(B())
 * Puede extender múltiples interfaces. Por lo tanto, se tiene herencia múltiple de interfaces.
 * Super Interfaces es una lista de nombres de interfaces separados por coma.
 * Una interfaz hereda todas las constantes y métodos de sus Super Interfaces.
+* Ejemplo 1
 
-### Ejemplo 1
+  ![Ejemplo Interface](img/interface-ejemplo.jpg)
 
-![Ejemplo Interface](img/interface-ejemplo.jpg)
+* Ejemplo 2
 
-### Ejemplo 2
-
-```java
-public interface Reseteable {
-  void reset();
-}
-```
-
-```java
-public class Punto implements Reseteable {
-  public void reset() {
-    ...
+  ```java
+  public interface Reseteable {
+    void reset();
   }
-}
-```
+  ```
 
-| Propiedades | Ejemplo |
-| -- | -- |
-| Una clase que implementa una interface debe implementar cada uno de los métodos que están definidos en ésta ||
-| Una clase puede implementar una o más interfaces | public class A implements B, C { } |
-| Se pueden declarar variables de tipo interface | Reseteable reseteable; |
-| Las variables de tipo interface tienen que referirse a un objeto de tipo de una clase que implemente la interface | reseteable = new Punto(); |
-| Se puede usar instanceof para comprobar si un objeto implementa o no la interface | new Punto(5.0, 3.0) instanceof Reseteable; |
+  ```java
+  public class Punto implements Reseteable {
+    public void reset() {
+      ...
+    }
+  }
+  ```
+
+  | Propiedades | Ejemplo |
+  | -- | -- |
+  | Una clase que implementa una interface debe implementar cada uno de los métodos que están definidos en ésta ||
+  | Una clase puede implementar una o más interfaces | public class A implements B, C { } |
+  | Se pueden declarar variables de tipo interface | Reseteable reseteable; |
+  | Las variables de tipo interface tienen que referirse a un objeto de tipo de una clase que implemente la interface | reseteable = new Punto(); |
+  | Se puede usar instanceof para comprobar si un objeto implementa o no la interface | new Punto(5.0, 3.0) instanceof Reseteable; |
+
+=== "python"
+
+* **Interfaces informales**
+
+  ```py
+  # simple clase que no implementa los métodos
+  class Mando:
+      def ch_up(self):
+          pass
+      def ch_dw(self):
+          pass
+
+  # clase extiende a la clase Mando pero no esta obligada a implementar los métodos
+  class MandoSamsung(Mando):
+      def ch_up(self):
+          return "Samsung-> +"
+      def ch_dw(self):
+          return "Samsung-> -"
+
+  class MandoLG(Mando):
+      def ch_up(self):
+          return "LG -> +"
+      def ch_dw(self):
+          return "LG -> -"
+  ```
+
+* **Interfaces formales**
+
+  ```py
+  from abc import abstractmethod
+  from abc import ABCMeta
+
+  class Mando(metaclass=ABCMeta):
+      @abstractmethod
+      def ch_up(self):
+          pass
+      @abstractmethod
+      def ch_dw(self):
+          pass
+
+  # clase extiende a la clase Mando y esta obligada a implementar los métodos
+  class MandoSamsung(Mando):
+      def ch_up(self):
+          return "Samsung-> +"
+      def ch_dw(self):
+          return "Samsung-> -"
+
+  mando = Mando() # TypeError: Can't instantiate abstract class Mando with abstract methods...
+  ```
