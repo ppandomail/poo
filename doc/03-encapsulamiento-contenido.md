@@ -139,27 +139,74 @@
   print(auto.get_estado())
   ```
 
-## Modificadores en Java
+## Modificadores
 
-| Modificadores de clase | | Ejemplo |
-| -- | -- | -- |
-| **public**   | accedidas por todos | public class Auto {} |
-| **package**  | accedidas dentro el paquete donde fueron declaradas | class Auto {} |
-| **abstract** | no se pueden instanciar | public abstract class Vehiculo {} |
-| **final**    | no se pueden extender | public final class Auto {} |
+=== "java"
 
-| Modificadores de atributos | | Ejemplo |
-| -- | -- | -- |
-| **static** | variables de clase (variable compartida) | private static int contador; |
-| **final**  | constantes                               | private static final double PI = 3.14; |
+  | Modificadores de clase | | Ejemplo |
+  | -- | -- | -- |
+  | **public**   | accedidas por todos | public class Auto {} |
+  | **package**  | accedidas dentro el paquete donde fueron declaradas | class Auto {} |
+  | **abstract** | no se pueden instanciar | public abstract class Vehiculo {} |
+  | **final**    | no se pueden extender | public final class Auto {} |
 
-| Modificadores de métodos | | Ejemplo |
-| -- | -- | -- |
-| **abstract**     | no tiene implementación. Debe ser miembro de una clase abstracta | public abstract double getSalary(); |
-| **static**       | no necesita de un objeto que lo controle. Lo invoca la clase | public static double pow(base, exp) {} |  
-| **final**        | no puede ser redefinido por las subclases | public final String toLowerCase() {} |
-| **native**       | está implementado en otro lenguaje | public native void diHola() {} |
-| **synchronized** | permite que múltiples objetos invoquen el mismo método con exclusión mutua | public synchronized void imprimir() {} |
+  | Modificadores de atributos | | Ejemplo |
+  | -- | -- | -- |
+  | **static** | variables de clase (variable compartida) | private static int contador; |
+  | **final**  | constantes                               | private static final double PI = 3.14; |
+
+  | Modificadores de métodos | | Ejemplo |
+  | -- | -- | -- |
+  | **abstract**     | no tiene implementación. Debe ser miembro de una clase abstracta | public abstract double getSalary(); |
+  | **static**       | no necesita de un objeto que lo controle. Lo invoca la clase | public static double pow(base, exp) {} |  
+  | **final**        | no puede ser redefinido por las subclases | public final String toLowerCase() {} |
+  | **native**       | está implementado en otro lenguaje | public native void diHola() {} |
+  | **synchronized** | permite que múltiples objetos invoquen el mismo método con exclusión mutua | public synchronized void imprimir() {} |
+
+=== "python"
+
+  ```py
+  # Clase pública
+  class Perro:
+
+    # atributo de clase (comunes para todos los objetos)
+    especie = 'mamifero'
+
+    # constructor
+    def __init__(self, nombre, raza):
+      # atributos de instancia
+      # self: representa la instancia de la clase
+      # __atributo: accesibilidad privada
+      self.__nombre = nombre
+      self.__raza = raza
+
+    # métodos de instancia: acceder y modificar atributos del objeto y acceder a otros métodos
+    # método de instancia sin parámetros
+    def ladra(self):
+      print('Guau')
+
+    # método de instancia con parámetros
+    def camina(self, pasos):
+      print(f"Caminando {pasos} pasos")
+
+    # método de clase: pueden modificar los atributos de la clase
+    @classmethod
+    def metodo_clase(cls):
+      return cls
+
+    # método estático: no pueden modificar el estado ni de la clase ni de la instancia
+    @staticmethod
+      def metodo_estatico():
+          return "Método estático"
+
+  # Objeto de la clase Perro
+  mi_perro = Perro('Toby', 'Bulldog')
+  print(Perro.especie)
+  mi_perro.ladra()
+  mi_perro.camina(10)
+  Perro.metodo_clase()
+  Perro.metodo_estatico()
+  ```
 
 ## Convenciones de nombres
 
