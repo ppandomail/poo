@@ -415,3 +415,164 @@ if __name__ == '__main__':
 | **@AfterAll**     | **tearDownClass(cls)**    | denota que el método se va a ejecutar después de la suite de tests |
 | **@Disabled**     | **@unittest.skip('xxx')** | usado para deshabilitar una clase test o un método test |
 | **@RepeatedTest** |                           | para repetir pruebas. Ejemplo: @RepeatedTest(10) |
+
+## Referencias
+
+* Es la dirección de memoria en la que se encuentra almacenado un **objeto**
+* Todos los objetos se manipulan a través de referencias
+* Una referencia **apunta** a un objeto que se encuentra en la memoria **HEAP**
+* Las variables de **tipo primitivo** (int, double, boolean, char) **almacenan el valor** propiamente dicho
+* Las variables que **no son de tipo primitivo almacenan una referencia** a una instancia de ese tipo de objeto
+
+  ![Declaración de la variable de referencia miNacimiento de tipo Fecha](img/ref-declaracion.png)
+  ![new Fecha reserva el espacio de memoria en el Heap para un objeto de tipo Fecha](img/ref-new.png)
+  ![La ejecución del constructor parametrizado](img/ref-inicializacion.png)
+  ![Asignación de la variable de referencia](img/ref-asignacion.png)
+
+* Asignación de referencias. Ejemplo:
+
+  ```java
+  int x = 7;
+  int y = x;
+  Fecha f = new Fecha(22, 12, 2020);
+  Fecha g = f;
+  ```
+
+  ![Dos variables se refieren a un mismo objeto Fecha](img/ref-asignacion-1.png)
+
+* Reasignación de g a un nuevo objeto Fecha
+
+  ```java
+  int x = 7;
+  int y = x;
+  Fecha f = new Fecha(22,12,2020);
+  Fecha g = new Fecha(10,1,2021);
+  ```
+
+  ![Ahora g referencia al nuevo objeto Fecha](img/ref-asignacion-2.png)
+
+* Reasignación de g a un nuevo objeto Fecha
+
+  ```java
+  int x = 7;
+  int y = x;
+  Fecha f = new Fecha(22,12,2020);
+  Fecha g = new Fecha(22,12,2020);
+  ```
+
+  ![Ahora g referencia al nuevo objeto Fecha pero con el mismo contenido que f](img/ref-asignacion-3.png){width=55%}
+
+## Operador == vs Método equals
+
+* **==**: realiza una comparación equivalencias. Dadas dos referencias **x** e **y**, **x == y** devuelve **true** si y solo si **x** e **y** refieren al mismo objeto
+* **equals**: para poder comparar dos objetos a fin de saber si son iguales, debemos proveer (sobrescribir) el método **equals**
+
+  ```java
+  @Override
+  public boolean equals(Object obj){
+      if(this == obj) //pregunta si las referencias son iguales
+          return true;
+      if(obj == null) //pregunta si el parámetro es null
+          return false;
+      if(this.getClass() != obj.getClass() //pregunta si los objetos 
+          return false;                    //son de distinta clase
+      Fecha f = (Fecha) obj; // Casteo de obj a tipo Fecha
+      //finalmente compara uno a uno los atributos
+      return (this.dia == f.dia && this.mes == f.mes && this.anio == f.anio)
+  }
+  ```
+
+  ```java
+  int x = 7;
+  int y = x;
+  Fecha f = new Fecha(22,12,2020);
+  Fecha g = new Fecha(22,12,2020);
+  ```
+
+  ![g referencia al objeto Fecha pero con el mismo contenido que f. Comparamos con equals.](img/ref-asignacion-4.png)
+
+## Garbage Collector
+
+* Objetos que quedan desreferenciados
+
+  ```java
+  int x = 7;
+  int y = x;
+  Fecha f = new Fecha(22,12,2020);
+  Fecha g = new Fecha(10,01,2021);
+  ```
+
+  ![f y g referencian a dos objetos Fecha diferentes.](img/gc1.png)
+
+* Objetos que quedan desreferenciados.
+
+  ```java
+  int x = 7;
+  int y = x;
+  Fecha f = new Fecha(22,12,2020);
+  Fecha g = new Fecha(10,01,2021);
+  f = g;
+  ```
+
+  ![En f se asigna el valor de g, ahora f y g referencian al mismo objeto.](img/gc2.png)
+
+* Objetos que quedan desreferenciados.
+
+  ```java
+  int x = 7;
+  int y = x;
+  Fecha f = new Fecha(22,12,2020);
+  Fecha g = new Fecha(10,01,2021);
+  f = g;
+  ```
+
+  ![La Fecha [22/12/2020] queda desreferenciada e inaccesible.](img/gc3.png)
+
+## Usos de la referencia this
+
+* Resolución de ambigüedades entre parámetros y atributos
+* Pasaje del objeto actual como parámetro a otro método
+* Invocación explícita de métodos de la propia clase
+* Invocación del constructor de la clase actual
+
+  ```java
+  class Circulo {
+
+    private double radio;
+
+    public Circulo() {
+      this(1.0);
+    }
+
+    public Circulo(double radio) { 
+      this.setRadio(radio);
+    }
+
+    public void setRadio(double radio) {
+      if(radio <=0)
+        throw new Error("Radio Inválido");
+      this.radio = radio;
+    }
+    
+    public void setDiametro(double diametro) {
+      this.setRadio(diametro/2);
+    }
+
+    public double getRadio() { 
+      return this.radio;
+    }
+
+    public double getDiametro(){
+      return this.getRadio() * 2;
+    }
+
+    public double getPerimetro() {
+      return this.getDiametro() * Math.PI; 
+    }
+        
+    public double getArea() {
+      return Math.PI * Math.pow(this.getRadio(),2);
+    }
+
+  }
+  ```
