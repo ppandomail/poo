@@ -27,9 +27,11 @@
 
 ## ¿Cuáles son los niveles de los desarrolladores?
 
-* **Junior**: necesita supervisión
-* **Semi Senior**: capacidad. técnica de realizar tareas con menos supervisión
-* **Senior**: es capaz de supervisar y dirigir equipos
+| Nivel | |
+| -- | -- |
+| **Junior**      | necesita supervisión |
+| **Semi Senior** | capacidad. técnica de realizar tareas con menos supervisión |
+| **Senior**      | es capaz de supervisar y dirigir equipos |
 
 ## ¿Cómo se aprende a programar?
 
@@ -40,26 +42,21 @@
 ## ¿Qué es un algoritmo?
 
 * Es la secuencia de pasos que resuelven un problema y es la base de la programación
-* Partes de un algoritmo:
 
-  |||
+  | Partes ||
   | -- | -- |
   | **Entrada** | datos |
   | **Proceso** | operaciones con los datos |
   | **Salida**  | resultado |
 
-* Características:
-
-  |||
+  | Características ||
   | -- | -- |
   | **Preciso**  | resolver el problema sin errores |
   | **Definido** | si se ejecuta el algoritmo varias veces, las salidas serán iguales en cada ejecución |
   | **Finito**   | debe tener un inicio y un fin |
   | **Legible**  | cualquier persona que vea el algoritmo debe ser capaz de comprenderlo |
 
-* Representación:
-
-  |||
+  | Representación ||
   | -- | -- |
   | Gráfica    | **Diagrama de Flujo** |
   | No gráfica | **Pseudocódigo** |
@@ -79,8 +76,8 @@
 ## ¿Cómo se resuelve un problema?
 
 1. **Diseñar** un algoritmo para el problema
-2. Expresar el algoritmo como un **Programa** (especificación formal de un algoritmo por medio de un lenguaje de programación)
-3. **Ejecutar** el programa (Eficiencia + V&V)
+1. Expresar el algoritmo como un **Programa** (especificación formal de un algoritmo por medio de un lenguaje de programación)
+1. **Ejecutar** el programa (Eficiencia + V&V)
 
     ![Algoritmo](img/algoritmo.png)
 
@@ -114,9 +111,14 @@
 ## ¿Qué es la POO?
 
 * Es una forma de programar, más cercana a como expresaríamos las cosas en la vida real que otros tipos de programación (alto nivel)
-* Se escriben programas en términos de: clases, objetos, encapsulamiento, propiedades, herencia, polimorfimo
+* Se escriben programas en términos de: clases, objetos, encapsulamiento, propiedades, herencia, polimorfismo
 * Todo es pensado como un objeto
-* Los objetos que existen en el mundo real pueden ser conceptuales (Ej. pedido, plano, punto, caja de ahorro) o físicos (Ej. vehículo)
+* Los objetos que existen en el mundo real pueden ser:
+
+  | | Ejemplos |
+  | -- | -- |
+  | **conceptuales** | pedido, plano, punto, caja de ahorro, ... |
+  | **físicos**      | vehículo, computadora, ... |
 
   ![POO](img/poo.png)
 
@@ -136,7 +138,7 @@
 
 |||
 | -- | -- |
-| **Abstracción/Clase**           | describir la estructura del objeto, responsable de crear sus instancias |
+| **Abstracción/Clase** | describir la estructura del objeto, responsable de crear sus instancias |
 | **Encapsulamiento** | ocultar detalles de implementación de un objeto |
 | **Polimorfismo**    | objetos de diferentes tipos responden al mismo mensaje (mismo comportamiento) |
 | **Herencia**        | compartir conocimiento. Se dá en una jerarquía (clasificación). Un objeto adquiere las propiedades de otro objeto |

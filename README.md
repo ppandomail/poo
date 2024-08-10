@@ -6,7 +6,7 @@
 * Adjuntos:
   * Ing. Leonardo Blautzik
   * Ing. Roberto Guglielmino
-* Ayudantes:
+* Ayudante:
   * Lic. Dante Mendoza
 
 ## Objetivos
