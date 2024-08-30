@@ -1,5 +1,35 @@
 # Encapsulamiento
 
+## Definición
+
+* **Encapsular**: acción de poner juntas ciertas cosas dado que hay una razón para ello
+* En la POO aquellas cosas serán los **datos** y los **métodos** que operan sobre esos datos
+* Mediante el **encapsulamiento** se crean las entidades que se desean manejar en los sistemas
+* Sentidos:
+
+  |||
+  | -- | -- |
+  | **especialización** | el propio objeto es quien sabrá cómo manejar los datos que contiene, y lo hará con los métodos asociados a sus dados |
+  | **completitud** |  permite descansar en que la abstracción construida representa a la entidad, y a aquella **responsabilidad** que tendrá asignada dentro de los sistemas |
+
+## Interfaz pública
+
+* Se define como **interfaz pública** de una clase, al conjunto de responsabilidades que los objetos de esa clase exponen o brindan al exterior de la misma, al universo
+* Interesa mucho más **la interfaz pública de los objetos** que sus **representaciones internas** y datos asociados
+
+## Ocultamiento de información
+
+* Es utilizar las técnicas que brinda el lenguaje para abstraer a los módulos cliente de los detalles de implementación
+* Indica **buenas prácticas de programación**: "necesito de este objeto, pero no me importa cómo resuelva sus **responsabilidades** mientras lo haga por mí"
+* Reglas:
+
+  | Encapsulamiento | Ocultamiento de información |
+  | -- | -- |
+  | Ubicar los datos y las operaciones que trabajan sobre esos datos en la misma clase | No exponer atributos |
+  | Utilizar diseño guiado por las responsabilidades para determinar la agrupación de datos y operaciones dentro de clases | No exponer diferencia entre atributos propiamente dichos y atributos calculados |
+  |  | No exponer la estructura interna de una clase |
+  |  | No exponer detalles de implementación de una clase |
+
 ## Paquete
 
 === "java"
@@ -218,6 +248,35 @@
 | **Método**     |             | J: getSalary() | P: get_salary()    |           |
 | **Constantes** |             |                |                    | NUMERO_PI |
 
+## Métodos Getters y Setters (accesores)
+
+* Bajo ciertas circunstancias puede ser necesario cambiar algún valor interno de un objeto
+* Es importante proporcionar un mecanismo para poder hacerlo sin romper el encapsulamiento, o sea, sin hacer públicos algunos -o todos- sus miembros
+* Los **accesores** serán los que nos permitan acceder a esos miembros privados de una manera controlada
+
+  ||| Sirven para ... |
+  | -- | -- | -- |
+  | **Getters** | obtener    | obtener el valor de un atributo |
+  | **Setters** | establecer | establecer el valor de un atributo |
+
+* **Estructura Getter**:
+
+  ```java
+  public Integer getEdad() {
+    return this.edad;
+  }
+  ```
+
+* **Estructura Setter**:
+
+  ```java
+  public void setEdad(Integer edad) {
+    this.edad = edad;
+  }
+  ```
+
+* Al definir una clase, se define la complejidad de éstos métodos y qué tan directamente se permite el acceso a los miembros de la misma
+
 ## Métodos privados
 
 * Se declaran métodos privados cuando:
@@ -342,9 +401,9 @@
 
   ```java
   public enum Talle {
-    MINI(“S”), 
-    MEDIANO(“M”), 
-    GRANDE(“X”);
+    MINI("S"), 
+    MEDIANO("M"), 
+    GRANDE("X");
     private representacion;
     private Talle(String representacion) { 
       this.setRepresentacion(representacion); 

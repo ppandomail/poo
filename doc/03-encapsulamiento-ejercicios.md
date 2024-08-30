@@ -2,158 +2,6 @@
 
 ## Ejercicios
 
-1. Defina una clase Punto que tendrá dos atributos, de tipo double, x e y, que representarán las coordenadas del punto dentro del plano. Implemente los siguientes métodos:
-
-    ```java
-    public boolean estaSobreElEjeX() {}
-    public boolean estaSobreElEjeY() {}
-    public boolean esElOrigenDeCoordenadas() {}
-    public double distanciaAlOrigen() {}
-    public static double distancia(Punto p1, Punto p2) {}
-    public double distancia(Punto p) {}
-    ```
-
-1. Defina una clase 'Monedero' que permita gestionar la cantidad de dinero de que una persona dispone en un momento dado. La clase deberá tener un constructor que permitirá crear un monedero con una cantidad de dinero inicial y deberá definir un método para meter dinero en el monedero, otro para sacarlo y finalmente, otro para consultar el disponible; solo podrá conocerse la cantidad de dinero del monedero a través de este último método. Por supuesto, no se podrá sacar más dinero del que haya en un momento dado en el monedero. Para probar el funcionamiento de la clase, escriba un método 'main' con una serie de instrucciones que hagan uso de los métodos definidos.
-
-1. Implementar en Java la simulación de la tarjeta SUBE para viajar en subte y premetro. Información de funcionamiento y tarifas en:
-[Tarifas, pases y abonos](http://www.buenosaires.gob.ar/subte/tarifas-pases-y-abonos)
-
-1. Se plantea una simplificación del laberinto del juego del pacman representado por una secuencia de caracteres como la siguiente:
-
-    ```sh
-    UP        LEFT      RIGHT     DOWN
-    .....     .....     .....     .....
-    .....     .....     .....     .....
-    ..V..     ..>..     ..<..     ..^..
-    .....     .....     .....     .....
-    .....     .....     .....     .....
-    ```
-
-* Para resolverlo vamos a crear una clase Maze que represente al laberinto y en ella algunos métodos que nos permitan mover al pacman en distintas direcciones, métodos para saber si el pacman está en cierta posición o con cierta dirección, un método que permite simular el paso de un instante de tiempo y un método que nos muestre en la consola el estado del laberinto. Una posible solución está representada por el siguiente código:
-
-  ```java
-  public class Maze {
-    private int rows;
-    private int columns;
-    public boolean isPacManAt(int row, int column){}
-    public boolean isPacManLoockingDown(){}
-    public boolean isPacManLookingUp(){}
-    public boolean isPacmManLookingLeft(){}
-    public boolean isPacManLookingRight(){}
-    public boolean isEmptyAt(int row, int column){}
-    public void pacManDown(){}
-    public void pacManUp(){}
-    public void pacManLeft(){}
-    public void pacManRight(){}
-    public void tick(){}
-    public void print(){}
-
-    public static void main(String[] args) {
-      Maze maze = new Maze();
-      maze.pacManRight();
-      maze.tick();
-      maze.print()
-      
-      // * * * * *
-      // * * * * *
-      // * *   < *
-      // * * * * *
-      // * * * * *
-    }
-  }
-  ```
-
-1. Probar la clase Maze, para los siguientes casos de prueba:
-    * testPacManLooksUpInCenterOfMaze
-    * testPacManMovesUp
-    * testPacManWrapsAroundWhenAtTop
-    * testTickLeftTickCheck
-    * testPacManMovesUpAndBackAgain
-    * testPacManMovesLeftAndBackAgain
-    * testPacManChangesDirectionLeft
-    * testPacManMovesLeft
-    * testPacManWrapsAroundLeft
-    * testPacManChangesDirectionDown
-    * testPacManChangesDirectionRight
-    * testPacManChangesDirectionUp
-    * assertThereIsExactlyOnePacMan
-  
-1. Se tiene un jugador de futbol definido por cantidad de goles y la cantidad de infracciones que hizo y cantidad de partidos en que jugó; además, se cuenta con un equipo de fútbol con 11 jugadores. De un campeonato con 10 equipos de fútbol se desea determinar cual es el equipo que hizo “juego sucio” y para cada equipo determinar “una figura”, para esto se deberá codificar los métodos:
-    * esBuenjugador(): retorna true si hizo al menos 10 goles y cometió menos de 5 infracciones, retorna false en otro caso.
-    * una Figura(): devuelve el número de jugador más goleador entre todos los “buenos jugadores” del equipo.
-    * juegoSucio(): retorna true si todos los jugadores de un mismo equipo que hicieron algún gol y jugaron más de 2 partidos, cometieron alguna infracción, retorna false en otro caso.
-    * Los datos para los 10 equipos del campeonato se generaran al azar y en un archivo de salida se guardaran los datos del campeonato.
-    * Se deberán codificar las clases y métodos necesarios.
-
-1. Supongamos una máquina que dispone de un conjunto de N pulsadores numerados de 0 a N-1, cada uno de los cuales puede estar activo o no, en un instante de tiempo. Necesitamos programar una clase en JAVA, que permita almacenar la información de cuáles de esos pulsadores están o no activos en un instante dado. La clase necesitará los siguientes métodos:
-    * activarPulsador: que recibirá un número de pulsador y hará que figure como activo.
-    * desactivarPulsador: que recibirá un número de pulsador y hará que figure como NO activo.
-    * activado: que recibirá un número de pulsador y devolverá si este está activo o no.
-    * numActivos: que devolverá el número de pulsadores que están activados.
-
-1. Escribir el código JAVA de una clase denominada ObraEdificio, con las siguientes características. Cada objeto de esta clase deberá tener información acerca de la superficie total a cimentar de una obra, y de la superficie que ya ha sido cimentada (en m^2, sin decimales). Existirán los siguientes métodos:
-    * Constructor: en la creación se fijará el área total a cimentar para este edificio.
-    * cimentando: recibirá un número indicando los metros de superficie que se están cimentando en ese momento. Si la suma de la superficie previamente cimentada más la que se supone que se está cimentando ahora, es mayor que la superficie total a cimentar, se escribirá un mensaje de error, y no se modificara nada. En caso contrario, se acumulara la cantidad de metros que se están cimentando con los que ya se habían cimentado antes.
-    * restaPorCimentar: devolverá los metros que faltan por cimentar para alcanzar la superficie total.
-    * terminado: devolverá verdadero si la superficie cimentada ya es igual a la superficie total a cimentar.
-
-1. Definir una clase que represente a un número fraccionario. Una fracción está definida por un numerador y un denominador, ambos son números enteros. La clase deberá contener:
-    * un constructor por defecto que inicialice la fracción en la fracción nula: 0/1
-    * un constructor con dos parámetros: dos números enteros para inicializar el numerador y el denominador de la fracción. Se deberá tener en cuenta que el denominador debe ser no nulo.
-    * Los métodos set y get respectivos.
-    * El método toString()
-    * El método ftor (): convierte una fracción a número real.
-    * El método reducir(): simplifica la fracción hasta que queda irreducible.
-
-1. Definir una clase que represente a un producto. El producto tendrá los siguientes atributos: código (int), descripcion (String), precio unitario (float), stock (int). La clase deberá contener:
-    * un constructor por defecto.
-    * un constructor con parámetros.
-    * los métodos set y get respectivos.
-    * el método toString().
-
-1. Definir una clase que represente a un libro. La clase deberá contener:
-    * un constructor por defecto.
-    * un constructor con parámetros.
-    * los métodos set y get respectivos.
-    * el método toString().
-
-1. Definir una clase Tiempo que representa una hora en formato hora, minuto y segundo. La clase deberá contener:
-    * un constructor por defecto.
-    * un constructor con parámetros.
-    * los métodos set y get respectivos.
-    * el método toString().
-    * has(): que transforma hhmmss a segundos.
-    * sah(): que transforma segundos a hhmmss.
-
-1. Definir una clase que represente a una fecha. Sus atributos serán: día (entero), mes (entero), ano(entero), mesStr (String). La clase deberá contener:
-    * un constructor por defecto.
-    * un constructor con parámetros.
-    * los métodos set y get respectivos.
-    * el método toString().
-    * aJuliana(): transforma la fecha gregoriana a fecha juliana representada por dos números enteros: el número ordinal que le corresponde a la fecha en el ano y el ano, ejemplo:
-        * 1 de febrero de 2001 se corresponde con 32 de 2001
-        * 1 de enero de 2001 se corresponde con 1 de 2001
-
-1. Definir una clase que represente a un número complejo. Sus atributos serán dos números reales que representarán la parte real y la parte imaginaria del número complejo. La clase deberá contener:
-    * un constructor por defecto.
-    * un constructor con parámetros.
-    * los métodos set y get respectivos.
-    * el método toString().
-    * suma(), resta(), producto(), division() y conjugado().
-
-1. Desarrollar una clase Segmento para representar segmentos. Los datos miembro de esta clase son dos objetos de la clase Punto extremos de un segmento. Estos datos han de ser privados. Para esta clase se piden los siguientes constructores y métodos:
-    * El constructor Segmento que recibe como argumentos dos objetos de la clase Punto, P1 y P2, y construye un nuevo objeto de la clase Segmento cuyos extremos son P1 y P2.
-    * Los métodos de acceso extremoA y extremoB, sin argumentos, que devuelven los extremos de un objeto Segmento.
-    * Los métodos modificadores extremoA y extremoB, que reciben como argumento un objeto de la clase Punto y modifican el correspondiente extremo de un objeto Segmento.
-    * El método igual, que comprueba si un objeto de la clase Segmento es igual a otro dado que se pasa como argumento.
-    * El método longitud, sin argumentos, que calcula la longitud de un objeto de la clase Segmento.
-    * El método proporcional, que comprueba si un objeto de la clase Segmento es proporcional a otro dado que se pasa como argumento.
-    * El método perpendicular, que comprueba si un objeto de la clase Segmento es perpendicular a otro dado que se pasa como argumento.
-    * El método puntoMedio, sin argumentos, que devuelve el objeto Punto que representa el punto medio de un objeto Segmento.
-    * El método pertenece, que recibe como argumento un objeto Punto P, y comprueba si P se encuentra en el segmento representado por un objeto Segmento.
-    * El método recta, sin argumentos, que construye un objeto Recta que contiene a un objeto Segmento.
-    * El método mediatriz, sin argumentos, que devuelve un objeto Recta que representa la mediatriz de un objeto Segmento.
-
 1. Implementar la clase Nota
 
 ```java
@@ -193,13 +41,24 @@ class Nota {
     public void recuperar(int nuevoValor) { }
 ```
 
+1. Defina una clase Punto que tendrá dos atributos, de tipo double, x e y, que representarán las coordenadas del punto dentro del plano. Implemente los siguientes métodos:
+
+    ```java
+    public boolean estaSobreElEjeX() {}
+    public boolean estaSobreElEjeY() {}
+    public boolean esElOrigenDeCoordenadas() {}
+    public double distanciaAlOrigen() {}
+    public static double distancia(Punto p1, Punto p2) {}
+    public double distancia(Punto p) {}
+    ```
+
 1. Implementar una clase que modele un círculo, del que se desea manipular (obtener y cambiar):
     * radio
     * diámetro
     * perímetro
     * área
 
-1. Implementar una clase que modele una corona circular utilizando la clase Circulo desarrollada previamente. Se desea manipular (obtener y cambiar):  @
+1. Implementar una clase que modele una corona circular utilizando la clase Circulo desarrollada previamente. Se desea manipular (obtener y cambiar):
     * radio interior
     * radio exterior
     * perímetro interior
@@ -455,7 +314,6 @@ class Tambor {
     }
 }
 
-
 class Tragamonedas {
 
     /**
@@ -480,6 +338,72 @@ class Tragamonedas {
     public int obtenerPosicionDelTambor(int i) { }
 }
 ```
+
+1. Defina una clase 'Monedero' que permita gestionar la cantidad de dinero de que una persona dispone en un momento dado. La clase deberá tener un constructor que permitirá crear un monedero con una cantidad de dinero inicial y deberá definir un método para meter dinero en el monedero, otro para sacarlo y finalmente, otro para consultar el disponible; solo podrá conocerse la cantidad de dinero del monedero a través de este último método. Por supuesto, no se podrá sacar más dinero del que haya en un momento dado en el monedero. Para probar el funcionamiento de la clase, escriba un método 'main' con una serie de instrucciones que hagan uso de los métodos definidos.
+
+1. Se tiene un jugador de futbol definido por cantidad de goles y la cantidad de infracciones que hizo y cantidad de partidos en que jugó; además, se cuenta con un equipo de fútbol con 11 jugadores. De un campeonato con 10 equipos de fútbol se desea determinar cual es el equipo que hizo “juego sucio” y para cada equipo determinar “una figura”, para esto se deberá codificar los métodos:
+    * esBuenjugador(): retorna true si hizo al menos 10 goles y cometió menos de 5 infracciones, retorna false en otro caso.
+    * una Figura(): devuelve el número de jugador más goleador entre todos los “buenos jugadores” del equipo.
+    * juegoSucio(): retorna true si todos los jugadores de un mismo equipo que hicieron algún gol y jugaron más de 2 partidos, cometieron alguna infracción, retorna false en otro caso.
+    * Los datos para los 10 equipos del campeonato se generaran al azar y en un archivo de salida se guardaran los datos del campeonato.
+    * Se deberán codificar las clases y métodos necesarios.
+
+1. Escribir el código JAVA de una clase denominada ObraEdificio, con las siguientes características. Cada objeto de esta clase deberá tener información acerca de la superficie total a cimentar de una obra, y de la superficie que ya ha sido cimentada (en m^2, sin decimales). Existirán los siguientes métodos:
+    * Constructor: en la creación se fijará el área total a cimentar para este edificio.
+    * cimentando: recibirá un número indicando los metros de superficie que se están cimentando en ese momento. Si la suma de la superficie previamente cimentada más la que se supone que se está cimentando ahora, es mayor que la superficie total a cimentar, se escribirá un mensaje de error, y no se modificara nada. En caso contrario, se acumulara la cantidad de metros que se están cimentando con los que ya se habían cimentado antes.
+    * restaPorCimentar: devolverá los metros que faltan por cimentar para alcanzar la superficie total.
+    * terminado: devolverá verdadero si la superficie cimentada ya es igual a la superficie total a cimentar.
+
+1. Definir una clase que represente a un número fraccionario. Una fracción está definida por un numerador y un denominador, ambos son números enteros. La clase deberá contener:
+    * un constructor por defecto que inicialice la fracción en la fracción nula: 0/1
+    * un constructor con dos parámetros: dos números enteros para inicializar el numerador y el denominador de la fracción. Se deberá tener en cuenta que el denominador debe ser no nulo.
+    * Los métodos set y get respectivos.
+    * El método toString()
+    * El método ftor (): convierte una fracción a número real.
+    * El método reducir(): simplifica la fracción hasta que queda irreducible.
+
+1. Definir una clase que represente a un producto. El producto tendrá los siguientes atributos: código (int), descripcion (String), precio unitario (float), stock (int). La clase deberá contener:
+    * un constructor por defecto.
+    * un constructor con parámetros.
+    * los métodos set y get respectivos.
+    * el método toString().
+
+1. Definir una clase Tiempo que representa una hora en formato hora, minuto y segundo. La clase deberá contener:
+    * un constructor por defecto.
+    * un constructor con parámetros.
+    * los métodos set y get respectivos.
+    * el método toString().
+    * has(): que transforma hhmmss a segundos.
+    * sah(): que transforma segundos a hhmmss.
+
+1. Definir una clase que represente a una fecha. Sus atributos serán: día (entero), mes (entero), ano(entero), mesStr (String). La clase deberá contener:
+    * un constructor por defecto.
+    * un constructor con parámetros.
+    * los métodos set y get respectivos.
+    * el método toString().
+    * aJuliana(): transforma la fecha gregoriana a fecha juliana representada por dos números enteros: el número ordinal que le corresponde a la fecha en el ano y el ano, ejemplo:
+        * 1 de febrero de 2001 se corresponde con 32 de 2001
+        * 1 de enero de 2001 se corresponde con 1 de 2001
+
+1. Definir una clase que represente a un número complejo. Sus atributos serán dos números reales que representarán la parte real y la parte imaginaria del número complejo. La clase deberá contener:
+    * un constructor por defecto.
+    * un constructor con parámetros.
+    * los métodos set y get respectivos.
+    * el método toString().
+    * suma(), resta(), producto(), division() y conjugado().
+
+1. Desarrollar una clase Segmento para representar segmentos. Los datos miembro de esta clase son dos objetos de la clase Punto extremos de un segmento. Estos datos han de ser privados. Para esta clase se piden los siguientes constructores y métodos:
+    * El constructor Segmento que recibe como argumentos dos objetos de la clase Punto, P1 y P2, y construye un nuevo objeto de la clase Segmento cuyos extremos son P1 y P2.
+    * Los métodos de acceso extremoA y extremoB, sin argumentos, que devuelven los extremos de un objeto Segmento.
+    * Los métodos modificadores extremoA y extremoB, que reciben como argumento un objeto de la clase Punto y modifican el correspondiente extremo de un objeto Segmento.
+    * El método igual, que comprueba si un objeto de la clase Segmento es igual a otro dado que se pasa como argumento.
+    * El método longitud, sin argumentos, que calcula la longitud de un objeto de la clase Segmento.
+    * El método proporcional, que comprueba si un objeto de la clase Segmento es proporcional a otro dado que se pasa como argumento.
+    * El método perpendicular, que comprueba si un objeto de la clase Segmento es perpendicular a otro dado que se pasa como argumento.
+    * El método puntoMedio, sin argumentos, que devuelve el objeto Punto que representa el punto medio de un objeto Segmento.
+    * El método pertenece, que recibe como argumento un objeto Punto P, y comprueba si P se encuentra en el segmento representado por un objeto Segmento.
+    * El método recta, sin argumentos, que construye un objeto Recta que contiene a un objeto Segmento.
+    * El método mediatriz, sin argumentos, que devuelve un objeto Recta que representa la mediatriz de un objeto Segmento.
 
 1. Implementar la clase SalaDeCine, tal que tenga operaciones para:
     1. Crearla con la cantidad de butacas totales, y cantidad de filas.
@@ -522,3 +446,69 @@ class Tragamonedas {
     // Informe por pantalla la cantidad de libros que hay por cada Genero literario.
     public void librosPorGeneroLiterario() { /*TODO*/ }
   ```  
+
+1. Supongamos una máquina que dispone de un conjunto de N pulsadores numerados de 0 a N-1, cada uno de los cuales puede estar activo o no, en un instante de tiempo. Necesitamos programar una clase en JAVA, que permita almacenar la información de cuáles de esos pulsadores están o no activos en un instante dado. La clase necesitará los siguientes métodos:
+    * activarPulsador: que recibirá un número de pulsador y hará que figure como activo.
+    * desactivarPulsador: que recibirá un número de pulsador y hará que figure como NO activo.
+    * activado: que recibirá un número de pulsador y devolverá si este está activo o no.
+    * numActivos: que devolverá el número de pulsadores que están activados.
+
+1. Se plantea una simplificación del laberinto del juego del pacman representado por una secuencia de caracteres como la siguiente:
+
+    ```sh
+    UP        LEFT      RIGHT     DOWN
+    .....     .....     .....     .....
+    .....     .....     .....     .....
+    ..V..     ..>..     ..<..     ..^..
+    .....     .....     .....     .....
+    .....     .....     .....     .....
+    ```
+
+* Para resolverlo vamos a crear una clase Maze que represente al laberinto y en ella algunos métodos que nos permitan mover al pacman en distintas direcciones, métodos para saber si el pacman está en cierta posición o con cierta dirección, un método que permite simular el paso de un instante de tiempo y un método que nos muestre en la consola el estado del laberinto. Una posible solución está representada por el siguiente código:
+
+  ```java
+  public class Maze {
+    private int rows;
+    private int columns;
+    public boolean isPacManAt(int row, int column){}
+    public boolean isPacManLoockingDown(){}
+    public boolean isPacManLookingUp(){}
+    public boolean isPacmManLookingLeft(){}
+    public boolean isPacManLookingRight(){}
+    public boolean isEmptyAt(int row, int column){}
+    public void pacManDown(){}
+    public void pacManUp(){}
+    public void pacManLeft(){}
+    public void pacManRight(){}
+    public void tick(){}
+    public void print(){}
+
+    public static void main(String[] args) {
+      Maze maze = new Maze();
+      maze.pacManRight();
+      maze.tick();
+      maze.print()
+      
+      // * * * * *
+      // * * * * *
+      // * *   < *
+      // * * * * *
+      // * * * * *
+    }
+  }
+  ```
+
+1. Probar la clase Maze, para los siguientes casos de prueba:
+    * testPacManLooksUpInCenterOfMaze
+    * testPacManMovesUp
+    * testPacManWrapsAroundWhenAtTop
+    * testTickLeftTickCheck
+    * testPacManMovesUpAndBackAgain
+    * testPacManMovesLeftAndBackAgain
+    * testPacManChangesDirectionLeft
+    * testPacManMovesLeft
+    * testPacManWrapsAroundLeft
+    * testPacManChangesDirectionDown
+    * testPacManChangesDirectionRight
+    * testPacManChangesDirectionUp
+    * assertThereIsExactlyOnePacMan
