@@ -1,10 +1,10 @@
 class FizzBuzzOO:
 
     def __init__(self, n):
-        self.n = n
+        self.__n = n
 
     def fizzbuzz(self):
-        for i in range(1, self.n + 1):
+        for i in range(1, self.__n + 1):
             if (i % 3 == 0) & (i % 5 == 0):
                 print('FizzBuzz')
             else:
