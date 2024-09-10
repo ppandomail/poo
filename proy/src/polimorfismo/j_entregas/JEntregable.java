@@ -1,4 +1,4 @@
-package j_entregas;
+
 
 public interface JEntregable {
 	

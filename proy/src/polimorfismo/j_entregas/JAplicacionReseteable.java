@@ -1,4 +1,4 @@
-package j_entregas;
+
 public class JAplicacionReseteable {
 
 	public static void main(String[] args) {

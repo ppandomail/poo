@@ -1,4 +1,4 @@
-package estrategia;
+
 
 public class JLancero extends JUnidad {
 	

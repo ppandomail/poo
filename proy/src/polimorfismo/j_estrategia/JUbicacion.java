@@ -1,4 +1,3 @@
-package estrategia;
 
 public class JUbicacion {
 	

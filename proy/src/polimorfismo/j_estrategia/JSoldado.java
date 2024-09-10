@@ -1,4 +1,4 @@
-package estrategia;
+
 
 public class JSoldado extends JUnidad implements JAguable {
 	

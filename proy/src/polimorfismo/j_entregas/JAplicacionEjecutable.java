@@ -1,4 +1,3 @@
-package j_entregas;
 public class JAplicacionEjecutable {
 
 	public static void main(String[] args) {

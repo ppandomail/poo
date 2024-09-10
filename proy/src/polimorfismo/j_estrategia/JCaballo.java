@@ -1,4 +1,4 @@
-package estrategia;
+
 
 public class JCaballo implements JAguable {
 
