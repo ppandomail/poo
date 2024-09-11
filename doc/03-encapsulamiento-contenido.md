@@ -9,7 +9,7 @@
 
   |||
   | -- | -- |
-  | **especialización** | el propio objeto es quien sabrá cómo manejar los datos que contiene, y lo hará con los métodos asociados a sus dados |
+  | **especialización** | el propio objeto es quien sabrá cómo manejar los datos que contiene, y lo hará con los métodos asociados a sus datos |
   | **completitud** |  permite descansar en que la abstracción construida representa a la entidad, y a aquella **responsabilidad** que tendrá asignada dentro de los sistemas |
 
 ## Interfaz pública
@@ -176,7 +176,7 @@
   | Modificadores de clase | | Ejemplo |
   | -- | -- | -- |
   | **public**   | accedidas por todos | public class Auto {} |
-  | **package**  | accedidas dentro el paquete donde fueron declaradas | class Auto {} |
+  | **package**  | accedidas dentro del paquete donde fueron declaradas | class Auto {} |
   | **abstract** | no se pueden instanciar | public abstract class Vehiculo {} |
   | **final**    | no se pueden extender | public final class Auto {} |
 
@@ -226,8 +226,8 @@
 
     # método estático: no pueden modificar el estado ni de la clase ni de la instancia
     @staticmethod
-      def metodo_estatico():
-          return "Método estático"
+    def metodo_estatico():
+      return "Método estático"
 
   # Objeto de la clase Perro
   mi_perro = Perro('Toby', 'Bulldog')
@@ -343,30 +343,34 @@
   ```py
   import random
 
-  class Tambor():
-
-      posicion = 0
+  class Tambor:
+      
+      def __init__(self):
+          self.__posicion = 0
 
       def girar(self):
-          r = random.randint(1, 8)
-          self.posicion = r
+          self.__posicion = random.randint(1, 3)
 
       def mostrar(self):
-          return "[" + str(self.posicion) + "]"
+          return "[" + str(self.__posicion) + "]"
 
-  class Tragamonedas():
-    
-      t1 = Tambor()
-      t2 = Tambor()
-      t3 = Tambor()
+  class Tragamonedas:
+      
+      def __init__(self):
+          self.__t1 = Tambor()
+          self.__t2 = Tambor()
+          self.__t3 = Tambor()
 
       def activar(self):
-          self.t1.girar()
-          self.t2.girar()
-          self.t3.girar()
+          self.__t1.girar()
+          self.__t2.girar()
+          self.__t3.girar()
 
       def mostrar(self):
-          return self.t1.mostrar() + self.t2.mostrar() + self.t3.mostrar()
+          return self.__t1.mostrar() + self.__t2.mostrar() + self.__t3.mostrar()
+          
+      def get_gano(self):
+          return self.__t1.mostrar() == self.__t2.mostrar() == self.__t3.mostrar()
 
   tambor = Tambor()
   tambor.girar()
@@ -374,6 +378,7 @@
   tgm = Tragamonedas()
   tgm.activar()
   print(tgm.mostrar())
+  print(tgm.get_gano())
   ```
 
 ## Enums
@@ -446,7 +451,7 @@
 ```py
 class Matematicas:
 
-  @classMethod
+  @staticmethod
   def sumar(op1, op2):
     return op1 + op2
 ```
@@ -458,6 +463,9 @@ class SumadorTest(unittest.TestCase):
 
   def test_suma_1_y_2(self):
     self.assertEquals(3, Matematicas.sumar(1, 2))
+    
+  def test_suma_2_y_2(self):
+    self.assertEquals(5, Matematicas.sumar(2, 2))
 
 if __name__ == '__main__':
     unittest.main()
