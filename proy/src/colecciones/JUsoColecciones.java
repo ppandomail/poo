@@ -1,4 +1,4 @@
-
+package colecciones;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -18,14 +18,14 @@ public class JUsoColecciones {
 		System.out.println(arrayList.get(1));
 		System.out.println(arrayList.size());
 		System.out.println(arrayList);
-		
+
 		// LinkedList
 		LinkedList<String> lista = new LinkedList<String>();
 		lista.add("Lic. Inf.");
 		lista.add("Ing. Inf");
 		lista.add("Tecn. Prog.");
 		System.out.println(lista);
-		
+
 		// Stack : LIFO
 		Stack<Integer> pila = new Stack<Integer>();
 		pila.push(3);
@@ -35,17 +35,17 @@ public class JUsoColecciones {
 		int elem = pila.pop();
 		System.out.println(elem);
 		System.out.println(pila.peek());
-		
+
 		// ConcurrentLinkedQueue : FIFO
 		ConcurrentLinkedQueue<Character> cola = new ConcurrentLinkedQueue<Character>();
-		// COLE  C -> A -> B
+		// COLE C -> A -> B
 		cola.offer('C');
 		cola.offer('A');
 		cola.offer('B');
 		System.out.println(cola.peek());
 		cola.poll();
 		System.out.println(cola.peek());
-		
+
 		// HashMap : mapa, diccionario clave y un valor
 		// titulo = Simulador de Aviones
 		// CantUsuarios = 3
@@ -55,12 +55,12 @@ public class JUsoColecciones {
 		mapa.put("Materia", "SO");
 		System.out.println(mapa.get("Materia"));
 		System.out.println(mapa);
-		
+
 		// HashSet : conjunto, no admite repetidos
 		HashSet<String> conjunto = new HashSet<String>();
 		conjunto.add("oct");
 		conjunto.add("nov");
-		conjunto.add("octubre");	
+		conjunto.add("octubre");
 	}
 
 }
