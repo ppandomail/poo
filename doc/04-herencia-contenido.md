@@ -6,16 +6,16 @@
 * Cuando se hereda, se reutilizan métodos y atributos
 * Permite extender la funcionalidad de un objeto
 
-| Tipos | | Ejemplo | LOO |
-| -- | -- | -- | -- |
-| **Simple**   | una clase puede heredar de una única clase | Circulo es una Figura              | **Java**, C# |
-| **Múltiple** | una clase puede heredar de varias clases   | Alumno es una Persona y es un Hijo | **Python**, Eiffel, C++ |
+  | Tipos | | Ejemplo | LOO |
+  | -- | -- | -- | -- |
+  | **Simple**   | una clase puede heredar de una única clase | Circulo es una Figura              | **Java**, C# |
+  | **Múltiple** | una clase puede heredar de varias clases   | Alumno es una Persona y es un Hijo | **Python**, Eiffel, C++ |
 
-![Como funciona](img/herencia1.png)
+  ![Como funciona](img/herencia1.png)
 
-![Subclasificación](img/herencia2.png)
+  ![Subclasificación](img/herencia2.png)
 
-![Cuenta Bancaria](img/herencia3.png)
+  ![Cuenta Bancaria](img/herencia3.png)
 
 ## Uso correcto
 
