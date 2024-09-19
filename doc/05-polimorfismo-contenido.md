@@ -148,3 +148,18 @@ hacer(B())
 
   mando = Mando() # TypeError: Can't instantiate abstract class Mando with abstract methods...
   ```
+
+## Pincipios SOLID
+
+* Conjunto de 5 principios que facilitan el testeo, mantenimiento y la legibilidad del código
+* SOLID es el acrónimo mnemónico que hace referencia a cada uno de los principios por sus siglas en inglés:
+
+  ||||
+  | -- | -- | -- |
+  | **S**ingle Responsibility Principle | SRP | Principio de Responsabilidad Única     |
+  | **O**pen-Closed Principle           | OCP | Principio de Abierto/Cerrado           |
+  | **L**iskov Substitution Principle   | LSP | Principio de Substitución de Liskov    |
+  | **I**nterface Segregation Principle | ISP | Principio de Segregación de Interfaz   |
+  | **D**ependency Inversion Principle  | DIP | Principio de Inversión de Dependencias |
+
+* [Ejemplos en Python](https://blog.damavis.com/los-principios-solid-ilustrados-en-ejemplos-sencillos-de-python/)
