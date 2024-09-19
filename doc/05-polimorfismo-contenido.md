@@ -4,7 +4,7 @@
 * Ejemplo 1: todos los objetos responden a equals/\_\_eq\_\_, toString/\_\_str\_\_, etc.
 * Ejemplo 2: un celular se puede apagar, una lampara se pude apagar, ..., todos los objetos apagables se pueden apagar
 
-![Como funciona](img/polimorfismo1.png)
+  ![Como funciona](img/polimorfismo1.png)
 
 * Dos o más objetos son polimórficos respecto de un conjunto de mensajes, si todos pueden responder estos mensajes, aún cuando cada uno lo haga de un modo diferente
 * Objetos polimórficos corresponden a un mismo “tipo” de objeto -> mismo comportamiento esencial, independientemente de implementación
@@ -43,11 +43,11 @@ hacer(B())
 ![Polimorfismo: ¿Para qué?](img/polimorfismo3.png)
 
 * Es la clave de un buen diseño:
-  * "Código" genérico.
-  * Objetos desacoplados.
-  * Objetos intercambiables.
-  * Objetos reusables.
-  * Programar por protocolo, no por implementación (buscar la esencia).
+  * "Código" genérico
+  * Objetos desacoplados
+  * Objetos intercambiables
+  * Objetos reusables
+  * Programar por protocolo, no por implementación (buscar la esencia)
 
 ## Interfaces
 
@@ -68,14 +68,15 @@ hacer(B())
   }
   ```
 
-* Puede extender múltiples interfaces. Por lo tanto, se tiene herencia múltiple de interfaces.
-* Super Interfaces es una lista de nombres de interfaces separados por coma.
-* Una interfaz hereda todas las constantes y métodos de sus Super Interfaces.
-* Ejemplo 1
+* Puede extender múltiples interfaces. Por lo tanto, se tiene herencia múltiple de interfaces
+* Super Interfaces es una lista de nombres de interfaces separados por coma
+* Una interfaz hereda todas las constantes y métodos de sus Super Interfaces
+
+* **Ejemplo 1**:
 
   ![Ejemplo Interface](img/interface-ejemplo.jpg)
 
-* Ejemplo 2
+* **Ejemplo 2**:
 
   ```java
   public interface Reseteable {

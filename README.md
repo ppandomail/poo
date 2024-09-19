@@ -37,6 +37,11 @@
 * [Python](https://www.python.org/)
 * [El libro de Python](https://ellibrodepython.com/)
 
+## Herramientas
+
+* [Online Python](https://www.online-python.com/)
+* [Online Java](https://www.jdoodle.com/online-java-compiler)
+
 ## Exámenes anteriores
 
 * [Exámenes](exa/)
