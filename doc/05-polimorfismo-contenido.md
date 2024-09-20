@@ -1,6 +1,6 @@
 # Polimorfismo
 
-* Es la capacidad que tienen los objetos de una clase de responder al mismo mensaje en función de los parámetros utilizados durante su invocación
+* Se refiere a la propiedad por la que es posible enviar mensajes sintácticamente iguales a objetos de tipos distintos
 * Ejemplo 1: todos los objetos responden a equals/\_\_eq\_\_, toString/\_\_str\_\_, etc.
 * Ejemplo 2: un celular se puede apagar, una lampara se pude apagar, ..., todos los objetos apagables se pueden apagar
 
@@ -150,7 +150,7 @@ hacer(B())
   mando = Mando() # TypeError: Can't instantiate abstract class Mando with abstract methods...
   ```
 
-## Pincipios SOLID
+## Principios SOLID
 
 * Conjunto de 5 principios que facilitan el testeo, mantenimiento y la legibilidad del código
 * SOLID es el acrónimo mnemónico que hace referencia a cada uno de los principios por sus siglas en inglés:
