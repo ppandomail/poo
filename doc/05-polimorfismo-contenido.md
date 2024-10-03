@@ -94,7 +94,7 @@ hacer(B())
 
   | Propiedades | Ejemplo |
   | -- | -- |
-  | Una clase que implementa una interface debe implementar cada uno de los métodos que están definidos en ésta ||
+  | Una clase que implementa una interface debe implementar cada uno de los métodos que están definidos en ésta, sino tendrá que ser declarada como abstracta ||
   | Una clase puede implementar una o más interfaces | public class A implements B, C { } |
   | Se pueden declarar variables de tipo interface | Reseteable reseteable; |
   | Las variables de tipo interface tienen que referirse a un objeto de tipo de una clase que implemente la interface | reseteable = new Punto(); |

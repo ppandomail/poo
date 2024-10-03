@@ -78,7 +78,7 @@
   // ----------------------------------------------------------------------
 
   // FIFO (First In First Out)
-  ArrayDequ<Integer> cola = new ArrayDeque<Integer>();
+  ArrayDeque<Integer> cola = new ArrayDeque<Integer>();
   cola.offer(2);
   cola.offer(5);
   cola.offer(3);
@@ -142,6 +142,7 @@ lista.remove('Ana')
 lista.pop()                     # elimina último elemento
 lista.sort()
 lista.reverse()
+lista.clear()
 
 # Listas por comprensión
 lista = [1, 2, 3, 4, 5, 6]
@@ -171,6 +172,8 @@ tuple([1, 2])        # Convierte lista en tupla
 
 nom, dd, mm, yyyy = tupla # desempaquetado de tupla
 print(nom)                # 'Juan'
+
+tupla.clear()
 
 # -----------------------------------------------------------------------
 
