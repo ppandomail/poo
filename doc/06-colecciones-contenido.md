@@ -8,7 +8,7 @@
 
 === "java"
 
-* En Java se emplea la interfaz genérica Collection.
+* En Java se emplea la interfaz genérica Collection
 
   | Tipos (interfaces) | | Implementaciones |
   | -- | -- | -- |
