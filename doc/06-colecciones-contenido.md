@@ -163,7 +163,7 @@ print(tuple('python'))
 
 tupla[1]             # 13
 len(tupla)           # 4
-tupla.count(9)       # 1
+tupla.count(9)       # 0
 tupla.index('Juan')  # 0
 'Juan' in tupla      # True
 
