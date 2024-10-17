@@ -2,7 +2,7 @@ import unittest
 from punto import Punto
 
 class PuntoTest(unittest.TestCase):
-    
+
     def test_getters(self):
         p = Punto(3, 4)
         self.assertEqual(p.get_x(), 3)
@@ -16,7 +16,7 @@ class PuntoTest(unittest.TestCase):
     def test_distancia(self):
         p = Punto(3, 4)
         self.assertEqual(p.distancia(Punto(0, 0)), 5.0)
-    
+
     def test_cuadrante(self):
         self.assertEqual(Punto(3, 4).getCuadrante(), 1)
 

@@ -1,10 +1,10 @@
 """ Un caballo se pone rebelde luego de 3 ataques, 
 y puede calmarse si recibe una poción de agua. """
 
-import bebedor as bb
 
+from bebedor import Bebedor
 
-class Caballo(bb.Bebedor):
+class Caballo(Bebedor):
 
     def __init__(self) -> None:
         self.__ataques = 0

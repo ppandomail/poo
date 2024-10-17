@@ -5,6 +5,7 @@ from abc import ABCMeta
 
 
 class Bebedor(metaclass=ABCMeta):
+    
     @abstractmethod
     def beber_agua(self):
         pass

@@ -1,10 +1,9 @@
 """class Soldado"""
 
-import unidad
-import bebedor as bb
+from unidad import Unidad
+from bebedor import Bebedor
 
-
-class Soldado(unidad.Unidad, bb.Bebedor):
+class Soldado(Unidad, Bebedor):
     """Los soldados pueden atacar cuerpo a cuerpo a otras unidades si tienen suficiente energía.
     Cada ataque les consume 10 puntos de energía, y comienzan con 100.
     Restauran energía si reciben la poción de agua.

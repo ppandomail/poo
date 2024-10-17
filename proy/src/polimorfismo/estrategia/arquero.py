@@ -3,10 +3,12 @@ Comienzan con 20 flechas en su carcaj, y pueden recargar si reciben un paquete d
 Infringen un daño de 5 puntos, y comienzan con 50 de salud.
 """
 
-import unidad
+
+from unidad import Unidad
 
 
-class Arquero(unidad.Unidad):
+class Arquero(Unidad):
+    
     def __init__(self, posicion):
         super().__init__(5, 50, posicion)
         self.__flechas = 20

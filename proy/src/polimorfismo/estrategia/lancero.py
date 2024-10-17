@@ -1,10 +1,10 @@
 """Los lanceros pueden atacar a una distancia de 1 a 3, sin condición. 
 Infringen un daño de 25 puntos, y comienzan con 150 de salud."""
 
-import unidad
+from unidad import Unidad
 
 
-class Lancero(unidad.Unidad):
+class Lancero(Unidad):
 
     def __init__(self, posicion):
         super().__init__(25, 150, posicion)

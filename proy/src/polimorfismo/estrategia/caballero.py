@@ -2,18 +2,18 @@
 siempre que su caballo no se haya puesto rebelde.
 Infringe un daño de 50 puntos y comienza con 200 de salud. """
 
-import poo.proy.proy.src.polimorfismo.p_unidad as p_unidad
-import caballo
+from unidad import Unidad
+from caballo import Caballo
 
 
-class Caballero(p_unidad.Unidad):
+class Caballero(Unidad):
     """Los caballeros pueden atacar a una distancia de 1 a 2,
     siempre que su caballo no se haya puesto rebelde.
     Infringe un daño de 50 puntos y comienza con 200 de salud."""
 
     def __init__(self, posicion):
         super().__init__(50, 200, posicion)
-        self.__caballo = caballo.Caballo()
+        self.__caballo = Caballo()
 
     def puede_atacar(self, oponente):
         return (
