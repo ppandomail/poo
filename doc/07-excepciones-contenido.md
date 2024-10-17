@@ -7,14 +7,14 @@
 
 | Tipo | Clase Java | Clase Python |
 | -- | -- | -- |
-| División entre cero | **ArithmeticException**   | **ZeroDivisionError** |
-| Conversión de datos | **NumberFormatException** | **TypeError**         |
-| Archivo incorrecto  | **IOException**           | **FileNotFoundError** |
-| Acceso a espacio de arreglo inexistente | **ArrayIndexOutOfBoundsException** | **IndexError**  |
-| null.método()                           | **NullPointerException**           | **ValueError**  |
-| Refundiciones incorrectas               | **ClassCastException**             | |
-| Acceso a dict con key inexistente       |                                    | **KeyError**    |
-| Falla importación módulo                |                                    | **ImportError** |
+| División entre cero                     | **ArithmeticException**            | **ZeroDivisionError** |
+| Conversión de datos                     | **NumberFormatException**          | **TypeError**         |
+| Archivo incorrecto                      | **IOException**                    | **FileNotFoundError** |
+| Acceso a espacio de arreglo inexistente | **ArrayIndexOutOfBoundsException** | **IndexError**        |
+| null.método()                           | **NullPointerException**           | **ValueError**        |
+| Refundiciones incorrectas               | **ClassCastException**             |                       |
+| Acceso a dict con key inexistente       |                                    | **KeyError**          |
+| Falla importación módulo                |                                    | **ImportError**       |
 
 ## Clasificación de Excepciones
 
@@ -29,7 +29,7 @@
 
   | Tipos de exceptions | | Ejemplos |
   | -- | -- | -- |
-  | **Comprobadas** | compilador verifica que el programador proporcione, o bien, un manejador o que lance la excepción | IOException, FileNotFoundException, SQLException, ... |
+  | **Comprobadas**    | compilador verifica que el programador proporcione, o bien, un manejador o que lance la excepción | IOException, FileNotFoundException, SQLException, ... |
   | **No Comprobadas** | excepciones comunes que no se comprueban | Error y sus subclases (OutOfMemoryError, InternalError, ...) y RuntimeException y sus subclases (NullPointerException, ArrayIndexOutOfBoundException, NumberFormatException, ClassCastException, ArithmeticException, ...) |
 
   ![Ejemplos de Exceptions](img/ex-ejemplos.JPG)
