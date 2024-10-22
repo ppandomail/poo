@@ -11,7 +11,7 @@ class Diccionario:
         self.__diccionario[espaniol] = ingles
 
     def traduce(self, espaniol):
-        return self.__diccionario[espaniol]
+        return None if espaniol not in self.__diccionario.keys() else self.__diccionario[espaniol]
 
     def palabra_aleatoria(self):
         n = random.randrange(0, len(self.__diccionario))
