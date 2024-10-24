@@ -64,7 +64,7 @@
 | 12 | Semana 28/10 | Excepciones |
 | 13 | Semana 04/11 | Archivos |
 | 14 | Semana 11/11 | Genericidad y Anotaciones |
-| 15 | Semana 18/11 | **Segundo Parcial**|
+| 15 | Semana 18/11 | **Segundo Parcial** |
 | 16 | Semana 25/11 | **Recuperatorios**. Cierre de Cursada |
 
 ## Criterios de evaluación UNO
