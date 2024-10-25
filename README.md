@@ -36,6 +36,7 @@
 * [Java, como programar (Deitel & Deitel)](biblio/)
 * [Python](https://www.python.org/)
 * [El libro de Python](https://ellibrodepython.com/)
+* [Refactoring](https://refactoring.guru/es)
 
 ## Herramientas
 
