@@ -30,8 +30,8 @@
   // uso
   String [] letras = {"a", "b", "c"};
   Integer [] nros  = {1, 2, 3};
-  String  priL = Colecciones.getPrimero(letras); // "a"
-  Integer priN = Colecciones.getPrimero(nros);   // 1
+  String  priL = Colecciones.<String>getPrimero(letras);  // "a"
+  Integer priN = Colecciones.<Integer>getPrimero(nros);   // 1
   ```
 
 === "python"
@@ -65,8 +65,8 @@
   }
 
   // uso
-  System.out.println(Utils.combinar(10, 20));        // "1020"
-  System.out.println(Utils.combinar("Oi", 9111975)); // "Oi9111975"
+  System.out.println(Utils.<Integer, Integer>combinar(10, 20));        // "1020"
+  System.out.println(Utils.<String, Integer>combinar("Oi", 9111975)); // "Oi9111975"
   ```
 
 === "python"
@@ -94,7 +94,7 @@
 
     private T contenido;
   
-    public Contenido(T contenido) {
+    public Contenedor(T contenido) {
       this.contenido = contenido;
     }
     
@@ -105,8 +105,8 @@
   }
 
   // uso
-  Contenedor<Integer> cInt = new Contenedor(10);
-  Contenedor<String> cStr = new Contenedor("Oi");
+  Contenedor<Integer> cInt = new Contenedor<Integer>(10);
+  Contenedor<String> cStr = new Contenedor<String>("Oi");
   System.out.println(cInt.getContenido());  // 10
   System.out.println(cStr.getContenido());  // "Oi"
   ```
@@ -116,9 +116,9 @@
   ```py
   from typing import TypeVar, Generic
 
-  T = TypeVar(Generic[T])
+  T = TypeVar('T')
 
-  class Contenedor:
+  class Contenedor(Generic[T]):
 
       def __init__(self, contenido: T):
           self.contenido = contenido
@@ -146,6 +146,6 @@
 | Reemplazar una TV por un primitivo             | `T a = 0;` |
 | Lanzar ni capturar objetos de clases genéricas | `throw new A<String>()` |
 | Que una clase genérica extienda a Throwable    | `public class A <T> extends Throwable` |
-| Declarar arreglos de tipos parametrizados      | `Pareja\<String> [] v = new Pareja\<String>(10);` |
+| Declarar arreglos de tipos parametrizados      | `Pareja<String> [] v = new Pareja<String>(10);` |
 | Crear objetos de TV                            | `new T();` |
 | Hacer referencias a TVs en atributos o métodos estáticos | `private static T ejemplarUnico;` |
