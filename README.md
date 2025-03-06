@@ -6,8 +6,8 @@
 * Adjuntos:
   * Ing. Leonardo Blautzik
   * Ing. Roberto Guglielmino
-* Ayudante:
-  * Lic. Dante Mendoza
+* JTP:
+  * Esp. Lic. Dante Mendoza
 
 ## Objetivos
 
@@ -31,7 +31,6 @@
 
 ## Bibliografía
 
-* [StarUML](https://staruml.io)
 * [Java](https://www.java.com/es/)
 * [Java, como programar (Deitel & Deitel)](biblio/)
 * [Python](https://www.python.org/)
