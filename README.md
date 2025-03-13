@@ -48,24 +48,24 @@
 
 ## Cronograma Tentativo UNO
 
-| **Clase** | **Fecha** | **Tema** |
-| -- | -- | -- |
-| 01 | Semana 12/08 | Presentación. Introducción POO |
-| 02 | Semana 19/08 | Introducción LOO |
-| 03 | Semana 26/08 | Encapsulamiento: clases y objetos |
-| 04 | Semana 02/09 | Encapsulamiento: constructores y métodos. Sobrecargas |
-| 05 | Semana 09/09 | Herencia: jerarquías. Funcionamiento |
-| 06 | Semana 16/09 | Herencia: sobreescrituras |
-| 07 | Semana 23/09 | Polimorfismo: interfaces. Funcionamiento |
-| 08 | Semana 30/09 | Polimorfismo: implementaciones |
-| 09 | Semana 07/10 | **Primer Parcial** |
-| 10 | Semana 14/10 | Colecciones: Pilas, Colas y Listas |
-| 11 | Semana 21/10 | Colecciones: Mapas |
-| 12 | Semana 28/10 | Excepciones |
-| 13 | Semana 04/11 | Archivos |
-| 14 | Semana 11/11 | Genericidad y Anotaciones |
-| 15 | Semana 18/11 | **Segundo Parcial** |
-| 16 | Semana 25/11 | **Recuperatorios**. Cierre de Cursada |
+| **Clase** | **Fecha** | **Tema** | **Observaciones** |
+| -- | -- | -- | -- |
+| 01 | Semana 12/03 | Presentación. Introducción POO | |
+| 02 | Semana 17/03 | Introducción LOO | |
+| 03 | Semana 24/03 | Encapsulamiento: clases y objetos | (24/03 feriado) |
+| 04 | Semana 31/03 | Encapsulamiento: constructores y métodos. Sobrecargas | |
+| 05 | Semana 07/04 | Herencia: jerarquías. Funcionamiento | |
+| 06 | Semana 14/04 | Herencia: sobreescrituras | (jue 17 y vie 18/04 feriados) |
+| 07 | Semana 21/04 | Polimorfismo: interfaces. Funcionamiento | (jue 24/04 feriado) |
+| 08 | Semana 28/04 | Polimorfismo: implementaciones | (jue 1 y vie 2/05 feriados) |
+| 09 | Semana 05/05 | **Primer Parcial** | (TM 1er parcial 9/05) |
+| 10 | Semana 12/05 | Colecciones: Pilas, Colas y Listas | |
+| 11 | Semana 19/05 | Colecciones: Mapas | |
+| 12 | Semana 26/05 | Excepciones y Archivos | |
+| 13 | Semana 02/06 | Genericidad y Anotaciones | |
+| 14 | Semana 09/06 | **Segundo Parcial** (jue 12 y vie 13) | |
+| 15 | Semana 16/06 | Repaso | (Lu 16 y Vie 20/06 feriados) |
+| 16 | Semana 23/06 | **Recuperatorios**. Cierre de Cursada | |
 
 ## Criterios de evaluación UNO
 
