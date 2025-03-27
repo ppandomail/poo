@@ -256,7 +256,7 @@
 
   ||| Sirven para ... |
   | -- | -- | -- |
-  | **Getters** | obtener    | obtener el valor de un atributo |
+  | **Getters** | obtener    | obtener el valor de un atributo    |
   | **Setters** | establecer | establecer el valor de un atributo |
 
 * **Estructura Getter**:
@@ -276,6 +276,27 @@
   ```
 
 * Al definir una clase, se define la complejidad de éstos métodos y qué tan directamente se permite el acceso a los miembros de la misma
+
+* En Python, se puede usar el decorador **@property** para definir un **getter** sin necesidad de llamarlo como función, permitiendo acceso controlado con sintaxis más limpia
+
+  ```py
+  class Persona:
+    def __init__(self, nombre):
+      self._nombre = nombre
+
+    @property
+    def nombre(self):
+      return self._nombre          # Se accede como un atributo, no como método
+
+    @nombre.setter
+    def nombre(self, nuevo_nombre):
+      self._nombre = nuevo_nombre  # Permite modificarlo como un atributo
+
+  # Uso
+  p = Persona("Alice")
+  print(p.nombre)   # Accede como un atributo, no es necesario usar 'getNombre()'
+  p.nombre = "Bob"  # Modifica con el setter, no es necesario usar 'setNombre(...)'
+  ```
 
 ## Métodos privados
 
@@ -383,6 +404,8 @@
 
 ## Enums
 
+* Conjunto de nombres simbólicos (miembros) asociados a valores únicos e inmutables
+* Para representar **constantes nombradas**, haciendo el código más claro y seguro
 * Para declarar variables con un conjunto restringido de valores
 
 ### Sin representación
@@ -402,6 +425,44 @@
   Talle talle = Talle.MEDIANO;
   ```
 
+=== "python"
+
+  ```py
+  from enum import Enum
+
+  class Color(Enum):
+    ROJO = 1
+    VERDE = 2
+    AZUL = 3
+
+  print(Color.ROJO)       # Color.ROJO
+  print(Color.ROJO.value) # 1
+  print(Color.ROJO.name)  # 'ROJO'
+
+  if Color.ROJO == Color.VERDE:
+    print("Son iguales")
+  else:
+    print("Son diferentes")
+
+  print(Color(2))       # Color.VERDE, es el miembro con valor 2
+  print(Color["AZUL"])  # Color.AZUL, accede al miembro por su nombre
+  ```
+
+  ```py
+  class Direccion(Enum):
+    NORTE = "N"
+    SUR = "S"
+    ESTE = "E"
+    OESTE = "O"
+
+    # Los Enums en Python pueden tener métodos personalizados
+    def es_horizontal(self):
+        return self in (Direccion.ESTE, Direccion.OESTE)
+
+  print(Direccion.ESTE.es_horizontal())  # True
+  print(Direccion.NORTE.es_horizontal()) # False
+```
+
 ### Con representación
 
   ```java
@@ -415,6 +476,21 @@
     }
   }
   ```
+
+  ```java
+  public enum Dia {
+    LUNES(1), 
+    MARTES(2), 
+    MIERCOLES(3);
+    private int numero;
+    Dia(int numero) {
+      this.numero = numero;
+    }
+    public int getNumero() { 
+      return numero; 
+    }
+}
+```
 
 ## Pruebas Unitarias
 
