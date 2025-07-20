@@ -19,7 +19,7 @@
 
 | Unidad | Contenido | Ejercicios |
 | -- | -- | -- |
-| 01 | [Introducción](doc/01-intro.ipynb) \| [Python](doc/01-intro-python.ipynb) \| [Java](doc/01-intro-python.ipynb)                                 | [Ejercicios](tp/02-intro-loo-ejercicios.md) |
+| 01 | [Introducción](doc/01-intro.ipynb) \| [Python](doc/01-intro-python.ipynb) \| [Java](doc/01-intro-java.ipynb)                                   | [Ejercicios](tp/02-intro-loo-ejercicios.md) |
 | 02 | [Encapsulamiento](doc/02-encapsulamiento.ipynb) \| [Python](doc/02-encapsulamiento-python.ipynb) \| [Java](doc/02-encapsulamiento-java.ipynb)  | [Ejercicios](tp/03-encapsulamiento-ejercicios.md) |
 | 03 | [Herencia](doc/03-herencia.ipynb) \| [Python](doc/03-herencia-python.ipynb) \| [Java](doc/03-herencia-java.ipynb)                              | [Ejercicios](tp/04-herencia-ejercicios.md) |
 | 04 | [Polimorfismo](doc/04-polimorfismo.ipynb) \| [Python](doc/04-polimorfismo-python.ipynb) \| [Java](doc/04-polimorfismo-java.ipynb)              | [Ejercicios](doc/05-polimorfismo-ejercicios.md) |
