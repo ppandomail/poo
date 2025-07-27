@@ -19,14 +19,14 @@
 
 | Unidad | Contenido | Ejercicios |
 | -- | -- | -- |
-| 01 | [Introducción](doc/01-intro.ipynb) \| [Python](doc/01-intro-python.ipynb) \| [Java](doc/01-intro-java.ipynb)                                   | [datos simples](tp/01-01-tipo-datos-simples.ipynb) \| [cadenas](tp/01-02-cadenas.ipynb) \| [condicionales](tp/01-03-condicionales.ipynb) \| [bucles](tp/01-04-bucles.ipynb) \| [funciones](tp/01-05-funciones.ipynb) |
-| 02 | [Encapsulamiento](doc/02-encapsulamiento.ipynb) \| [Python](doc/02-encapsulamiento-python.ipynb) \| [Java](doc/02-encapsulamiento-java.ipynb)  | [encapsulamiento](tp/02-encapsulamiento.ipynb) |
-| 03 | [Herencia](doc/03-herencia.ipynb) \| [Python](doc/03-herencia-python.ipynb) \| [Java](doc/03-herencia-java.ipynb)                              | [herencia](tp/03-herencia.ipynb) |
-| 04 | [Polimorfismo](doc/04-polimorfismo.ipynb) \| [Python](doc/04-polimorfismo-python.ipynb) \| [Java](doc/04-polimorfismo-java.ipynb)              | [polimorfismo](tp/04-polimorfismo.ipynb) |
-| 05 | [Colecciones Python](doc/05-colecciones-python.ipynb) \| [Colecciones Java](doc/05-colecciones-java.ipynb)                                     | [pilas y colas](tp/05-01-pilas-colas.ipynb) \| [listas y tuplas](tp/05-02-listas-tuplas.ipynb) \| [diccionarios](tp/05-03-diccionarios.ipynb)         |
-| 06 | [Excepciones Python](doc/06-excepciones-python.ipynb) \| [Excepciones Java](doc/06-excepciones-java.ipynb)                                     | [excepciones](tp/06-excepciones.ipynb) |
-| 07 | [Archivos Python](doc/07-archivos-python.ipynb) \| [Archivos Java](doc/07-archivos-java.ipynb)                                                 | [archivos](tp/07-archivos.ipynb) |
-| 08 | [Genericidad Python](doc/08-genericidad-python.ipynb) \| [Genericidad Java](doc/08-genericidad-java.ipynb)                                     | [genericidad](tp/08-genericidad.ipynb) |
+| 01 | [Introducción](doc/01-intro.ipynb) \| [Python](doc/01-intro-python.ipynb) \| [Java](doc/01-intro-java.ipynb)                                   | [TP datos simples](tp/01-01-tipo-datos-simples.ipynb) \| [TP cadenas](tp/01-02-cadenas.ipynb) \| [TP condicionales](tp/01-03-condicionales.ipynb) \| [TP bucles](tp/01-04-bucles.ipynb) \| [TP funciones](tp/01-05-funciones.ipynb) |
+| 02 | [Encapsulamiento](doc/02-encapsulamiento.ipynb) \| [Python](doc/02-encapsulamiento-python.ipynb) \| [Java](doc/02-encapsulamiento-java.ipynb)  | [TP encapsulamiento](tp/02-encapsulamiento.ipynb) |
+| 03 | [Herencia](doc/03-herencia.ipynb) \| [Python](doc/03-herencia-python.ipynb) \| [Java](doc/03-herencia-java.ipynb)                              | [TP herencia](tp/03-herencia.ipynb) |
+| 04 | [Polimorfismo](doc/04-polimorfismo.ipynb) \| [Python](doc/04-polimorfismo-python.ipynb) \| [Java](doc/04-polimorfismo-java.ipynb)              | [TP polimorfismo](tp/04-polimorfismo.ipynb) |
+| 05 | [Colecciones Python](doc/05-colecciones-python.ipynb) \| [Colecciones Java](doc/05-colecciones-java.ipynb)                                     | [TP pilas y colas](tp/05-01-pilas-colas.ipynb) \| [TP listas y tuplas](tp/05-02-listas-tuplas.ipynb) \| [TP diccionarios](tp/05-03-diccionarios.ipynb)         |
+| 06 | [Excepciones Python](doc/06-excepciones-python.ipynb) \| [Excepciones Java](doc/06-excepciones-java.ipynb)                                     | [TP excepciones](tp/06-excepciones.ipynb) |
+| 07 | [Archivos Python](doc/07-archivos-python.ipynb) \| [Archivos Java](doc/07-archivos-java.ipynb)                                                 | [TP archivos](tp/07-archivos.ipynb) |
+| 08 | [Genericidad Python](doc/08-genericidad-python.ipynb) \| [Genericidad Java](doc/08-genericidad-java.ipynb)                                     | [TP genericidad](tp/08-genericidad.ipynb) |
 | 09 | [Decoradores Python](doc/09-decoradores-python.ipynb) \| [Anotaciones Java](doc/09-anotaciones-java.ipynb)                                     | |
 
 ## Bibliografía
@@ -79,4 +79,4 @@
   * Dos recuperatorios con nota >= 7
   * Nota final: promedio de las notas de los parciales o recuperatorios con nota >= 7
 
-**NOTA** La nota del recuperatorio reemplaza el parcial
+**NOTA**: La nota del recuperatorio reemplaza el parcial
