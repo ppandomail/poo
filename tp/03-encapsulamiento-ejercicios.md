@@ -1,69 +1,10 @@
 # Encapsulamiento
 
-## Ejercicios
+`
 
-1. Implementar la clase Nota
+1. 
 
-```java
-class Nota {
-
-    /**
-     * pre : valorInicial está comprendido entre 0 y 10.
-     * post: inicializa la Nota con el valor indicado.
-     */
-    public Nota(int valorInicial) { }
-    
-    /**
-     * post: devuelve el valor numérico de la Nota, comprendido entre 0 y 10.
-     */
-    public int obtenerValor() { }
-    
-    /**
-     * post: indica si la Nota permite o no la aprobación.
-     */
-    public boolean aprobado() { }
-    
-    /**
-     * post: indica si la Nota implica desaprobación.
-     */
-    public boolean desaprobado() { }
-    
-}
-```
-
-1. Agregar a la clase Nota el método:
-
-```java
-    /**
-     * pre : nuevoValor está comprendido entre 0 y 10.
-     * post: modifica el valor numérico de la Nota, cambiándolo por nuevoValor, siempre y cuando nuevoValor sea superior al valor numérico actual de la Nota.
-    */
-    public void recuperar(int nuevoValor) { }
-```
-
-1. Defina una clase Punto que tendrá dos atributos, de tipo double, x e y, que representarán las coordenadas del punto dentro del plano. Implemente los siguientes métodos:
-
-    ```java
-    public boolean estaSobreElEjeX() {}
-    public boolean estaSobreElEjeY() {}
-    public boolean esElOrigenDeCoordenadas() {}
-    public double distanciaAlOrigen() {}
-    public static double distancia(Punto p1, Punto p2) {}
-    public double distancia(Punto p) {}
-    ```
-
-1. Implementar una clase que modele un círculo, del que se desea manipular (obtener y cambiar):
-    * radio
-    * diámetro
-    * perímetro
-    * área
-
-1. Implementar una clase que modele una corona circular utilizando la clase Circulo desarrollada previamente. Se desea manipular (obtener y cambiar):
-    * radio interior
-    * radio exterior
-    * perímetro interior
-    * perímetro exterior
-    * área
+1. 
 
 1. Implementar la clase Cubo a partir de la siguiente interfaz:
 
