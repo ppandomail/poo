@@ -36,6 +36,7 @@
 * [Python](https://www.python.org/)
 * [El libro de Python](https://ellibrodepython.com/)
 * [Refactoring](https://refactoring.guru/es)
+* [Entorno de Desarrollo](doc/00-anaconda-jupyterlab.ipynb)
 
 ## Cronograma Tentativo UNO
 
