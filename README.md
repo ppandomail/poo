@@ -75,4 +75,4 @@
   * Dos recuperatorios con nota >= 7
   * Nota final: promedio de las notas de los parciales o recuperatorios con nota >= 7
 
-**NOTA**: La nota del recuperatorio reemplaza el parcial
+**NOTA**: La nota del recuperatorio reemplaza el parcial.
