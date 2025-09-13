@@ -1,0 +1,26 @@
+id,tipo,nombre,linea,estado,ultima_actualizacion,recorrido,estaciones,frecuencia
+1,colectivo,Linea 12,12,funcionando,2025-09-10 08:30,"Barracas - Plaza Once","",10
+2,colectivo,Linea 152,152,demorado,2025-09-10 08:35,"Olivos - La Boca","",15
+3,colectivo,Linea 39,39,funcionando,2025-09-10 08:40,"Chacarita - Barracas","",12
+4,colectivo,Linea 68,68,en mantenimiento,2025-09-10 08:45,"Villa Luro - Retiro","",20
+5,colectivo,Linea 132,132,funcionando,2025-09-10 08:50,"Saavedra - Once","",9
+6,colectivo,Linea 29,29,demorado,2025-09-10 08:55,"Belgrano - La Boca","",14
+7,colectivo,Linea 41,41,funcionando,2025-09-10 09:00,"Lanús - Plaza Italia","",11
+8,colectivo,Linea 124,124,funcionando,2025-09-10 09:05,"Constitución - Palermo","",13
+9,colectivo,Linea 5,5,en mantenimiento,2025-09-10 09:10,"Caballito - Congreso","",18
+10,colectivo,Linea 132,132,funcionando,2025-09-10 09:15,"Saavedra - Once","",9
+11,subte,Subte Linea A,A,funcionando,2025-09-10 09:20,"","Plaza de Mayo - San Pedrito",4
+12,subte,Subte Linea B,B,demorado,2025-09-10 09:25,"","Leandro N. Alem - Juan Manuel de Rosas",5
+13,subte,Subte Linea C,C,funcionando,2025-09-10 09:30,"","Retiro - Constitución",3
+14,subte,Subte Linea D,D,en mantenimiento,2025-09-10 09:35,"","Catedral - Congreso de Tucumán",6
+15,subte,Subte Linea E,E,funcionando,2025-09-10 09:40,"","Retiro - Plaza de los Virreyes",7
+16,subte,Subte Linea H,H,funcionando,2025-09-10 09:45,"","Hospitales - Facultad de Derecho",5
+17,tren,Tren Roca,Roca,funcionando,2025-09-10 09:50,"","Constitución - La Plata",20
+18,tren,Tren Mitre,Mitre,demorado,2025-09-10 09:55,"","Retiro - Tigre",18
+19,tren,Tren San Martín,San Martín,funcionando,2025-09-10 10:00,"","Retiro - Pilar",15
+20,tren,Tren Belgrano Sur,Belgrano Sur,funcionando,2025-09-10 10:05,"","Buenos Aires - González Catán",22
+21,tren,Tren Belgrano Norte,Belgrano Norte,funcionando,2025-09-10 10:10,"","Retiro - Villa Rosa",19
+22,tren,Tren Sarmiento,Sarmiento,demorado,2025-09-10 10:15,"","Once - Moreno",17
+23,tren,Tren Urquiza,Urquiza,funcionando,2025-09-10 10:20,"","Chacarita - General Lemos",16
+24,tren,Tren Roca,Roca,en mantenimiento,2025-09-10 10:25,"","Constitución - Temperley",25
+25,tren,Tren Mitre,Mitre,funcionando,2025-09-10 10:30,"","Retiro - Bartolomé Mitre",14
