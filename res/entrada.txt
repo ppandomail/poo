@@ -1,0 +1,3 @@
+nombre=Calcular
+atributos=atr1,atr2,atr3
+metodos=sumar,restar

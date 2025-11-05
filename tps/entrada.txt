@@ -1,0 +1,3 @@
+metodos=arrancar,detener
+atributos=ruedas,color
+nombre=moto
