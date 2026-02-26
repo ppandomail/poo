@@ -67,7 +67,7 @@
   * Dos recuperatorios teóricos - prácticos en papel, con nota >= 4 y nota <= 6
 
 * **Final (Alumnos Regulares)**
-  * Final teórico en papel, con nota >= 4
+  * Final teórico - práctico en papel, con nota >= 4
 
 * **Promoción**
   * Dos parciales teóricos - prácticos en papel, con nota >= 7
