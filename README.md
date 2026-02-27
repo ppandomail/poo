@@ -9,6 +9,7 @@
 * Auxiliares:
   * Esp. Lic. Dante Mendoza
   * Lic. Leandro Politano
+  * Anta. Maximiliano Sosa
 
 ## Objetivos
 
