@@ -1,12 +1,12 @@
-# Programación con Objetos I (UNO)
+# Programación con Objetos I
 
 ## Docentes
 
-* Titular: Mg. Esp. Ing. Pablo Pandolfo
-* Adjuntos:
+* **Titular**: Mg. Esp. Ing. Pablo Pandolfo
+* **Adjuntos**:
   * Ing. Leonardo Blautzik
   * Ing. Roberto Guglielmino
-* Auxiliares:
+* **Auxiliares**:
   * Esp. Lic. Dante Mendoza
   * Lic. Leandro Politano
   * Anta. Maximiliano Sosa
