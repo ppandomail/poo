@@ -43,37 +43,37 @@
 
 | **Sem** | **Fecha** | **Tema** | **Observaciones** |
 | -- | --           | --                                    | -- |
-| 01 | Semana 11/08 | Presentación. Introducción            | |
-| 02 | Semana 18/08 | Introducción                          | |
-| 03 | Semana 25/08 | Encapsulamiento                       | |
-| 04 | Semana 01/09 | Encapsulamiento                       | |
-| 05 | Semana 08/09 | Herencia                              | |
-| 06 | Semana 15/09 | Herencia                              | |
-| 07 | Semana 22/09 | Polimorfismo                          | |
-| 08 | Semana 29/09 | Polimorfismo                          | |
-| 09 | Semana 06/10 | **Primer Parcial**                    | |
-| 10 | Semana 13/10 | Colecciones: Pilas, Colas y Listas    | |
-| 11 | Semana 20/10 | Colecciones: Diccionarios/Mapas       | |
-| 12 | Semana 27/10 | Excepciones y Archivos                | |
-| 13 | Semana 03/11 | Genericidad y Anotaciones             | |
-| 14 | Semana 10/11 | **Segundo Parcial**                   | |
-| 15 | Semana 17/11 | **Recuperatorios**                    | |
-| 16 | Semana 24/11 | Cierre de Cursada                     | |
+| 01 | Semana 16/03 | Presentación. Introducción            | |
+| 02 | Semana 23/03 | Introducción                          | |
+| 03 | Semana 30/03 | Encapsulamiento                       | |
+| 04 | Semana 06/04 | Encapsulamiento                       | |
+| 05 | Semana 13/04 | Herencia                              | |
+| 06 | Semana 20/04 | Herencia                              | |
+| 07 | Semana 27/04 | Polimorfismo                          | |
+| 08 | Semana 04/05 | Polimorfismo                          | |
+| 09 | Semana 11/05 | **Primer Parcial**                    | |
+| 10 | Semana 18/05 | Colecciones: Pilas, Colas y Listas    | |
+| 11 | Semana 25/05 | Colecciones: Diccionarios/Mapas       | |
+| 12 | Semana 01/06 | Excepciones y Archivos                | |
+| 13 | Semana 08/06 | Genericidad y Anotaciones             | |
+| 14 | Semana 15/06 | **Segundo Parcial**                   | |
+| 15 | Semana 22/06 | **Recuperatorios**                    | |
+| 16 | Semana 29/06 | Cierre de Cursada                     | |
 
 ## Criterios de evaluación UNO
 
 * **Regularidad**
-  * Dos parciales teóricos - prácticos en papel, con nota >= 4 y nota <= 6
+  * Dos parciales teóricos (60% bien) - prácticos (60% bien) en papel, con nota >= 4 y nota <= 6
   * 80% asistencia
-  * Dos recuperatorios teóricos - prácticos en papel, con nota >= 4 y nota <= 6
+  * Dos recuperatorios teóricos (60% bien) - prácticos (60% bien) en papel, con nota >= 4 y nota <= 6
 
 * **Final (Alumnos Regulares)**
-  * Final teórico - práctico en papel, con nota >= 4
+  * Final teórico (60% bien) - práctico (60% bien) en papel, con nota >= 4
 
 * **Promoción**
-  * Dos parciales teóricos - prácticos en papel, con nota >= 7
+  * Dos parciales teóricos (80% bien) - prácticos (80% bien) en papel, con nota >= 7
   * 80% asistencia
   * Dos recuperatorios con nota >= 7
   * Nota final: promedio de las notas de los parciales o recuperatorios con nota >= 7
 
-**NOTA**: La nota del recuperatorio reemplaza el parcial.
+**NOTA**: La nota del recuperatorio reemplaza el parcial. El tiempo de los examenes dura 1h30. En el caso de recuperar ambos parciales el tiempo de ambos es de 1h30 (total)
